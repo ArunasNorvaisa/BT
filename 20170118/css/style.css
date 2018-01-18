@@ -1,0 +1,24 @@
+.pagrindinis {
+    width: 100%;
+    border: 2px solid midnightblue;
+}
+header {
+    color: aliceblue;
+    padding: 1em;
+    background-color: darkmagenta;
+    text-align: center;
+}
+footer {
+    color: aliceblue;
+    padding: 1em;
+    background-color: darkmagenta;
+    text-align: center;
+}
+article {
+    margin-right: 180px;
+    border-right: 1px solid midnightblue;
+}
+.navigacija {
+    float: right;
+    max-width: 170px;
+}
