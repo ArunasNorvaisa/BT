@@ -1,0 +1,23 @@
+body {
+    background-color: khaki;
+}
+h1 {
+    color: crimson;
+    text-align: center;
+}
+p {
+    color: slateblue;
+    text-align: center;
+}
+label.city {
+    color: darkgreen;
+    text-blink: 2s;
+}
+div.header {
+    border: 3px solid black;
+    padding: 10px;
+}
+footer.apacia {
+    text-align: center;
+    color: blue;
+}

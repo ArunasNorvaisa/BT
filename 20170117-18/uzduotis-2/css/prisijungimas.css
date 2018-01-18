@@ -1,0 +1,23 @@
+body {
+    background-color: silver;
+}
+h1 {
+    color: midnightblue;
+    text-align: center;
+}
+p {
+    color: navy;
+    text-align: center;
+}
+#pass {
+    color: orangered;
+    text-align: center;
+}
+div.header {
+    border: 3px solid black;
+    padding: 10px;
+}
+footer.apacia {
+    text-align: center;
+    color: blue;
+}

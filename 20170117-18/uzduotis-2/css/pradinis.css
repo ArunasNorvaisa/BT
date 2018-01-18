@@ -1,0 +1,17 @@
+body {
+    background-color: aliceblue;
+}
+h1 {
+    color: olivedrab;
+}
+p {
+    color: midnightblue;
+}
+div.header {
+    border: 3px solid black;
+    padding: 10px;
+}
+footer.apacia {
+    text-align: center;
+    color: blue;
+}
