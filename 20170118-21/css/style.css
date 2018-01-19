@@ -1,29 +1,51 @@
 .pagrindinis {
-    width: 100%;
-    border: 2px solid midnightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "title title title"
+    "straipsnis straipsnis straipsnis"
+    "navigacija navigacija navigacija"
+    "footer footer footer";
+    padding: 1em;
+    grid-gap: 10px;
 }
 header {
+    grid-area: title;
+    text-align: center;
+    background-color: midnightblue;
     color: aliceblue;
     padding: 1em;
-    background-color: darkmagenta;
-    text-align: center;
-    clear: both;
 }
 footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: midnightblue;
     color: aliceblue;
     padding: 1em;
-    background-color: darkmagenta;
-    text-align: center;
-    clear: both;
 }
 article {
-    width: 80%;
-    margin-right: 180px;
-    border-right: 1px solid midnightblue;
+    grid-area: straipsnis;
+    border: midnightblue solid 1px;
+    padding: 1em;
 }
 .navigacija {
-    float: right;
-    width: 20%;
-    margin: auto;
-    clear: both;
+    grid-area: navigacija;
+    text-decoration: none;
+    justify-self: space-evenly;
+    padding: 1em;
+    align-self: center;
+}
+
+@media screen and (min-width: 896px) {
+    .pagrindinis {
+        display: grid;
+        grid-template-columns: 1fr 500px 500px 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+                ". title title title ."
+                ". straipsnis straipsnis navigacija ."
+                ". footer footer footer .";
+        padding: 1em;
+        grid-gap: 10px;
 }
