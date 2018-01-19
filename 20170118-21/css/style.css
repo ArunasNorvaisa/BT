@@ -9,6 +9,7 @@
     "footer footer footer";
     padding: 1em;
     grid-gap: 10px;
+    font-family: Helvetica, Arial, SansSerif;
 }
 header {
     grid-area: title;
@@ -16,6 +17,7 @@ header {
     background-color: midnightblue;
     color: aliceblue;
     padding: 1em;
+    border-radius: 15px;
 }
 footer {
     grid-area: footer;
@@ -23,10 +25,12 @@ footer {
     background-color: midnightblue;
     color: aliceblue;
     padding: 1em;
+    border-radius: 8px;
 }
 article {
     grid-area: straipsnis;
     border: midnightblue solid 1px;
+    border-radius: 30px;
     padding: 1em;
 }
 .navigacija {
@@ -35,17 +39,28 @@ article {
     justify-self: space-evenly;
     padding: 1em;
     align-self: center;
+    color: midnightblue;
 }
-
+a {
+    text-decoration: none;
+    color: midnightblue;
+}
+.navigacija ul {
+    list-style-type: none;
+}
+.p-center {
+    text-align: center;
+}
 @media screen and (min-width: 896px) {
     .pagrindinis {
         display: grid;
         grid-template-columns: 1fr 500px 500px 1fr 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas:
-                ". title title title ."
+                ". title title . ."
                 ". straipsnis straipsnis navigacija ."
-                ". footer footer footer .";
+                ". footer footer . .";
         padding: 1em;
         grid-gap: 10px;
+    }
 }
