@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registracijos puslapis</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<div class="pagrindinis">
+    <header>
+        <h1>
+            Registracija
+        </h1>
+    </header>
+    <nav class="navigacija">
+        <ul>
+            <li><a href="index.html">Pradžia</a></li>
+            <li><a href="registracija.html">Registracija</a></li>
+            <li><a href="prisijungimas.html">Prisijungimas</a></li>
+            <li><a href="kontaktai.html">Kontaktai</a></li>
+            <li><a href="galerija.html">Galerija</a></li>
+            <li><a href="apie.html">Apie mane</a></li>
+        </ul>
+    </nav>
+    <article>
+        <form action="registracija.html" method="get">
+            <p class="p-right">
+                <label for="vardas">Jūsų vardas: </label>
+                <input id="vardas" type="text" name="vardas">
+                <label for="pavarde">Jūsų pavardė:</label>
+                <input id="pavarde" type="text" name="pavarde"><br>
+                <label for="vvardas">Pageidaujamas vartotojo vardas: </label>
+                <input id="vvardas" type="text" name="vvardas"><br>
+                <label for="slaptazodis">Pageidaujamas slaptažodis: </label>
+                <input id="slaptazodis" type="password" name="slaptazodis">
+                <label for="slaptazodis">Pakartokite slaptažodį: </label>
+                <input id="slaptazodis" type="password" name="slaptazodis"><br>
+                <label for="email">Jūsų el. pašto adresas</label>
+                <input id="email" type="email" name="elpastas"><br>
+                <label for="telefonas">Jūsų telefonas: </label>
+                <input id="telefonas" type="tel" name="telefonas"><br>
+                <label for="lytis">Jūsų lytis: </label>
+                <input id="lytis" type="radio" name="lytis" value="Vyras">Vyras
+                <input id="lytis" type="radio" name="lytis" value="Moteris">Moteris
+                <input id="lytis" type="radio" name="lytis" value="Kita" checked>Kita<br>
+                <label for="miestas">Jūsų miestas: </label>
+                <select id="miestas" name="miestas">
+                    <option value="Ramygala">Ramygala</option>
+                    <option value="Adutiškis">Adutiškis</option>
+                    <option value="Balbieriškis">Balbieriškis</option>
+                    <option value="Kaunas" selected>Kaunas</option>
+                </select><br>
+                <label for="adresas">Jūsų adresas: </label>
+                <textarea id="adresas" name="adresas" rows="6" cols="60"></textarea><br>
+                <label for="indeksas">Jūsų pašto indeksas: </label>
+                <input id="indeksas" type="text" name="indeksas"><br>
+                <label for="pastabos">Jūsų komentarai apie save: </label>
+                <textarea id="pastabos" name="pastabos" rows="6" cols="60"></textarea><br>
+                <input type="submit" name="submit" value="Pateikti">
+                <input type="reset" name="reset" value="Iš naujo">
+            </p>
+        </form>
+    </article>
+    <footer>
+        Sukūrė Arūnas &copy; 2018
+    </footer>
+</div>
+</body>
+</html>

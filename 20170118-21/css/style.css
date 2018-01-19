@@ -51,6 +51,9 @@ a {
 .p-center {
     text-align: center;
 }
+.p-right {
+    text-align: right;
+}
 @media screen and (min-width: 896px) {
     .pagrindinis {
         display: grid;
