@@ -48,11 +48,15 @@ a {
 .navigacija ul {
     list-style-type: none;
 }
-.p-center {
+.p-center, h2 {
     text-align: center;
 }
 .p-right {
     text-align: right;
+}
+#map {
+    height: 400px;
+    width: 100%;
 }
 @media screen and (min-width: 896px) {
     .pagrindinis {
