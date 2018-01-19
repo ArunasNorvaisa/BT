@@ -58,6 +58,21 @@ a {
     height: 400px;
     width: 100%;
 }
+article #manophoto {
+    width: 20%;
+    height: auto;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    object-fit: contain;
+    clear: right;
+}
+article #lorem {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+}
 @media screen and (min-width: 896px) {
     .pagrindinis {
         display: grid;
