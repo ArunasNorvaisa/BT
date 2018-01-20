@@ -59,19 +59,13 @@ a {
     width: 100%;
 }
 article #manophoto {
-    width: 20%;
-    height: auto;
+    width: 15%;
     float: left;
-    text-align: center;
-    padding: 10px;
-    object-fit: contain;
-    clear: right;
+    padding: 1em;
 }
 article #lorem {
-    width: 100%;
-    height: auto;
     text-align: center;
-    padding: 10px;
+    padding: 1em;
 }
 @media screen and (min-width: 896px) {
     .pagrindinis {
