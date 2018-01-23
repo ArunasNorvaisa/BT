@@ -21,6 +21,15 @@ body {
 .container .block:nth-child(2) {
     margin-top: 10px;
 }
+.container .block:nth-child(2):hover {
+    margin-top: 10px;
+    color: #000000;
+    background-color: #ff0000;
+    padding: 10px 10px 17% 10px;
+    width: 20%;
+    height: 35%;
+    text-align: left;
+}
 .block-stroked {
     color: #000000;
     background-color: #003ccd;
