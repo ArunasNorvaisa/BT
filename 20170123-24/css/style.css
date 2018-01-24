@@ -19,18 +19,21 @@ body {
     position: relative;
     top: 30px;
     left: 200px;
-    text-align: center;
+    align-self: center;
+    font-size: 94px;
 }
 #g {
-      width: 500px;
-      height: 500px;
-      background: rgba(0,255,0,0.35);
-      border-radius: 50%;
-      border: rgb(0,255,0) solid 20px;
-      position: relative;
-      bottom: 220px;
-      left: 30px;
-      text-align: center;
+    width: 500px;
+    height: 500px;
+    background: rgba(0,255,0,0.35);
+    border-radius: 50%;
+    border: rgb(0,255,0) solid 20px;
+    position: relative;
+    bottom: 220px;
+    left: 30px;
+    text-align: center;
+    align-self: center;
+    font-size: 94px;
 }
 #b {
     width: 500px;
@@ -42,4 +45,6 @@ body {
     bottom: 750px;
     right: -320px;
     text-align: center;
+    align-self: center;
+    font-size: 94px;
 }
