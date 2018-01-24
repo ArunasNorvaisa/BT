@@ -1,6 +1,8 @@
 body {
     font-size: 25px;
     font-family: "Estrangelo Edessa", SansSerif;
+    height: 100%;
+    font-variant: all-small-caps;
 }
 .container {
     width: 50%;
@@ -14,8 +16,8 @@ body {
     color: #000000;
     background-color: #003ccd;
     padding: 10px 10px 17% 10px;
-    width: 20%;
-    height: 35%;
+    width: 25%;
+    height: 15%;
     text-align: left;
 }
 .container .block:nth-child(2) {
@@ -26,8 +28,8 @@ body {
     color: #000000;
     background-color: #ff0000;
     padding: 10px 10px 17% 10px;
-    width: 20%;
-    height: 35%;
+    width: 25%;
+    height: 15%;
     text-align: left;
 }
 .block-stroked {
@@ -61,7 +63,7 @@ body {
     background-color: #dc143c;
     padding: 10px 10px 10px 10px;
     width: 15%;
-    height: 25%;
+    height: 35%;
     text-align: left;
     float: left;
     margin-top: 10px;
@@ -73,6 +75,6 @@ body {
     background-color: #addf2f;
     padding: 10px 10px 10px 10px;
     width: 25%;
-    height: 25%;
+    height: 45%;
     text-align: left;
 }
