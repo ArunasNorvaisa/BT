@@ -1,7 +1,7 @@
 body {
     font-size: xx-large;
 }
-body > #pagr {
+#pagr {
     height: 900px;
     width: 900px;
     background-color: rgb(178, 178, 178);
