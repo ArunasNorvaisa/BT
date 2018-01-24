@@ -1,0 +1,45 @@
+body {
+    font-size: xx-large;
+}
+body > #pagr {
+    height: 900px;
+    width: 900px;
+    background-color: rgb(178, 178, 178);
+    position: absolute;
+    margin: auto;
+    text-align: center;
+    color: rgb(255,255,255);
+}
+#r {
+    width: 500px;
+    height: 500px;
+    background: rgba(255,0,0,0.35);
+    border-radius: 50%;
+    border: rgb(255,0,0) solid 20px;
+    position: relative;
+    top: 30px;
+    left: 200px;
+    text-align: center;
+}
+#g {
+      width: 500px;
+      height: 500px;
+      background: rgba(0,255,0,0.35);
+      border-radius: 50%;
+      border: rgb(0,255,0) solid 20px;
+      position: relative;
+      bottom: 220px;
+      left: 30px;
+      text-align: center;
+}
+#b {
+    width: 500px;
+    height: 500px;
+    background: rgba(0,0,255,0.35);
+    border-radius: 50%;
+    border: rgb(0,0,255) solid 20px;
+    position: relative;
+    bottom: 750px;
+    right: -320px;
+    text-align: center;
+}
