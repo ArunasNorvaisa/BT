@@ -1,10 +1,11 @@
+/* globalūs nustatymai */
 html, body {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #d9f4ef;
     font-family: Arial, SansSerif;
+    background-color: #8fbc8f;
 }
 .container {
     width: 80%;
@@ -13,8 +14,9 @@ html, body {
 header {
     background-color: #d9f4ef;
     color: midnightblue;
-    min-height: 70px;
-    padding-top: 30px;
+    padding: 30px;
+    min-height: 75px;
+    max-height: 150px;
 }
 .mygtukas {
     color: #ffffff;
@@ -24,6 +26,8 @@ header {
     border-top-right-radius: 15px;
     background-color: seagreen;
 }
+
+/* viršūnė */
 header a {
     color: midnightblue;
     font-size: 17px;
@@ -46,18 +50,19 @@ header .craftlance {
 }
 header .craftlance h1 {
     margin: 0;
+    margin-top: 15px;
 }
 header .navigacija {
     float: right;
-    margin-top: 10px;
+    margin-top: 32px;
 }
 header ul li #selected {
-    width: 180px;
-    height: 60px;
-    border: 1px solid lightseagreen;
+    width: 80px;
+    height: 35px;
+    border: 2px solid lightseagreen;
     background-color: #ffffff;
-    padding: 15px;
-    border-radius: 40%;
+    padding: 7px 10px !important;
+    border-radius: 6px;
     font-size: 15px;
     color: lightseagreen;
 }
@@ -65,21 +70,27 @@ header a:hover {
     color: #ff0000;
     font-weight: bold;
 }
+
+/* turinys */
 .turinys {
-    min-height: 800px;
+    min-height: 650px;
+    max-height: 1500px;
     background: #8fbc8f url("http://arunas.org/6/images/laptop3.png") no-repeat 50% 300px;
     text-align: center;
 }
 .turinys h1 {
-    padding-top: 90px;
+    padding-top: 20px;
+    font-size: 32px;
 }
+
+/* el pašto forma */
 .signin {
-    padding: 45px;
+    padding: 25px;
     color: #ffffff;
     background-color: #8fbc8f;
     text-align: center;
 }
-.signin input[type="email"] {
+.signin input {
     height: 32px;
     padding: auto
     width: 260px;
@@ -90,6 +101,7 @@ header a:hover {
     font-size: smaller;
 }
 
+/* mobilus dizainas */
 @media screen and (max-width: 996px) {
     .craftlance, .navigacija, .navigacija li {
         width: 100%;
@@ -97,11 +109,10 @@ header a:hover {
         float: none;
     }
     header {
-        margin: 40px 0 20px 0;
+        margin: 0;
+        padding: 0 0 70px 0;
     }
     header li {
-        float: none;
-        display: inherit;
-        padding: 6px;
+        padding: 10px;
     }
 }
