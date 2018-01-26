@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #d9f4ef;
+    font-family: Arial, SansSerif;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+header {
+    background-color: #d9f4ef;
+    color: midnightblue;
+    min-height: 70px;
+    padding-top: 30px;
+}
+.mygtukas {
+    color: #ffffff;
+    height: 35px;
+    border: none;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: seagreen;
+}
+header a {
+    color: midnightblue;
+    font-size: 17px;
+    text-decoration: none;
+}
+header ul {
+    padding: 0;
+    margin: 0;
+}
+header li {
+    padding: 0 20px 0 20px;
+    float: left;
+    display: inline;
+}
+header .craftlance {
+    font-family: 'VT323', monospace;
+    font-variant: petite-caps;
+    font-size: x-large;
+    float: left;
+}
+header .craftlance h1 {
+    margin: 0;
+}
+header .navigacija {
+    float: right;
+    margin-top: 10px;
+}
+header ul li #selected {
+    width: 180px;
+    height: 60px;
+    border: 1px solid lightseagreen;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 40%;
+    font-size: 15px;
+    color: lightseagreen;
+}
+header a:hover {
+    color: #ff0000;
+    font-weight: bold;
+}
+.turinys {
+    min-height: 800px;
+    background: #8fbc8f url("http://arunas.org/6/images/laptop3.png") no-repeat 50% 300px;
+    text-align: center;
+}
+.turinys h1 {
+    padding-top: 90px;
+}
+.signin {
+    padding: 45px;
+    color: #ffffff;
+    background-color: #8fbc8f;
+    text-align: center;
+}
+.signin input[type="email"] {
+    height: 32px;
+    padding: auto
+    width: 260px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px
+}
+.signin p {
+    font-size: smaller;
+}
+
+@media screen and (max-width: 996px) {
+    .craftlance, .navigacija, .navigacija li {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+    header {
+        margin: 40px 0 20px 0;
+    }
+    header li {
+        float: none;
+        display: inherit;
+        padding: 6px;
+    }
+}

@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Užduotis-4</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -13,10 +15,10 @@
         </div>
         <div class="navigacija">
             <ul>
-                <li><a href="products.html"></a>Products</li>
-                <li><a href="solutions.html"></a>Solutions</li>
-                <li><a href="support.html"></a>Support</li>
-                <li><a href="sign-in.html"></a>Sign In</li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><span id="selected"><a href="sign-in.html">Sign In</a></span></li>
             </ul>
         </div>
     </div>
@@ -34,8 +36,9 @@
 <article class="signin">
     <div class="container">
         <form action="index.html" method="get">
-            <input type="email" class="email" placeholder="Enter your email address..." />
+            <input type="email" placeholder="Enter your email address..." />
             <button type="submit" class="mygtukas">Use it free</button>
+            <p>By clicking Use it free, you agree to the BlueLance <a href="terms.html">Terms of Service</a></p>
         </form>
     </div>
 </article>
