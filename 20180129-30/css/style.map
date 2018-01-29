@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "../saas/style.css",
+	"sources": [
+		"../saas/style.scss",
+		"../saas/_variables.scss",
+		"../saas/_mixins.scss"
+	],
+	"sourcesContent": [
+		"@import url('https://fonts.googleapis.com/css?family=Rammetto+One&amp;subset=latin-ext');\r\n@import \"variables\";\r\n@import \"mixins\";\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: $font-family;\r\n  font-size: $font-size;\r\n}\r\n.container {\r\n  width: 1200px;\r\n  margin: 0 auto;\r\n\r\n  .block1 {\r\n    height: 300px;\r\n    width: 100%;\r\n    margin-bottom: 20px;\r\n    background-color: red;\r\n    &.Custom_block{\r\n      @include border-radius(50px);\r\n    }\r\n    &:hover {\r\n      background-color: $dark-green;\r\n    }\r\n  }\r\n}",
+		"$font-size: 15px;\r\n$dark-green: #006400;\r\n$font-family: 'Rammetto One', cursive;",
+		"@mixin border-radius($radius) {\r\n  border-radius: $radius;\r\n}"
+	],
+	"mappings": "AAAA,OAAO,CAAC,gFAAI;;AAIZ,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,WAAW,ECLC,cAAc,EAAE,OAAO;EDMnC,SAAS,ECRC,IAAI;CDSf;;;AACD,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,MAAO;EACd,MAAM,EAAE,MAAO;CAchB;;;AAhBD,AAIE,UAJQ,CAIR,OAAO,CAAC;EACN,MAAM,EAAE,KAAM;EACd,KAAK,EAAE,IAAK;EACZ,aAAa,EAAE,IAAK;EACpB,gBAAgB,EAAE,GAAI;CAOvB;;;AAfH,AAIE,UAJQ,CAIR,OAAO,AAKJ,aAAa,CAAA;EElBhB,aAAa,EFmBc,IAAI;CAC5B;;;AAXL,AAIE,UAJQ,CAIR,OAAO,AAQJ,MAAM,CAAC;EACN,gBAAgB,ECtBT,OAAO;CDuBf",
+	"names": []
+}
