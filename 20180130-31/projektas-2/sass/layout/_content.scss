@@ -1,0 +1,53 @@
+article {
+  width: 100%;
+  min-height: 600px;
+  color: $white;
+  font-family: Arial;
+  text-align: center;
+
+  h1 {
+    color: $dark-yellow;
+    font-size: 65px;
+    padding: 30px;
+  }
+
+  #p-center {
+    color: $black;
+  }
+
+  .mygtukas {
+    background-color: $dark-yellow;
+    color: $white;
+    text-align: center;
+    width: 130px;
+    height: 48px;
+    text-transform: uppercase;
+    margin-top: 25px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 25px;
+  }
+
+  .trigubas {
+    color: $black;
+    padding: 15px;
+    
+    .fa-5x {
+      color: $sky-blue;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    #p-center, h1 {
+      padding: 15px;
+    }
+  }
+
+}
