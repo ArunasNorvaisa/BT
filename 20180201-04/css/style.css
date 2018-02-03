@@ -1,0 +1,70 @@
+* {
+  width: auto;
+  height: auto;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.container-m {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  padding: 0;
+  grid-template-columns: 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px
+                         55px 55px 55px 55px 55px;
+}
+
+.m1 {
+  grid-area: 1m;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  background-color: #ef6934;
+}
+
+.m2 {
+  grid-area: 2m;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  background-color: #e2ab81;
+}
+
+.m3 {
+  grid-area: 3m;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  background-color: #844f26;
+}
+
+.zemyn {
+	height: 500px;
+	width:800px;
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(green), to(blue));
+	background:-webkit-linear-gradient(green, blue);
+	background:-moz-linear-gradient(green, blue);
+	background:-o-linear-gradient(green, blue);
+	background: linear-gradient(green, blue);
+	margin: auto;
+}
+
+.kairen {
+	height: 500px;
+	margin: auto;
+	background: -webkit-gradient(linear, 100% 0, 0 0, from(blue), color-stop(0.33, red), color-stop(0.67, yellow), to(green));
+	background: -webkit-linear-gradient(to right, blue, red, yellow, green);
+	background: -moz-linear-gradient(to right, blue, red, yellow, green);
+	background: -o-linear-gradient(to right, blue, red, yellow, green);
+	background: linear-gradient(to right, blue, red, yellow, green);
+}
+
+.pietryciai {
+	height: 500px;
+	margin: auto;
+	background: -webkit-gradient(linear, 100% 100%, 0 0, from(blue), to(orange));
+	background: -webkit-linear-gradient(to right bottom, blue, orange);
+	background: -moz-linear-gradient(to right bottom, blue, orange);
+	background: -o-linear-gradient(to right bottom, blue, orange);
+	background: linear-gradient(to right bottom, blue, orange);
+}
