@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss",
+		"../sass/_variables.scss"
+	],
+	"sourcesContent": [
+		"@import url('https://fonts.googleapis.com/css?family=Roboto');\r\n@import \"variables\";\r\n\r\n* {\r\n  padding: 0;\r\n  margin: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  font-family: 'Roboto', sans-serif;\r\n}",
+		""
+	],
+	"mappings": "AAAA,OAAO,CAAC,qDAAI;;AAGZ,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAE;EACX,MAAM,EAAE,CAAE;EACV,UAAU,EAAE,UAAW;CACxB;;;AAED,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,oBAAqB;CACnC",
+	"names": []
+}

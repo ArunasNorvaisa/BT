@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* line 4, C:/bt/20180205-06/sass/style.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* line 10, C:/bt/20180205-06/sass/style.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*# sourceMappingURL=../css/style.map */
