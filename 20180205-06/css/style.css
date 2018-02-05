@@ -1,14 +1,87 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-/* line 4, C:/bt/20180205-06/sass/style.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* line 10, C:/bt/20180205-06/sass/style.scss */
 body {
   font-family: 'Roboto', sans-serif;
 }
 
-/*# sourceMappingURL=../css/style.map */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  background-color: rgba(225, 225, 225, 0.5);
+  position: fixed;
+  top: 0;
+}
+
+header .top-header {
+  text-align: right;
+  padding: 10px 0;
+}
+
+header .top-header i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+header .top-header ilast-of-type {
+  margin-right: 0;
+}
+
+header .bottom-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+header .bottom-header .logo {
+  width: 30%;
+}
+
+header .bottom-header .logo img {
+  height: 40px;
+}
+
+header .bottom-header .menu {
+  width: 70%;
+}
+
+header .bottom-header .menu > a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 500;
+  color: #000000;
+}
+
+header .bottom-header .menu > a:hover {
+  color: #ff595e;
+}
+
+header .bottom-header .registration-button {
+  border: 0;
+  padding: 8px 20px;
+  background-color: #8ac926;
+  border-radius: 16px;
+  font-size: 19px;
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+header .bottom-header .registration-button:hover {
+  background-color: #ff595e;
+}
+
+.slider {
+  background-image: './images/';
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: top;
+}

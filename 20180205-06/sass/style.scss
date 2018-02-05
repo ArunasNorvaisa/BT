@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import "variables";
 
 * {
   padding: 0;
@@ -10,3 +9,12 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@import "variables";
+@import "./layouts/header";
+@import "layouts/content";

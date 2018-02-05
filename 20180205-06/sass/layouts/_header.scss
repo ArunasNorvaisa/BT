@@ -1,0 +1,61 @@
+header {
+  width: 100%;
+  background-color: rgba(225,225,225,0.5);
+  position: fixed;
+  top: 0;
+
+  .top-header {
+    text-align: right;
+    padding: 10px 0;
+
+    i {
+      margin-right: 10px;
+      font-size: 1.5em;
+      &last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .bottom-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .logo {
+      width: 30%;
+
+      img {
+        height: 40px;
+      }
+    }
+
+    .menu {
+      width: 70%;
+
+      >a {
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 19px;
+        font-weight: 500;
+        color: #000000;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+
+    .registration-button {
+      border: 0;
+      padding: 8px 20px;
+      background-color: $green;
+      border-radius: 16px;
+      font-size: 19px;
+      color: #ffffff;
+      margin-left: 15px;
+      &:hover {
+        background-color: $red;
+      }
+    }
+  }
+}
