@@ -3,6 +3,7 @@ header {
   background-color: rgba(225,225,225,0.5);
   position: fixed;
   top: 0;
+  z-index: 1;
 
   .top-header {
     text-align: right;
