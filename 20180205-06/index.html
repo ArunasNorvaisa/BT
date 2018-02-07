@@ -1,85 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Danticija UAB</title>
-    <link href="./css/style.css" rel="stylesheet" type="text/css" />
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Danticija UAB</title>
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-<header>
+
+  <header>
     <div class="container">
-        <div class="top-header">
+      <div class="top-header">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-snapchat-square"></i>
+      </div>
+      <div class="bottom-header">
+        <div class="logo">
+          <a href="#"><img src="./images/danticija.png" alt="Danticija logo"></a>
+        </div>
+        <div class="menu">
+          <a href="#paslaugos">Paslaugos</a>
+          <a href="#kainos">Kainos</a>
+          <a href="#paslaugos">Personalas</a>
+          <a href="#paslaugos">Kontaktai</a>
+          <button class="registration-button">Registracija</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="slider">
+      <div class="container">
+        <div class="registration-info-block">
+          <div class="title">Registracija pas specialistą</div>
+          <div class="short-description">
+            <p>Registruokis pas pasirinktą specialistą internetu!</p>
+          </div>
+          <div class="buttons">
+            <button class="btn registration">Registruotis</button>
+            <button class="btn">Plačiau</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="paslaugos" class="services">
+      <div class="container">
+        <div class="title">Paslaugos</div>
+        <div class="services-list">
+          <div class="service-item">
+            <div class="icon"><img src="./images/teethcleaning.png"> </div>
+            <div class="name">Balinimas</div>
+            <div class="price">nuo 50&euro;</div>
+          </div>
+          <div class="service-item">
+            <div class="icon"><img src="./images/teethcleaning.png"> </div>
+            <div class="name">Estetinis plombavimas</div>
+            <div class="price">nuo 25&euro;</div>
+          </div>
+          <div class="service-item">
+            <div class="icon"><img src="./images/teethcleaning.png"> </div>
+            <div class="name">Dantų gydymas</div>
+            <div class="price">nuo 20&euro;</div>
+          </div>
+          <div class="service-item">
+            <div class="icon"><img src="./images/teethcleaning.png"> </div>
+            <div class="name">Dantų protezavimas</div>
+            <div class="price">nuo <b>80&euro;</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="specialist" id="personalas">
+    <div class="container">
+      <div class="title">Specialistai</div>
+      <div class="specas">
+        <div class="pavarde">
+          <div class="paveikslas"><img class="hide-me" src="./images/dentist1.jpg" alt="dantistas">
+            <div class="hidden">
+              <div>
+                <p>Registruotis<br>
+                  <i class="fa">&#xf2bc;</i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="vardas">Danielė Pavardė</div>
+          <div class="specialybe">Burnos higienistė</div>
+          <div class="telefonas">+370 60000000</div>
+          <div class="tinklai">
             <i class="fab fa-facebook-square"></i>
             <i class="fab fa-twitter-square"></i>
             <i class="fab fa-snapchat-square"></i>
+          </div>
         </div>
-        <div class="bottom-header">
-            <div class="logo">
-                <a href="#"><img src="./images/danticija.png" alt="Danticija logo"></a>
+        <div class="pavarde">
+          <div class="paveikslas"><img class="hide-me" src="./images/doctor_PNG16035.png" alt="dantistas">
+            <div class="hidden">
+              <div>
+                <p>Registruotis<br>
+                  <i class="fa">&#xf2bc;</i>
+                </p>
+              </div>
             </div>
-            <div class="menu">
-                <a href="#paslaugos">Paslaugos</a>
-                <a href="#kainos">Kainos</a>
-                <a href="#paslaugos">Personalas</a>
-                <a href="#paslaugos">Kontaktai</a>
-                <button class="registration-button">Registracija</button>
-            </div>
+          </div>
+          <div class="vardas">Donata Pavardė</div>
+          <div class="specialybe">Odontologė</div>
+          <div class="telefonas">+370 60011111</div>
+          <div class="tinklai">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-snapchat-square"></i>
+          </div>
         </div>
-    </div>
-
-</header>
-
-<div class="content">
-    <div class="slider">
-        <div class="container">
-            <div class="registration-info-block">
-                <div class="title">Registracija pas specialista</div>
-                <div class="short-description">
-                    <p>Registacija pas specialista</p>
-                </div>
-                <div class="buttons">
-                    <button class="btn registration">Registruotis</button>
-                    <button class="btn">Placiau</button>
-                </div>
+        <div class="pavarde">
+          <div class="paveikslas"><img class="hide-me" src="./images/Innovative-Dental-Dentist-Moonee-Ponds-Female-Dentist-1.png" alt="dantistas">
+            <div class="hidden">
+              <div>
+                <p>Registruotis<br>
+                  <i class="fa">&#xf2bc;</i>
+                </p>
+              </div>
             </div>
+          </div>
+          <div class="vardas">Kristina Pavardė</div>
+          <div class="specialybe">Odontologė</div>
+          <div class="telefonas">+370 60022222</div>
+          <div class="tinklai">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-snapchat-square"></i>
+          </div>
         </div>
-    </div>
-    <div id="paslaugos" class="services">
-        <div class="container">
-            <div class="title">Paslaugos</div>
-            <div class="services-list">
-                <div class="service-item">
-                    <div class="icon"><img src="images/teethcleaning.png"> </div>
-                    <div class="name">Balinimas</div>
-                    <div class="price">nuo 50&euro;</div>
-                </div>
-                <div class="service-item">
-                    <div class="icon"><img src="images/teethcleaning.png"> </div>
-                    <div class="name">Balinimas</div>
-                    <div class="price">nuo 50&euro;</div>
+        <div class="pavarde">
+          <div class="paveikslas"><img class="hide-me" src="./images/dentist2.png" alt="dantistas">
+            <div class="hidden">
+              <div>
+                <p>Registruotis<br>
+                  <i class="fa">&#xf2bc;</i>
+                </p>
+              </div>
             </div>
-                <div class="service-item">
-                    <div class="icon"><img src="./images/teethcleaning.png"> </div>
-                    <div class="name">Balinimas</div>
-                    <div class="price">nuo 50&euro;</div>
-                </div>
-                <div class="service-item">
-                    <div class="icon"><img src="./images/teethcleaning.png"> </div>
-                    <div class="name">Balinimas</div>
-                    <div class="price">nuo <b>50&euro;</b></div>
-                </div>
-            </div>
+          </div>
+          <div class="vardas">Tomas Pavardė</div>
+          <div class="specialybe">Dantų technikas</div>
+          <div class="telefonas">+370 60033333</div>
+          <div class="tinklai">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-snapchat-square"></i>
+          </div>
         </div>
+      </div>
     </div>
-
-</div>
-
-<div class="specialistai" id="personalas">
-    <div class="container">
-        <div class="title">Specialistai</div>
-    </div>
-</div>
+  </div>
 
 </body>
+
 </html>

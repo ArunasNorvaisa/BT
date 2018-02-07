@@ -12,6 +12,7 @@ header {
     i {
       margin-right: 10px;
       font-size: 1.5em;
+
       &last-of-type {
         margin-right: 0;
       }
@@ -34,28 +35,30 @@ header {
     .menu {
       width: 70%;
 
-      >a {
+      > a {
         padding: 10px 20px;
         text-decoration: none;
         font-size: 19px;
         font-weight: 500;
         color: #000000;
+
         &:hover {
           color: $red;
         }
       }
-    }
 
-    .registration-button {
-      border: 0;
-      padding: 8px 20px;
-      background-color: $green;
-      border-radius: 16px;
-      font-size: 19px;
-      color: #ffffff;
-      margin-left: 15px;
-      &:hover {
-        background-color: $red;
+      .registration-button {
+        border: 0;
+        padding: 8px 20px;
+        background-color: $green;
+        border-radius: 16px;
+        font-size: 16px;
+        color: #ffffff;
+        margin-left: 15px;
+
+        &:hover {
+          background-color: $red;
+        }
       }
     }
   }
