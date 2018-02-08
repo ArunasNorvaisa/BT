@@ -1,22 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
+/* line 4, E:/bt/20180205-08/sass/style.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* line 10, E:/bt/20180205-08/sass/style.scss */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f5f5f5;
 }
 
+/* line 15, E:/bt/20180205-08/sass/style.scss */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   height: 100%;
 }
 
+/* line 1, E:/bt/20180205-08/sass/layouts/_header.scss */
 header {
   width: 100%;
   background-color: rgba(225, 225, 225, 0.5);
@@ -25,38 +29,46 @@ header {
   z-index: 1;
 }
 
+/* line 8, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .top-header {
   text-align: right;
   padding: 10px 0;
 }
 
+/* line 12, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .top-header i {
   margin-right: 10px;
   font-size: 1.5em;
 }
 
+/* line 16, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .top-header ilast-of-type {
   margin-right: 0;
 }
 
+/* line 22, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
+/* line 27, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header .logo {
   width: 30%;
 }
 
+/* line 30, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header .logo img {
   height: 40px;
 }
 
+/* line 35, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header .menu {
   width: 70%;
 }
 
+/* line 38, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header .menu > a {
   padding: 10px 20px;
   text-decoration: none;
@@ -65,10 +77,12 @@ header .bottom-header .menu > a {
   color: #000000;
 }
 
+/* line 45, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header .menu > a:hover {
   color: #ff595e;
 }
 
+/* line 50, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header .menu .registration-button {
   border: 0;
   padding: 8px 20px;
@@ -79,10 +93,12 @@ header .bottom-header .menu .registration-button {
   margin-left: 15px;
 }
 
+/* line 59, E:/bt/20180205-08/sass/layouts/_header.scss */
 header .bottom-header .menu .registration-button:hover {
   background-color: #ff595e;
 }
 
+/* line 1, E:/bt/20180205-08/sass/layouts/_content.scss */
 .title {
   font-size: 36px;
   font-weight: 700;
@@ -92,6 +108,7 @@ header .bottom-header .menu .registration-button:hover {
   width: 100%;
 }
 
+/* line 10, E:/bt/20180205-08/sass/layouts/_content.scss */
 .slider {
   background-image: url("../images/bigstock-Young-man-on-dental-check-up-107031422.jpg");
   background-attachment: scroll;
@@ -101,6 +118,7 @@ header .bottom-header .menu .registration-button:hover {
   height: 763px;
 }
 
+/* line 18, E:/bt/20180205-08/sass/layouts/_content.scss */
 .slider .registration-info-block {
   width: 40%;
   margin-left: 50px;
@@ -108,6 +126,7 @@ header .bottom-header .menu .registration-button:hover {
   position: relative;
 }
 
+/* line 24, E:/bt/20180205-08/sass/layouts/_content.scss */
 .slider .registration-info-block .title {
   color: #008be9;
   font-size: 43px;
@@ -116,11 +135,13 @@ header .bottom-header .menu .registration-button:hover {
   text-align: left;
 }
 
+/* line 32, E:/bt/20180205-08/sass/layouts/_content.scss */
 .slider .registration-info-block .short-description {
   font-size: 20px;
   margin-bottom: 30px;
 }
 
+/* line 38, E:/bt/20180205-08/sass/layouts/_content.scss */
 .slider .registration-info-block .buttons .btn {
   padding: 10px 25px;
   background-color: transparent;
@@ -131,22 +152,26 @@ header .bottom-header .menu .registration-button:hover {
   font-size: 18px;
 }
 
+/* line 47, E:/bt/20180205-08/sass/layouts/_content.scss */
 .slider .registration-info-block .buttons .btn:hover {
   background-color: #ff595e;
   color: #ffffff;
   border-color: #ff595e;
 }
 
+/* line 54, E:/bt/20180205-08/sass/layouts/_content.scss */
 .slider .registration-info-block .buttons .registration {
   background-color: #8ac926;
   color: #ffffff;
   margin-right: 15px;
 }
 
+/* line 63, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services {
   margin: 30px 0;
 }
 
+/* line 66, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services .services-list {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -155,6 +180,7 @@ header .bottom-header .menu .registration-button:hover {
   flex-wrap: wrap;
 }
 
+/* line 73, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services .services-list .service-item {
   background-color: #ffffff;
   padding: 30px;
@@ -163,14 +189,17 @@ header .bottom-header .menu .registration-button:hover {
   width: 22%;
 }
 
+/* line 80, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services .services-list .service-item .icon {
   text-align: center;
 }
 
+/* line 83, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services .services-list .service-item .icon img {
   height: 117px;
 }
 
+/* line 88, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services .services-list .service-item .name {
   font-weight: 800;
   font-size: 18px;
@@ -179,6 +208,7 @@ header .bottom-header .menu .registration-button:hover {
   min-height: 85px;
 }
 
+/* line 96, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services .services-list .service-item .price {
   color: #6a4c93;
   font-size: 20px;
@@ -187,18 +217,21 @@ header .bottom-header .menu .registration-button:hover {
   font-family: 'Berkshire Swash', cursive;
 }
 
+/* line 104, E:/bt/20180205-08/sass/layouts/_content.scss */
 .services .services-list .service-item:hover {
   -webkit-box-shadow: 1px 1px 18px 0 rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 18px 0 rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 18px 0 rgba(0, 0, 0, 0.75);
 }
 
+/* line 113, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist {
   background-color: #e5e9eb;
   margin: 30px 0;
   padding-bottom: 45px;
 }
 
+/* line 118, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist .specas {
   display: flex;
   justify-content: space-between;
@@ -206,10 +239,12 @@ header .bottom-header .menu .registration-button:hover {
   position: relative;
 }
 
+/* line 124, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist .specas .pavarde {
   text-align: left;
 }
 
+/* line 127, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist .specas .pavarde img {
   margin-top: 31px;
   height: 230px;
@@ -220,6 +255,7 @@ header .bottom-header .menu .registration-button:hover {
   box-shadow: 1px 1px 18px 0 rgba(0, 0, 0, 0.75);
 }
 
+/* line 137, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist .specas .pavarde .vardas {
   margin: 30px 0 4px 0;
   font-size: 21px;
@@ -228,20 +264,24 @@ header .bottom-header .menu .registration-button:hover {
   font-family: 'Berkshire Swash', cursive;
 }
 
+/* line 145, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist .specas .pavarde .specialybe {
   color: #008be9;
   font-family: 'Berkshire Swash', cursive;
 }
 
+/* line 150, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist .specas .pavarde .telefonas {
   font-family: 'Berkshire Swash', cursive;
 }
 
+/* line 154, E:/bt/20180205-08/sass/layouts/_content.scss */
 .specialist .specas .pavarde .tinklai {
   color: #008be9;
   font-size: 1.5em;
 }
 
+/* line 162, E:/bt/20180205-08/sass/layouts/_content.scss */
 .hidden {
   display: none;
   position: relative;
@@ -252,14 +292,17 @@ header .bottom-header .menu .registration-button:hover {
   margin-bottom: 65px;
 }
 
+/* line 172, E:/bt/20180205-08/sass/layouts/_content.scss */
 .paveikslas:hover .hidden {
   display: block;
 }
 
+/* line 176, E:/bt/20180205-08/sass/layouts/_content.scss */
 .paveikslas:hover img.hide-me {
   display: none;
 }
 
+/* line 180, E:/bt/20180205-08/sass/layouts/_content.scss */
 .hidden div {
   display: table;
   width: 230px;
@@ -273,6 +316,7 @@ header .bottom-header .menu .registration-button:hover {
   left: 0;
 }
 
+/* line 193, E:/bt/20180205-08/sass/layouts/_content.scss */
 .hidden div p {
   display: table-cell;
   width: 100%;
@@ -283,24 +327,97 @@ header .bottom-header .menu .registration-button:hover {
   font-size: 24px;
 }
 
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+/* line 3, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .kontaktai, footer f-3 p .kontaktai {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 25px;
 }
 
+/* line 10, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+/* line 14, E:/bt/20180205-08/sass/layouts/_footer.scss */
 footer .container .f-1 {
   text-align: center;
 }
 
+/* line 17, E:/bt/20180205-08/sass/layouts/_footer.scss */
 footer .container .f-1 .logotipas img {
-  height: 40px;
+  height: 30px;
 }
 
+/* line 20, E:/bt/20180205-08/sass/layouts/_footer.scss */
 footer .container .f-1 .geriausi img {
   height: 80px;
 }
 
+/* line 24, E:/bt/20180205-08/sass/layouts/_footer.scss */
 footer .container .f-1 .geriausi {
   padding: 25px 0;
 }
+
+/* line 29, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 33, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-2 .adresas {
+  font-size: 15px;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+
+/* line 38, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-2 .adresas p {
+  padding-bottom: 12px;
+}
+
+/* line 43, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-2 .tinklai {
+  font-size: 2em;
+  color: #555555;
+}
+
+/* line 47, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-2 .tinklai i {
+  margin-right: 5px;
+}
+
+/* line 55, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-3 input, footer .container .f-3 button, footer .container .f-3 textarea {
+  font-family: 'Aref Ruqaa', serif;
+  height: 25px;
+  width: 280px;
+  border: 2px solid grey;
+  border-radius: 4px;
+  color: #555555;
+  background-color: #f5f5f5;
+  padding-left: 5px;
+}
+
+/* line 66, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-3 textarea {
+  height: 140px;
+  padding-top: 5px;
+}
+
+/* line 71, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-3 p {
+  padding: 2px;
+}
+
+/* line 75, E:/bt/20180205-08/sass/layouts/_footer.scss */
+footer .container .f-3 button {
+  border-radius: 10px;
+  margin-bottom: 10em;
+  height: 35px;
+}
+
+/*# sourceMappingURL=../css/style.map */
