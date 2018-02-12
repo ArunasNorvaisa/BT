@@ -1,0 +1,59 @@
+article {
+
+  .container {
+    padding-top: 160px;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  .a-1 {
+    background-color: #002266;
+
+    .s-a-1 {
+      color: #fff;
+      font-weight: 400;
+      font-family: 'Wire One', sans-serif;
+      text-align: center;
+      margin: 0 15px;
+
+      h1 {
+        font-size: 65px;
+        padding-bottom: 25px;
+        border-bottom: 2px solid red;
+        margin-top: 18vh;
+      }
+
+      h2 {
+        font-size: 45px;
+        padding-bottom: 25px;
+
+        span {
+          color: red;
+        }
+      }
+
+      h2:first-of-type {
+        margin-top: 25px;
+      }
+
+      h3 {
+        font-size: 32px;
+        padding-bottom: 29px;
+      }
+
+      p a {
+        background-color: red;
+        text-decoration: none;
+        color: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        font-size: 22px;
+        font-family: monospace;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+    }
+  }
+}

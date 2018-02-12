@@ -2,12 +2,14 @@ header {
 
   .container {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto auto;
     background-color: #fff;
     font-variant: all-small-caps;
     padding: 20px;
     width: 100%;
     position: fixed;
+    font-family: Arial, sans-serif;
+    z-index: 1;
   }
 
   .logo {
@@ -36,6 +38,29 @@ header {
     padding: 10px;
     text-decoration: none;
     font-size: 17px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: #000;
+      height: 2px;
+      transform: translateY(-4px);
+      transition-property: transform;
+      transition-duration: 0.8s;
+      transition-timing-function: ease-out;
+    }
+
+    &:hover:before {
+      transform: translateY(0px);
+    }
   }
 
   .active {
@@ -63,13 +88,35 @@ header {
     color: #000;
     padding: 10px;
     background-color: inherit;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: #000;
+      height: 2px;
+      transform: translateY(-4px);
+      transition-property: transform;
+      transition-duration: 0.8s;
+      transition-timing-function: ease-out;
+    }
+
+    &:hover:before {
+      transform: translateY(0px);
+    }
   }
 
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 260px;
     z-index: 1;
   }
 
@@ -87,13 +134,8 @@ header {
     display: block;
   }
 
-  .dropbtn:hover,
-  .topnav a:hover {
-    border-top: 2px solid black;
-  }
-
   .dropdown-content a:last-child {
-    border-bottom: 2px solid red;
+    border-bottom: 3px solid red;
   }
 
   .dropdown-content a:hover {
@@ -101,11 +143,16 @@ header {
     color: #fff;
     border-bottom: 0.5px #ddd solid;
   }
-  @media screen and (max-width: 900px) {
+
+  @media screen and (max-width: 1000px) {
     .dropdown .dropbtn,
     .logo,
     .topnav a {
       display: none;
+    }
+
+    .container {
+      grid-template-columns: auto;
     }
 
     .topnav a.icon {

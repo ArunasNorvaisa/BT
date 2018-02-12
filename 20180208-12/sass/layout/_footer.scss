@@ -1,0 +1,108 @@
+footer {
+  width: 100%;
+
+  .f-1 {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 3fr;
+    text-align: left;
+    width: 100%;
+    background-color: #404040;
+    color: #fff;
+    padding: 20px;
+
+    .f-1-1,
+    .f-1-2,
+    .f-1-3,
+    .f-1-4 {
+      padding: 25px;
+    }
+
+    .attack,
+    .company,
+    .solutions {
+      border-bottom: 1.5px solid #fff;
+      padding-bottom: 11px;
+    }
+
+    ul {
+      padding-top: 25px;
+    }
+
+    li {
+      text-decoration: none;
+      padding: 5px 0;
+      text-decoration: none;
+
+      &:hover {
+        color: blue;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        color: #7588D6;
+      }
+    }
+  }
+
+  .f-1-4 {
+    i {
+      color: #111;
+      &:hover {
+        border-top: 2px solid red;
+        color: #000;
+      }
+    }
+
+    .tinklai {
+      width: 115px;
+    }
+
+    .tinklai:hover {
+      transform: translateY(-2px);
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+    }
+
+    input,
+    select {
+      width: 100%;
+      background-color: #777;
+      color: #fff;
+      height: 31px;
+      border-radius: 7px;
+    }
+
+    p {
+      padding: 5px 0;
+    }
+
+    span {
+      color: red;
+    }
+
+    button {
+      background-color: red;
+      color: #fff;
+      width: 45%;
+      height: 45px;
+      text-transform: uppercase;
+      border-radius: 15px;
+      border: 0 solid red;
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .f-1 {
+      grid-template-columns: 1fr;
+    }
+  }
+}

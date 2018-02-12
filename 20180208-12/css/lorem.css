@@ -5,6 +5,7 @@
  */
 /* FONT PATH
  * -------------------------- */
+@import url("https://fonts.googleapis.com/css?family=Wire+One");
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
@@ -3757,7 +3758,7 @@
   clip: auto;
 }
 
-/* line 4, E:/bt/20180208-12/sass/lorem.scss */
+/* line 5, E:/bt/20180208-12/sass/lorem.scss */
 html, body {
   width: 100%;
   height: 100%;
@@ -3765,31 +3766,33 @@ html, body {
   font-family: Arial, sans-serif;
 }
 
-/* line 11, E:/bt/20180208-12/sass/lorem.scss */
+/* line 12, E:/bt/20180208-12/sass/lorem.scss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* line 17, E:/bt/20180208-12/sass/lorem.scss */
+/* line 18, E:/bt/20180208-12/sass/lorem.scss */
 .container {
-  max-width: auto;
+  max-width: 1900px;
   margin: 0 auto;
 }
 
 /* line 3, E:/bt/20180208-12/sass/layout/_header.scss */
 header .container {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto auto;
   background-color: #fff;
   font-variant: all-small-caps;
   padding: 20px;
   width: 100%;
   position: fixed;
+  font-family: Arial, sans-serif;
+  z-index: 1;
 }
 
-/* line 13, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 15, E:/bt/20180208-12/sass/layout/_header.scss */
 header .logo {
   font-size: 42px;
   font-style: normal;
@@ -3802,12 +3805,12 @@ header .logo {
   border-radius: 17px;
 }
 
-/* line 25, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 27, E:/bt/20180208-12/sass/layout/_header.scss */
 header .topnav {
   overflow: hidden;
 }
 
-/* line 29, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 31, E:/bt/20180208-12/sass/layout/_header.scss */
 header .topnav a {
   float: left;
   display: block;
@@ -3818,27 +3821,52 @@ header .topnav a {
   padding: 10px;
   text-decoration: none;
   font-size: 17px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
-/* line 41, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 46, E:/bt/20180208-12/sass/layout/_header.scss */
+header .topnav a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  height: 2px;
+  transform: translateY(-4px);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+}
+
+/* line 61, E:/bt/20180208-12/sass/layout/_header.scss */
+header .topnav a:hover:before {
+  transform: translateY(0px);
+}
+
+/* line 66, E:/bt/20180208-12/sass/layout/_header.scss */
 header .active {
   background-color: #fff;
   color: white;
   border-top: 2px solid black;
 }
 
-/* line 47, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 72, E:/bt/20180208-12/sass/layout/_header.scss */
 header .topnav .icon {
   display: none;
 }
 
-/* line 51, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 76, E:/bt/20180208-12/sass/layout/_header.scss */
 header .dropdown {
   float: left;
   overflow: hidden;
 }
 
-/* line 56, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 81, E:/bt/20180208-12/sass/layout/_header.scss */
 header .dropdown .dropbtn {
   font-size: 17px;
   font-variant: all-small-caps;
@@ -3849,18 +3877,42 @@ header .dropdown .dropbtn {
   color: #000;
   padding: 10px;
   background-color: inherit;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
-/* line 68, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 96, E:/bt/20180208-12/sass/layout/_header.scss */
+header .dropdown .dropbtn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  height: 2px;
+  transform: translateY(-4px);
+  transition-property: transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-out;
+}
+
+/* line 111, E:/bt/20180208-12/sass/layout/_header.scss */
+header .dropdown .dropbtn:hover:before {
+  transform: translateY(0px);
+}
+
+/* line 116, E:/bt/20180208-12/sass/layout/_header.scss */
 header .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 260px;
   z-index: 1;
 }
 
-/* line 76, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 123, E:/bt/20180208-12/sass/layout/_header.scss */
 header .dropdown-content a {
   display: block;
   float: none;
@@ -3871,70 +3923,262 @@ header .dropdown-content a {
   text-align: left;
 }
 
-/* line 86, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 133, E:/bt/20180208-12/sass/layout/_header.scss */
 header .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* line 90, E:/bt/20180208-12/sass/layout/_header.scss */
-header .dropbtn:hover,
-header .topnav a:hover {
-  border-top: 2px solid black;
-}
-
-/* line 95, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 137, E:/bt/20180208-12/sass/layout/_header.scss */
 header .dropdown-content a:last-child {
-  border-bottom: 2px solid red;
+  border-bottom: 3px solid red;
 }
 
-/* line 99, E:/bt/20180208-12/sass/layout/_header.scss */
+/* line 141, E:/bt/20180208-12/sass/layout/_header.scss */
 header .dropdown-content a:hover {
   background-color: #000;
   color: #fff;
   border-bottom: 0.5px #ddd solid;
 }
 
-@media screen and (max-width: 900px) {
-  /* line 105, E:/bt/20180208-12/sass/layout/_header.scss */
+@media screen and (max-width: 1000px) {
+  /* line 148, E:/bt/20180208-12/sass/layout/_header.scss */
   header .dropdown .dropbtn,
   header .logo,
   header .topnav a {
     display: none;
   }
-  /* line 111, E:/bt/20180208-12/sass/layout/_header.scss */
+  /* line 154, E:/bt/20180208-12/sass/layout/_header.scss */
+  header .container {
+    grid-template-columns: auto;
+  }
+  /* line 158, E:/bt/20180208-12/sass/layout/_header.scss */
   header .topnav a.icon {
     float: right;
     display: block;
   }
-  /* line 116, E:/bt/20180208-12/sass/layout/_header.scss */
+  /* line 163, E:/bt/20180208-12/sass/layout/_header.scss */
   header .topnav.responsive {
     position: relative;
   }
-  /* line 120, E:/bt/20180208-12/sass/layout/_header.scss */
+  /* line 167, E:/bt/20180208-12/sass/layout/_header.scss */
   header .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  /* line 126, E:/bt/20180208-12/sass/layout/_header.scss */
+  /* line 173, E:/bt/20180208-12/sass/layout/_header.scss */
   header .topnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
-  /* line 132, E:/bt/20180208-12/sass/layout/_header.scss */
+  /* line 179, E:/bt/20180208-12/sass/layout/_header.scss */
   header .topnav.responsive .dropdown {
     float: none;
   }
-  /* line 136, E:/bt/20180208-12/sass/layout/_header.scss */
+  /* line 183, E:/bt/20180208-12/sass/layout/_header.scss */
   header .topnav.responsive .dropdown-content {
     position: relative;
   }
-  /* line 140, E:/bt/20180208-12/sass/layout/_header.scss */
+  /* line 187, E:/bt/20180208-12/sass/layout/_header.scss */
   header .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
     text-align: left;
+  }
+}
+
+/* line 3, E:/bt/20180208-12/sass/layout/_content.scss */
+article .container {
+  padding-top: 160px;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* line 11, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 {
+  background-color: #002266;
+}
+
+/* line 14, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 .s-a-1 {
+  color: #fff;
+  font-weight: 400;
+  font-family: 'Wire One', sans-serif;
+  text-align: center;
+  margin: 0 15px;
+}
+
+/* line 21, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 .s-a-1 h1 {
+  font-size: 65px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid red;
+  margin-top: 18vh;
+}
+
+/* line 28, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 .s-a-1 h2 {
+  font-size: 45px;
+  padding-bottom: 25px;
+}
+
+/* line 32, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 .s-a-1 h2 span {
+  color: red;
+}
+
+/* line 37, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 .s-a-1 h2:first-of-type {
+  margin-top: 25px;
+}
+
+/* line 41, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 .s-a-1 h3 {
+  font-size: 32px;
+  padding-bottom: 29px;
+}
+
+/* line 46, E:/bt/20180208-12/sass/layout/_content.scss */
+article .a-1 .s-a-1 p a {
+  background-color: red;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-family: monospace;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* line 1, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer {
+  width: 100%;
+}
+
+/* line 4, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 3fr;
+  text-align: left;
+  width: 100%;
+  background-color: #404040;
+  color: #fff;
+  padding: 20px;
+}
+
+/* line 13, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 .f-1-1,
+footer .f-1 .f-1-2,
+footer .f-1 .f-1-3,
+footer .f-1 .f-1-4 {
+  padding: 25px;
+}
+
+/* line 20, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 .attack,
+footer .f-1 .company,
+footer .f-1 .solutions {
+  border-bottom: 1.5px solid #fff;
+  padding-bottom: 11px;
+}
+
+/* line 27, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 ul {
+  padding-top: 25px;
+}
+
+/* line 31, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 li {
+  text-decoration: none;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+/* line 36, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 li:hover {
+  color: blue;
+}
+
+/* line 41, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 45, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1 a:hover {
+  color: #7588D6;
+}
+
+/* line 52, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 i {
+  color: #111;
+}
+
+/* line 54, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 i:hover {
+  border-top: 2px solid red;
+  color: #000;
+}
+
+/* line 60, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 .tinklai {
+  width: 115px;
+}
+
+/* line 64, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 .tinklai:hover {
+  transform: translateY(-2px);
+}
+
+/* line 68, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+/* line 75, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 input,
+footer .f-1-4 select {
+  width: 100%;
+  background-color: #777;
+  color: #fff;
+  height: 31px;
+  border-radius: 7px;
+}
+
+/* line 84, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 p {
+  padding: 5px 0;
+}
+
+/* line 88, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 span {
+  color: red;
+}
+
+/* line 92, E:/bt/20180208-12/sass/layout/_footer.scss */
+footer .f-1-4 button {
+  background-color: red;
+  color: #fff;
+  width: 45%;
+  height: 45px;
+  text-transform: uppercase;
+  border-radius: 15px;
+  border: 0 solid red;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  /* line 104, E:/bt/20180208-12/sass/layout/_footer.scss */
+  footer .f-1 {
+    grid-template-columns: 1fr;
   }
 }
 

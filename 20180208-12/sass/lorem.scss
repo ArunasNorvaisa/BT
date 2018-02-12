@@ -1,5 +1,6 @@
 //Import Font-Awesome
 @import "vendors/font-awesome/font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Wire+One');
 
 html, body{
   width: 100%;
@@ -15,11 +16,10 @@ html, body{
 }
 
 .container {
-  max-width: auto;
+  max-width: 1900px;
   margin: 0 auto;
 }
 
-@import "variables";
 @import "layout/header";
 @import "layout/content";
 @import "layout/footer";
