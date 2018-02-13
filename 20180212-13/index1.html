@@ -1,31 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>JS uzduotis - 2</title>
-    <style>
-        #skaicius {
-           height: 300px;
-            width: 300px;
-            background-color: red;
-            line-height: 300px;
-            text-align: center;
-            color: #fff;
-            cursor: pointer;
-            font-size: 25px;
-            border-radius: 50%;
-        }
-    </style>
-</head>
-<body>
-<div id="skaicius">1</div>
 
-<script>
-   document.querySelector('#skaicius').addEventListener('click', function () {
-       var value = document.querySelector('#skaicius').innerText;
-       var newValue = parseInt(value) * 2;
-       document.querySelector('#skaicius').innerText = newValue;
-   })
-</script>
+<head>
+  <meta charset="UTF-8">
+  <title>JS užduotis - 2</title>
+  <style>
+    #skaicius,
+    #skaicius1,
+    #skaicius2,
+    #skaicius3,
+    #skaicius4,
+    #numesti {
+      height: 300px;
+      width: 300px;
+      line-height: 300px;
+      text-align: center;
+      color: #fff;
+      cursor: pointer;
+      font-size: 25px;
+      border-radius: 50%;
+    }
+
+    #skaicius,
+    #skaicius1,
+    #skaicius3 {
+      background-color: red;
+    }
+
+    #skaicius2,
+    #skaicius4 {
+      background-color: green;
+    }
+
+    #numesti {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1>Daugyba iš 2:</h1>
+    <div id="skaicius">1</div><br>
+    <h1>Suma var + 10:</h1>
+    <div>
+      <div id="skaicius1">0</div>
+      <div id="skaicius2">0</div>
+    </div>
+    <h1>Suma var + 1 bei rezultatų numetimas:</h1>
+    <div>
+      <div id="skaicius3">0</div>
+      <div id="skaicius4">0</div>
+      <div id="numesti">Numesti</div>
+    </div>
+  </center>
+
+  <script>
+    // Dauginti iš 2
+    document.querySelector('#skaicius').addEventListener('click', function() {
+      var value = document.querySelector('#skaicius').innerText;
+      var newValue = parseInt(value) * 2;
+      document.querySelector('#skaicius').innerText = newValue;
+    })
+    // Pridėti 10
+    document.querySelector('#skaicius1').addEventListener('click', function() {
+      var value = document.querySelector('#skaicius1').innerText;
+      var newValue = parseInt(value) + 10;
+      document.querySelector('#skaicius1').innerText = newValue;
+    })
+    document.querySelector('#skaicius2').addEventListener('click', function() {
+      var value = document.querySelector('#skaicius2').innerText;
+      var newValue = parseInt(value) + 10;
+      document.querySelector('#skaicius2').innerText = newValue;
+    })
+    // Pridėti 1 bei numesti rezultatus
+    document.querySelector('#skaicius3').addEventListener('click', function() {
+      var value = document.querySelector('#skaicius3').innerText;
+      var newValue = parseInt(value) + 1;
+      document.querySelector('#skaicius3').innerText = newValue;
+    })
+    document.querySelector('#skaicius4').addEventListener('click', function() {
+      var value = document.querySelector('#skaicius4').innerText;
+      var newValue = parseInt(value) + 1;
+      document.querySelector('#skaicius4').innerText = newValue;
+    })
+    document.querySelector('#numesti').addEventListener('click', function() {
+      document.querySelector('#skaicius3').innerText = 0;
+      document.querySelector('#skaicius4').innerText = 0;
+    })
+  </script>
+
 </body>
+
 </html>
