@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS uzduotis - 2</title>
+    <style>
+        #skaicius {
+           height: 300px;
+            width: 300px;
+            background-color: red;
+            line-height: 300px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            font-size: 25px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="skaicius">1</div>
+
+<script>
+   document.querySelector('#skaicius').addEventListener('click', function () {
+       var value = document.querySelector('#skaicius').innerText;
+       var newValue = parseInt(value) * 2;
+       document.querySelector('#skaicius').innerText = newValue;
+   })
+</script>
+</body>
+</html>
