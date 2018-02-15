@@ -1,14 +1,6 @@
-<!--Panaudodami ciklus:
-1) Atspausdinkite pradinius mašinų duomenis.
-2) Apskaičiuokite vidutinį automobilio greitį kilometrais per valandą ir jei jis viršija 60 km/h, atspausdinkite jį kartu su automobilio valstybiniais numeriais.
-
-Pradiniai duomenys:
-var auto = [
-['ZBG 123', 98450, 3645],
-['ABC 345', 1500, 91],
-['LRS 222', 49506, 3250],
-['LRS 222', 0, 0]
-];-->
+<!-- Atvaizduoti lentelėje pateiktus pradinius duomenis. Šalia kiekvienos prekės turi būti
+checkbox, ant kurio paspaudus tūrėtų atsinaujinti prekių krepšelio kaina.
+Naudoti Bootstrap. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +13,7 @@ var auto = [
 
 <div class="container">
     <div class="mobile-table"></div>
-    <div id="suma">Suma: </div>
+    <div style="font-size: 3.5vw; color:red">Jūsų pirkinių suma: <span id="suma"></span>&euro;</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
