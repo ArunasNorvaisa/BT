@@ -16,6 +16,9 @@ var prekes = [
   ['Sony', 'F8331 BLUE', 'Sony Xperia XZ F8331 Blue, 5.2 ", IPS LCD, 1080 x 1920 pixels, Qualcomm Snapdragon, 820, Internal RAM 3 GB, 32 GB, microSD, Single SIM, Nano-SIM, 3G, 4G, Main camera 23 MP, Second camera 13 MP, Android, 6.0.1, 2900 mAh, Warranty 24 month(s)', 385.39, 'http://www.skytech.lt/images/xsmall/84/1471184.png'],
 ];
 
+/* MANO KODAS:
+   ===========
+
 var headerPrekes = ['Gamintojas', 'Modelis', 'Aprašymas', 'Kaina', 'Nuotrauka', 'Jamam?'];
 createTable(headerPrekes, prekes);
 
@@ -57,4 +60,54 @@ function sumuok() {
     }
   }
   document.getElementById('suma').innerHTML = total;
+}
+
+*/
+
+// DĖSTYTOJO KODAS:
+
+var headerPrekes = ['Gamintojas', 'Modelis', 'Aprašymas', 'Kaina', 'Nuotrauka', 'Jamam?'];
+createTable(headerPrekes, prekes);
+
+function createTable(header, data) {
+    var table = '';
+    table += '<table class="table table-bordered table-hover">';
+    table += '<thead>';
+    table += '<tr>';
+    for (var o = 0; o < header.length; o++) {
+        table += '<th>' + header[o] + '</th>';
+    }
+    table += '</tr>';
+    table += '</thead>';
+    table += '<tbody>';
+    for (var i = 0; i < data.length; i++) {
+        table += '<tr>';
+        for (var j = 0; j < (data[i].length); j++) {
+            switch (j){
+                case 4:
+                    table += '<td><img src="' + data[i][j] + '" /></td>';
+                    table += '<td><input id="' + i + '" type="checkbox" onclick="sumuok(this)" /></td>';
+                    break;
+                default:
+                    table += '<td>' + data[i][j] + '</td>';
+            }
+        }
+        table += '</tr>';
+    }
+    table += '</tbody>';
+    table += '</table>';
+
+    document.querySelector('.mobile-table').innerHTML = table;
+}
+
+function sumuok(checkbox) {
+    var total = parseFloat(document.querySelector('#suma').innerText);
+    var itemIndex = checkbox.getAttribute("id");
+    var itemPrice = parseFloat(prekes[itemIndex][3]);
+    if(checkbox.checked){
+        total += itemPrice;
+    }else{
+        total -= itemPrice;
+    }
+    document.querySelector('#suma').innerText = total.toFixed(2);
 }
