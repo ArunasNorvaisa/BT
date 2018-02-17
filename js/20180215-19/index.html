@@ -1,8 +1,9 @@
-<!-- ar figuros = [
+<!--
+  var figuros = [
     {ilgis: 2, plotis: 5, aukstis: 3},
     {ilgis: 3, plotis: 2, aukstis: 6},
     {ilgis: 1, plotis: 5, aukstis: 5}
-    ];
+  ];
 
 HTML puslapyje turi būti du mygtukai su pavadinimais: "Pradiniai duomenys" ir "Rasti max".
 
@@ -18,32 +19,42 @@ didžiausias, atspausdinkite kitokia spalva (spausdindami panaudokite css klasę
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>JS Užduotis - 3</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th class="text-center">Ilgis</th>
-                    <th class="text-center">Turis</th>
-                    <th class="text-center">Aukstis</th>
-                </tr>
-                </thead>
-            </table>
-        </div>
 
-    <div class="col-md-4">
-        <button type="button" class="btn btn-primary" id="primary-data">Pradiniai duomenys</button>
-        <button type="button" class="btn btn-secondary" id="find-max">Rasti max</button>
+<head>
+  <meta charset="UTF-8">
+  <title>JS Užduotis - 3</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .geltona {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="text-center" style="font-family:Arial">Ilgis</th>
+              <th class="text-center" style="font-family:Arial">Plotis</th>
+              <th class="text-center" style="font-family:Arial">Aukštis</th>
+              <th class="text-center" style="font-family:Arial">Tūris</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <br>
+    <div class="col-md-12">
+      <button type="button" class="btn btn-primary" id="primary-data">Pradiniai duomenys</button>
+      <button type="button" class="btn btn-warning" id="find-max" onclick="rastiMax()">Rasti max</button>
     </div>
-    </div>
+  </div>
 </div>
-<script src="./script/script.js" rel="script", type="text/javascript"></script>
+<script src="./script/test.js" rel="script" , type="text/javascript"></script>
 </body>
+
 </html>
