@@ -24,7 +24,7 @@ var figuros = [];
 // Užpildom objektą 'figuros' atsitiktiniais skaičiais
 var y = 0;
 var z1, z2, z3;
-while (y < 9) {              // '9' šiuo atveju - eilučių/masyvų kiekis objekto 'figuros' viduje
+while (y < 9) { // '9' šiuo atveju - eilučių/masyvų kiekis objekto 'figuros' viduje
   var naujas = {};  
   z1 = Math.ceil(Math.random() * 15);
   naujas['ilgis'] = z1;
@@ -54,11 +54,11 @@ function printData(data) {
   for (var i = 0; i < data.length; i++) {
     var tableBodyRow = document.createElement('tr');
 
-// Skaičiuojame tūrį
-    // var turis = data[i].aukstis * data[i].plotis * data[i].ilgis;
-// Modifikuojam figuros objektą, pridėdami kiekv. figūros tūrį
-    // data[i].turis = turis;
-
+/* Skaičiuojame tūrį
+    var turis = data[i].aukstis * data[i].plotis * data[i].ilgis;
+Modifikuojam figuros objektą, pridėdami kiekv. figūros tūrį
+    data[i].turis = turis;
+*/
     var td = document.createElement("td")
     td.appendChild(document.createTextNode(data[i].ilgis));
     td.classList.add("text-center");
