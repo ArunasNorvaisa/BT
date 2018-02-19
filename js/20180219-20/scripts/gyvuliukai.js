@@ -26,12 +26,8 @@ document.querySelector('#rasti').addEventListener('click', function() {
 
 function miau(data) {
     var kaRasti = document.getElementById("ka-sako").value;
-    // var rezultatas = data.indexOf(kaRasti);
     if (kaRasti == 0) { // tikrinam ar vartotojas kažką suvedė
         document.getElementById("atsakymas").innerHTML = "Prašome įvesti paieškomą garsą";
-    }
-    if (kaRasti == -1) { // tikrinam ar vartotojas suvedė gyvulio garsą, ar šiaip maivosi :)
-        document.getElementById("atsakymas").innerHTML = "Taip nesako joks gyvuliukas";
     }
     else {
         var rezultatas = "";
