@@ -17,12 +17,21 @@ var gyvuliai = [{
     {
         gyvulys:"arkliukas",
         garsas:"Ihaha"
+    },
+    {
+        gyvulys:"gaidžiukas",
+        garsas:"Kaka-rie-kū"
+    },
+    {
+        gyvulys:"BAISUS LOKYS!!!",
+        garsas:"Grrr"
     }
 ];
 
-document.querySelector('#rasti').addEventListener('click', function() {
+/* document.querySelector('#rasti').addEventListener('click', function() {
     miau(gyvuliai);
 })
+*/
 
 function miau(data) {
     var kaRasti = document.getElementById("ka-sako").value;
@@ -37,8 +46,6 @@ function miau(data) {
                 rezultatas = data[i].gyvulys;
             }
         }
-        console.log(rezultatas);
-        document.getElementById("atsakymas").innerHTML = kaRasti + " sako " + rezultatas;
     }
+    document.getElementById("atsakymas").innerText = kaRasti + " sako " + rezultatas;
 }
-
