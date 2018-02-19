@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS užduotis - 4, temperatūrų konvertacija</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">&deg;C</span>
+        </div>
+        <input id="C" oninput="cToFToK()" type="text" class="form-control" placeholder="Temperatūra Celcijaus laipsniais" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">&deg;F</span>
+        </div>
+        <input id="F" oninput="fToCToK()" type="text" class="form-control" placeholder="Temperatūra Fahrenheito laipsniais" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-2">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">&deg;K</span>
+        </div>
+        <input id="K" oninput="kToCToF()" type="text" class="form-control" placeholder="Temperatūra Kelvino laipsniais" aria-describedby="basic-addon1">
+    </div>
+</div>
+<script scr="./scripts/temperaturos.js"></script>
+</body>
+</html>
