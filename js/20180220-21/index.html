@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Užduotis Nr. 5 - Modalinis langas - įvestis į lentelę</title>
+    <link href="./css/modalinis.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h2>Užduotis:</h2>
+    <hr>
+    <p>Sukurti modalinį langą kuriame butų 4 įvedimo laukai Vardas, Pavardė,
+        telefono nr. ir el. paštas <br>
+        Modaliniame lange turi būti 2 mygtukai Atšaukti ir Pridėti. <br>
+        Paspaudos mygtuką "Atšaukti" turi užsidaryti modalinis langas ir
+        išsivalyti įvesti formoje duomenys. <br>
+        "Pridėti" mygtuko paspaudimu programa privalo patikrinti ar visi laukai
+        įvesti. Jeigu visi laukai yra užpildyti, įvesti duomenys turi
+        atsivaizduoti puslapyje esančioje lentelėje. <br>
+        Po sėkmingo atvaizdavimo modalinis langas turi užsidaryti ir išsivalyti
+        formoje esantys įvesties laukai. <br>
+        Modaliniam langui naudoti Plain CSS ir javascript. Inputams ir
+        lentelės stiliui naudoti Bootstrap. <hr></p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Pridėti eilutę
+    </button> <p></p>
+    <table class="table table-bordered">
+        <thead>
+            <th>Vardas</th>
+            <th>Pavardė</th>
+            <th>El. paštas</th>
+            <th>Tel. Nr.</th>
+        </thead>
+    </table>
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Suveskite duomenis:</h2>
+                <span class="close">&times;</span> <hr>
+
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <input id="klientoVardas" type="text" class="form-control" placeholder="Įveskite savo vardą" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <input id="klientoPavarde" type="text" class="form-control" placeholder="Įveskite savo pavardę" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <input id="klientoPastas" type="text" class="form-control" placeholder="Įveskite savo el. paštą" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <input id="klientoTelefonas" type="text" class="form-control" placeholder="Įveskite savo telefoną" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="button btn-primary" type="submit">Suvesti</button>
+                <button class="button btn-danger" type="reset">Ištrinti</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="./scripts/modalinis.js"></script>
+</body>
+</html>
