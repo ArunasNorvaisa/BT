@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>JS užduotis - 4, temperatūrų konvertacija</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
+
 <body>
-<div class="container">
-    <div class="input-group mb-2">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">&deg;C</span>
+    <div class="container">
+        <h1>Užduotis</h1>
+        <p></p>
+        <p>Sukurkite puslapį, kuriame būtų trys input laukeliai, į kuriuos bus įvedamos temperatūros reikšmės: kelvinais, farenheitais ir celcijais
+            <br> Padarykite, kad įvedant reikšmę į vieną laukelį, kituose laukeliuose būtų atvaizduojama konvertuota reikšmė.
+            <br> Pvz įvedant skaičius į kelvinų laukelį reikšmė su kiekvienu mygtuko paspaudimu atsinaujintu ir farenheito ir celcijaus laukeliuose.
+            <br> Patarimas: siūlau apsirašyti funkcijas celciusToFarenheit(celciusValue), farenheitToKelvin(farenheitValue) ir t.t.
+            <br> Naudoti įvykį oninput.</p>
+        <p></p>
+        <hr>
+        <div class="input-group mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">&deg;C</span>
+            </div>
+            <input id="tC" oninput="tKonvertuotojas(this.id, this.value)" onchange="tKonvertuotojas(this.id, this.value)" type="number" class="form-control" placeholder="Temperatūra Celcijaus laipsniais" aria-describedby="basic-addon1">
         </div>
-        <input id="C" oninput="cToFToK()" type="text" class="form-control" placeholder="Temperatūra Celcijaus laipsniais" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group mb-2">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">&deg;F</span>
+        <hr>
+        <div class="input-group mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">&deg;F</span>
+            </div>
+            <input id="tF" oninput="tKonvertuotojas(this.id, this.value)" onchange="tKonvertuotojas(this.id, this.value)" type="number" class="form-control" placeholder="Temperatūra Farenheito laipsniais" aria-describedby="basic-addon1">
         </div>
-        <input id="F" oninput="fToCToK()" type="text" class="form-control" placeholder="Temperatūra Fahrenheito laipsniais" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group mb-2">
-        <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">&deg;K</span>
+        <hr>
+        <div class="input-group mb-1">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">&deg;K</span>
+            </div>
+            <input id="tK" oninput="tKonvertuotojas(this.id, this.value)" onchange="tKonvertuotojas(this.id, this.value)" type="number" class="form-control" placeholder="Temperatūra Kelvino laipsniais" aria-describedby="basic-addon1">
         </div>
-        <input id="K" oninput="kToCToF()" type="text" class="form-control" placeholder="Temperatūra Kelvino laipsniais" aria-describedby="basic-addon1">
+        <p></p>
+        <hr>
+        <p>Laisvalaikiu padarytas puslapis vaikui <a href="http://arunas.org/014/gyvuliukai.html" target="_blank">"Kas pasakė Miau?"</a></p>
     </div>
-</div>
-<script scr="./scripts/temperaturos.js"></script>
+    <script src="./scripts/temperaturos.js">
+    </script>
 </body>
+
 </html>
