@@ -1,4 +1,5 @@
 var modal = document.getElementById('langas');
+var seselis = document.getElementById('pilkas');
 var btn = document.getElementById("pridetiEilute");
 var span = document.getElementsByClassName("close")[0];
 var istrinti = document.getElementById("forma");
@@ -6,10 +7,12 @@ var ivesti = document.getElementById("ivestiDuomenis");
 
 btn.onclick = function() {
   modal.style.display = "block";
+  seselis.style.display = "block";
 }
 
 span.onclick = function() {
   modal.style.display = "none";
+  seselis.style.display = "none";
 }
 
 istrinti.onclick = function() {
@@ -44,5 +47,6 @@ function eilute() {
 
   tableBody.appendChild(tableBodyRow);
   modal.style.display = "none";
+  seselis.style.display = "none";
   istrinti.reset();
 }
