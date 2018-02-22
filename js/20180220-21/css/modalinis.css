@@ -1,23 +1,35 @@
 .modalinis {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: auto;
-    width: auto;
-    height: auto;
-    margin: auto;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10vw;
+  width: 80vw;
+  height: auto;
+  align-content: center;
+}
+
+.modalinis {
+  position: absolute;
+  padding: 20px;
+  width: auto;
+  height: auto;
+}
+
+.modal-header {
+  padding: 20px;
+  width: 100%;
 }
 
 .close {
-    color: #688688;
-    float: right;
-    font-weight: 900;
-    font-size: 36px;
+  color: #388388;
+  float: right;
+  font-weight: 900;
+  font-size: 36px;
 }
 
 .close:hover {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
