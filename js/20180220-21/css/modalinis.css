@@ -1,0 +1,23 @@
+.modalinis {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: auto;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.close {
+    color: #688688;
+    float: right;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

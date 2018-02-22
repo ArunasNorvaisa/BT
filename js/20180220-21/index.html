@@ -22,9 +22,10 @@
         formoje esantys įvesties laukai. <br>
         Modaliniam langui naudoti Plain CSS ir javascript. Inputams ir
         lentelės stiliui naudoti Bootstrap. <hr></p>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    <button id="pridetiEilute" type="button" class="btn btn-primary"
+            data-toggle="modal" data-target="#myModal">
         Pridėti eilutę
-    </button> <p></p>
+    </button>
     <table class="table table-bordered">
         <thead>
             <th>Vardas</th>
@@ -32,16 +33,17 @@
             <th>El. paštas</th>
             <th>Tel. Nr.</th>
         </thead>
+        <tbody></tbody>
     </table>
 
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
+    <div id="myModal" class="modalinis">
         <div class="modal-content">
             <div class="modal-header">
                 <h2>Suveskite duomenis:</h2>
                 <span class="close">&times;</span> <hr>
 
             </div>
+            <form id="forma">
             <div class="modal-body">
                 <div class="input-group mb-3">
                     <input id="klientoVardas" type="text" class="form-control" placeholder="Įveskite savo vardą" aria-label="Username" aria-describedby="basic-addon1">
@@ -50,16 +52,17 @@
                     <input id="klientoPavarde" type="text" class="form-control" placeholder="Įveskite savo pavardę" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
-                    <input id="klientoPastas" type="text" class="form-control" placeholder="Įveskite savo el. paštą" aria-label="Username" aria-describedby="basic-addon1">
+                    <input id="klientoPastas" type="email" class="form-control" placeholder="Įveskite savo el. paštą" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
                 <div class="input-group mb-3">
-                    <input id="klientoTelefonas" type="text" class="form-control" placeholder="Įveskite savo telefoną" aria-label="Username" aria-describedby="basic-addon1">
+                    <input id="klientoTelefonas" type="tel" class="form-control" placeholder="Įveskite savo telefoną" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="button btn-primary" type="submit">Suvesti</button>
+                <button onclick="eilute(); return false;" id="ivestiDuomenis" class="button btn-primary"" type="submit">Suvesti</button>
                 <button class="button btn-danger" type="reset">Ištrinti</button>
             </div>
+            </form>
         </div>
     </div>
 
