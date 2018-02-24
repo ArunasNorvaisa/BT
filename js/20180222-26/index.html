@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>JS Užduotis - 6; duomenų filtravimas</title>
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous"/>
-    <link href="./css/filtras.css" rel="stylesheet" type="text/css"/>
+  <meta charset="UTF-8">
+  <title>JS Užduotis - 6; duomenų filtravimas</title>
+  <link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous" />
+  <link href="./css/filtras.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-<div class="container">
+  <div class="container">
     <h2>Užduotis:</h2>
     <hr>
     <code>
@@ -31,29 +33,30 @@
     </code>
     <hr>
     <h3>Suveskite automobilio duomenis:</h3>
-    <form class="form-inline forma">
-        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Valst. Nr.">
-        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Nuvažiuotas kelias, km">
-        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Sugaištas laikas, val.">
-        <button type="submit" class="btn btn-primary mb-2">Įvesti</button>
+    <form class="form-inline" id="forma">
+      <input type="text" id="valstNr" class="form-control mb-2 mr-sm-2" placeholder="Valst. Nr." required />
+      <input type="text" id="keliasKm" class="form-control mb-2 mr-sm-2" placeholder="Nuvažiuotas kelias, km" required />
+      <input type="text" id="sugaistasLaikas" class="form-control mb-2 mr-sm-2" placeholder="Sugaištas laikas, val." required />
+      <button id="pridetiEilute" class="btn btn-primary mb-2" onclick="return eilute()">Įvesti</button>
     </form>
 
-    <table class="lenta table table-bordered">
-        <thead>
+    <table id="lenta" class="table table-bordered">
+      <thead>
         <tr>
-            <th>Automobilio Nr.</th>
-            <th>Nuvažiuotas kelias, m</th>
-            <th>Laikas, s</th>
-            <th>Greitis, km/h</th>
+          <th>Automobilio Nr.</th>
+          <th>Nuvažiuotas kelias, m</th>
+          <th>Laikas, s</th>
+          <th>Greitis, km/h</th>
         </tr>
-        </thead>
-        <tbody></tbody>
+      </thead>
+      <tbody></tbody>
     </table>
-    <form class="form-inline forma">
-        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Didž. greitis">
-        <button type="submit" class="btn btn-primary mb-2">Filtruoti</button>
+    <form class="form-inline" id="forma1">
+      <input id="maxGreitis" type="text" class="form-control mb-2 mr-sm-2" placeholder="Didž. greitis" />
+      <button onclick="return filtras()" id="filtruoti" class="btn btn-primary mb-2">Filtruoti</button>
     </form>
-</div>
-<script src="./script/filtras.js" type="text/javascript" rel="script"></script>
+  </div>
+  <script src="./script/filtras.js" type="text/javascript" rel="script"></script>
 </body>
+
 </html>

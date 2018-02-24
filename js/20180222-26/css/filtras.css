@@ -1,4 +1,10 @@
-.lenta, h2, .forma {
-    width: 100%;
-    padding-top: 10px;
+#lenta, h2, #forma {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.geltona {
+  border: 5px solid red;
+  background-color: orange;
+  font-weight: 900;
 }
