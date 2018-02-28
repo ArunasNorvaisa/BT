@@ -27,6 +27,10 @@ code {
   border-radius: 7px;
   cursor: pointer;
   color: #fff;
-  font-variant: small-caps;
+  font-variant: all-petite-caps;
   padding: 7px 25px;
+}
+
+#lenta1, #lenta2, #lenta3, #lenta4 {
+  display: none;
 }

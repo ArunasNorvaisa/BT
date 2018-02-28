@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    $(function() {
+        $("#inputData").datetimepicker();
+    });
   $("#h3").click(function(){ // slepiam/rodom užduoties aprašymą
       $("code").toggle();
   });
@@ -8,5 +11,4 @@ $(document).ready(function(){
         var xxx = this.name;
         return xxx;
     });
-    console.log(xxx);
 });
