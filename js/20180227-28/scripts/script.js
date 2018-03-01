@@ -12,9 +12,14 @@ $(document).ready(function() {
     $('#regLangas').modal(); // atidarom modalą
     var targetId = $(this).attr('data-lentelesId'); // sekame kuris REGISTRUOTIS mygtukas paspaustas
     $('#'+targetId).show(); // nustojame slėpti atitinkamą lentelę
-    $("button[name='mygtas']").attr({
-      data_lentelesId: targetId
+    $("button[name='mygtas']").attr("data-lentelesId", targetId); // suteikiame REGISTRUOTIS mygtukui atitinkamą atributą
+    var targetLentele = $("button[name='mygtas']").attr("data-lentelesId");
+
+    $("button[name='mygtas']").click(function() {
+        console.log(targetLentele);
+        var table = $('#'+targetLentele).children();
+        table.append("<tr><td>" + $('#inputVardas').val() + "</td><td>" + $('#inputPavarde').val() + "</td><td>" + $('#inputNumeris').val() + "</td><td>" + $('#inputPastas').val() + "</td><td>" + $('#inputRenginys').val() + "</td><td>" + $('#inputSalis').val() + "</td><td>" + $('#inputKomentarai').val() + "</td></tr>");
+        console.log(table);
     })
-    console.log($("button[name='mygtas']").attr());
   });
 });
