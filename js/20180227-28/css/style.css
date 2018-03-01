@@ -11,6 +11,10 @@ code {
   color: #222;
 }
 
+#inputSalis, #inputRenginys {
+  height: 32px;
+}
+
 .pilkas, .virsus {
   display: inline-block;
   color: #444;
