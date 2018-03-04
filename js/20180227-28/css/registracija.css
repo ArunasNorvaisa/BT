@@ -1,0 +1,40 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #ccc;
+}
+
+code {
+  display: none;
+  color: #258;
+}
+
+#inputSalis, #inputRenginys {
+  height: 32px;
+}
+
+.pilkas, .virsus {
+  display: inline-block;
+  color: #444;
+}
+
+.pirmas {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  padding: 15px;
+  border-radius: 7px;
+}
+
+.button {
+  border-radius: 7px;
+  cursor: pointer;
+  color: #fff;
+  font-variant: all-petite-caps;
+  padding: 7px 25px;
+}
+
+#lenta1, #lenta2, #lenta3, #lenta4 {
+  display: none;
+}
