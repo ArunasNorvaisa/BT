@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $("textarea").val(""); // išvalom laukelius (buvo kažkoks bug'as, TEXTAREA netuščias)
+
   $("#inputData").datetimepicker({ // datetimepicker
     locale: 'lt',
     viewMode: 'decades',
@@ -24,7 +26,7 @@ $(document).ready(function() {
   $("button[name='mygtukas']").click(function() { // f-ja pridėti eilutę prie lentelės
     var targetId = $(this).attr('data-lentelesId'); // išsiaiškinam kurią lentelę pildysim
     var lenta = $('#' + targetId);
-    var lLangelis, lEilute;
+    var lentelesLangelis, lentelesEilute;
     var eilute = [];
 
     $(lenta).show(); // nustojame slėpti atitinkamą lentelę
@@ -38,14 +40,13 @@ $(document).ready(function() {
       $('#inputRenginys').val(),
       $('#inputSalis').val()
     );
-    lEilute = $('<tr>'); // kuriame eilutę
+    lentelesEilute = $('<tr>'); // kuriame eilutę
     $.each(eilute, function(i) {
-      lLangelis = $('<td>').text(eilute[i]);
-      lEilute.append(lLangelis);
+      lentelesLangelis = $('<td>').text(eilute[i]);
+      lentelesEilute.append(lentelesLangelis);
     });
-    $(lenta).append(lEilute);
-    // Paskutiniame eilutės langelyje įterpiamas HTMLas su mygtuku
-    $(lenta).find('tr').last().append("<td><button type='button' class='btn btn-primary commentaras' data-container='body' data-toggle='popover' data-placement='left' data-content='" + $('#inputKomentarai').val() + "'>Komentaras</button></td>");
+    $(lentelesEilute).append("<td><button type='button' class='btn btn-primary commentaras' data-container='body' data-toggle='popover' data-placement='left' data-content='" + $('#inputKomentarai').val() + "'>Komentaras</button></td>");
+    $(lenta).append(lentelesEilute);
 
     /* SENAS KODAS, NEBENAUDOJAMAS DĖL SAUGUMO
                 // pridedam eilutę:
@@ -61,9 +62,7 @@ $(document).ready(function() {
               );
     */
 
-    $('.commentaras').popover({
-      trigger: 'focus'
-    }); // Rodome popover
+    $('.commentaras').popover({trigger: 'focus'}); // Rodome popover
     // nuimame nuo modalinio/mėlyno REGISTRUOTIS mygtuko atitinkamą atributą:
     $("button[name='mygtukas']").removeAttr("data-lentelesId");
     $("input").val(""); // išvalom modalo laukelius
