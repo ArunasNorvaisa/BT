@@ -1,15 +1,13 @@
 $(document).ready(function() {
 
-  $("textarea").val(""); // išvalom laukelius (buvo kažkoks bug'as, TEXTAREA netuščias)
-
   $("#inputData").datetimepicker({ // datetimepicker
     locale: 'lt',
-    viewMode: 'decades',
+    viewMode: 'years',
     format: 'YYYY-MM-DD',
     defaultDate: '2000-03-05',
     dayViewHeaderFormat: 'YYYY MMMM',
     maxDate: '2000-03-05',
-    minDate: '1900-01-01',
+    minDate: '1900-01-01'
   });
 
   $("#h3").click(function() { // slepiam/rodom užduoties aprašymą
@@ -17,6 +15,8 @@ $(document).ready(function() {
   });
 
   $("button[name^='mygtas']").click(function() { // žalio REGISTRUOTIS mygtuko paspaudimas
+    $("textarea").val(""); // išvalom komentarų laukelį (buvo kažkoks bug'as, TEXTAREA netuščias)
+    $("input").val(""); // išvalom modalo laukelius
     $('#regLangas').modal(); // atidarom modalą
     var targetId = $(this).attr('data-lentelesId'); // sekame kuris iš 4 mygtukų paspaustas
     // suteikiame modaliniam/mėlynam REGISTRUOTIS mygtukui atitinkamą atributą:
@@ -26,7 +26,7 @@ $(document).ready(function() {
   $("button[name='mygtukas']").click(function() { // f-ja pridėti eilutę prie lentelės
     var targetId = $(this).attr('data-lentelesId'); // išsiaiškinam kurią lentelę pildysim
     var lenta = $('#' + targetId);
-    var lentelesLangelis, lentelesEilute;
+    var lentelesLangelis, lentelesEilute, i;
     var eilute = [];
 
     $(lenta).show(); // nustojame slėpti atitinkamą lentelę
@@ -65,8 +65,6 @@ $(document).ready(function() {
     $('.commentaras').popover({trigger: 'focus'}); // Rodome popover
     // nuimame nuo modalinio/mėlyno REGISTRUOTIS mygtuko atitinkamą atributą:
     $("button[name='mygtukas']").removeAttr("data-lentelesId");
-    $("input").val(""); // išvalom modalo laukelius
-    $("textarea").val(""); // išvalom modalo laukelius
     $('#regLangas').modal("hide"); // uždarom modalą
   });
 })
