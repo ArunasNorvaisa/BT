@@ -29,7 +29,9 @@ $(document).ready(function() {
     var lentelesLangelis, lentelesEilute, i;
     var eilute = [];
 
-    $(lenta).show(); // nustojame slėpti atitinkamą lentelę
+    // tikrinam ar lentelė turi galvą ir, jei taip, nukertam ją:
+    var thead = $(lenta).find('thead');
+    if (thead != null) {thead.remove();}
 
     eilute.push( // kuriam masyvą su būsimos eilutės duomenimis
       $('#inputVardas').val(),
@@ -45,8 +47,11 @@ $(document).ready(function() {
       lentelesLangelis = $('<td>').text(eilute[i]);
       lentelesEilute.append(lentelesLangelis);
     });
+    // Pridedame komentarų mygtą eilutės paskutiniame langelyje:
     $(lentelesEilute).append("<td><button type='button' class='btn btn-primary commentaras' data-container='body' data-toggle='popover' data-placement='left' data-content='" + $('#inputKomentarai').val() + "'>Komentaras</button></td>");
-    $(lenta).append(lentelesEilute);
+    $(lenta).append(lentelesEilute); // prie lentelės pridedame eilutę
+    // lentelės pradžioje pridedam viršūnelę:
+    $(lenta).prepend('<thead><tr><th>Vardas</th><th>Pavardė</th><th>Tel. numeris</th><th>El. paštas</th><th>Data</th><th>Renginys</th><th>Šalis</th><th>Komentaras</th></tr></thead>')
 
     /* SENAS KODAS, NEBENAUDOJAMAS DĖL SAUGUMO
                 // pridedam eilutę:

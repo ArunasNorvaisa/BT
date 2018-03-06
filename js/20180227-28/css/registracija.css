@@ -60,7 +60,3 @@ tr th:last-of-type {
   font-variant: all-petite-caps;
   padding: 7px 25px;
 }
-
-#lenta1, #lenta2, #lenta3, #lenta4 {
-  display: none;
-}
