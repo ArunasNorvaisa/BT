@@ -31,6 +31,7 @@ $(document).ready(function() {
 
     // tikrinam ar lentelė turi galvą ir, jei taip, nukertam ją:
     var thead = $(lenta).find('thead');
+    console.log(thead);
     if (thead != null) {thead.remove();}
 
     eilute.push( // kuriam masyvą su būsimos eilutės duomenimis
