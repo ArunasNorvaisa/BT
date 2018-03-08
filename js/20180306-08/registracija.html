@@ -186,7 +186,7 @@
 
     </div>
   </div>
-  <!-- Modalinis langas -->
+  <!-- Registracijos modalinis langas -->
   <div class="modal fade" id="regLangas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -260,7 +260,42 @@
       </div>
     </div>
   </div>
+
+  <!-- Trynimo modalo pradžia -->
+  <div class="modal fade" id="eilutesTrynimoModalas" tabindex="-1" role="dialog" aria-labelledby="eilutesTrynimoModalasLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h3 class="modal-title" id="eilutesTrynimoModalasLabel">Dėmesio!</h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                   <h4> Ar tikrai TRINTI? Duomenų atstatyti nebebus įmanoma.</h4>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" id="taipTrinti">Taip</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">NE!!!</button>
+              </div>
+          </div>
+      </div>
+ </div>
+
   <script src="./scripts/registracija.js" type="text/javascript"></script>
+  <script>
+  $("button.trinti").on('click', function (e) {
+      e.preventDefault();
+      var id = $(this).closest('tr').data('id');
+  console.log(this);
+  console.log(id);
+      $('#eilutesTrynimoModalas').data('id', id).modal('show');
+  });
+
+  $("#taipTrinti").click(function() {
+      var id = $('#eilutesTrynimoModalas').data('id');
+      $('[data-id=' + id + ']').remove();
+      $('#eilutesTrynimoModalas').modal('hide');
+  });
+  </script>
 </body>
 
 </html>

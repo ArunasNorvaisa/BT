@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/locale/lt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+</head>
+<body>
+ 
+<table>
+    <thead>
+        <tr>
+            <th>opapa</th>
+            <th>opapa</th>
+            <th>opapa</th>
+            <th>opapa</th>
+            <th>opapa</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="trinti" data-id="1">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>
+                <button class="btn btn-primary trinti" href=""><i class="far fa-trash-alt"></i></button>
+            </td>
+        </tr>
+        <tr class="trinti" data-id="2">
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>
+                <button class="btn btn-primary trinti" href=""><i class="far fa-trash-alt"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  <div class="modal fade" id="eilutesTrynimoModalas" tabindex="-1" role="dialog" aria-labelledby="eilutesTrynimoModalasLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+<h3 class="modal-title" id="eilutesTrynimoModalasLabel">Demesio!</h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                   <h4> Ar tikrai TRINTI? Duomenu atstatyti nebebus imanoma.</h4>
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" id="taipTrinti">Taip</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">NE!!!</button>
+              </div>
+          </div>
+      </div>
+ </div>
+
+ 
+<script>
+$('button.trinti').on('click', function (e) {
+    e.preventDefault();
+    var id = $(this).closest('tr').data('id');
+console.log(this);
+console.log(id);
+    $('#eilutesTrynimoModalas').data('id', id).modal('show');
+});
+
+$('#taipTrinti').click(function () {
+    var id = $('#eilutesTrynimoModalas').data('id');
+console.log(this);
+console.log(id);
+    $('[data-id=' + id + ']').remove();
+    $('#eilutesTrynimoModalas').modal('hide');
+});
+</script>
+ 
+</body>
+</html>

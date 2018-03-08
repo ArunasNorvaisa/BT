@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  var eilutesId = 1;
+
   $("#inputData").datetimepicker({ // datetimepicker
     locale: 'lt',
     viewMode: 'years',
@@ -42,7 +44,8 @@ $(document).ready(function() {
       $('#inputRenginys').val(),
       $('#inputSalis').val()
     );
-    lentelesEilute = $('<tr>'); // kuriame eilutę
+    lentelesEilute = $('<tr class="trinti" data-id=' + eilutesId + '>'); // kuriame eilutę
+    eilutesId ++;
     $.each(eilute, function(i) {
       lentelesLangelis = $('<td>').text(eilute[i]);
       lentelesEilute.append(lentelesLangelis);
@@ -78,7 +81,9 @@ $(document).ready(function() {
   });
 
 // TRINTI mygtuko funkcija:
-$("table").on('click', '.trinti', function(){
+
+/* // Trynimas be modalinio lango:
+$("table").on('click', 'button.trinti', function(){
   $(this).closest('tr').fadeOut(1000, function () {$(this).closest('tr').remove();});
-  });
+});*/
 })
