@@ -31,7 +31,6 @@ $(document).ready(function() {
 
     // tikrinam ar lentelė turi galvą ir, jei taip, nukertam ją:
     var thead = $(lenta).find('thead');
-    console.log(thead);
     if (thead != null) {thead.remove();}
 
     eilute.push( // kuriam masyvą su būsimos eilutės duomenimis
@@ -48,11 +47,15 @@ $(document).ready(function() {
       lentelesLangelis = $('<td>').text(eilute[i]);
       lentelesEilute.append(lentelesLangelis);
     });
-    // Pridedame komentarų mygtą eilutės paskutiniame langelyje:
+    // Pridedame komentarų mygtą:
     $(lentelesEilute).append("<td><button type='button' class='btn btn-primary commentaras' data-container='body' data-toggle='popover' data-placement='left' data-content='" + $('#inputKomentarai').val() + "'>Komentaras</button></td>");
+    // Pridedame trynimo mygtą:
+    $(lentelesEilute).append('<td><button type="button" class="btn btn-danger trinti" data-lentelesId="' + targetId +'"><i class="far fa-trash-alt"></i></button></td>');
+    // Pridedame redagavimo mygtą eilutės paskutiniame langelyje:
+    $(lentelesEilute).append('<td><button type="button" class="btn btn-secondary redaguoti"><i class="far fa-edit"></i></button></td>');
     $(lenta).append(lentelesEilute); // prie lentelės pridedame eilutę
     // lentelės pradžioje pridedam viršūnelę:
-    $(lenta).prepend('<thead><tr><th>Vardas</th><th>Pavardė</th><th>Tel. numeris</th><th>El. paštas</th><th>Data</th><th>Renginys</th><th>Šalis</th><th>Komentaras</th></tr></thead>')
+    $(lenta).prepend('<thead><tr><th>Vardas</th><th>Pavardė</th><th>Tel. numeris</th><th>El. paštas</th><th>Data</th><th>Renginys</th><th>Šalis</th><th>Komentaras</th><th></th><th></th></tr></thead>');
 
     /* SENAS KODAS, NEBENAUDOJAMAS DĖL SAUGUMO
                 // pridedam eilutę:
@@ -72,5 +75,10 @@ $(document).ready(function() {
     // nuimame nuo modalinio/mėlyno REGISTRUOTIS mygtuko atitinkamą atributą:
     $("button[name='mygtukas']").removeAttr("data-lentelesId");
     $('#regLangas').modal("hide"); // uždarom modalą
+  });
+
+// TRINTI mygtuko funkcija:
+$("table").on('click', '.trinti', function(){
+  $(this).closest('tr').fadeOut(1000, function () {$(this).closest('tr').remove();});
   });
 })
