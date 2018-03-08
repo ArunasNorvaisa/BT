@@ -16,18 +16,18 @@ $(document).ready(function() {
     $("code").toggle();
   });
 
-  $("button[name^='mygtas']").click(function() { // žalio REGISTRUOTIS mygtuko paspaudimas
+  $("button[name='mygtas']").click(function() { // žalio REGISTRUOTIS mygtuko paspaudimas
     $("textarea").val(""); // išvalom komentarų laukelį (buvo kažkoks bug'as, TEXTAREA netuščias)
     $("input").val(""); // išvalom modalo laukelius
     $('#regLangas').modal(); // atidarom modalą
-    var targetId = $(this).attr('data-lentelesId'); // sekame kuris iš 4 mygtukų paspaustas
+    // var targetId = $(this).attr('data-lentelesId'); // sekame kuris iš 4 mygtukų paspaustas
     // suteikiame modaliniam/mėlynam REGISTRUOTIS mygtukui atitinkamą atributą:
-    $("button[name='mygtukas']").attr("data-lentelesId", targetId);
+    // $("button[name='mygtukas']").attr("data-lentelesId", targetId);
   });
 
   $("button[name='mygtukas']").click(function() { // f-ja pridėti eilutę prie lentelės
-    var targetId = $(this).attr('data-lentelesId'); // išsiaiškinam kurią lentelę pildysim
-    var lenta = $('#' + targetId);
+    // var targetId = $(this).attr('data-lentelesId'); // išsiaiškinam kurią lentelę pildysim
+    var lenta = $("#lenta1");
     var lentelesLangelis, lentelesEilute, i;
     var eilute = [];
 
@@ -44,7 +44,7 @@ $(document).ready(function() {
       $('#inputRenginys').val(),
       $('#inputSalis').val()
     );
-    lentelesEilute = $('<tr class="trinti" data-id=' + eilutesId + '>'); // kuriame eilutę
+    lentelesEilute = $('<tr class="trinti" data-id="' + eilutesId + '">'); // kuriame eilutę
     eilutesId ++;
     $.each(eilute, function(i) {
       lentelesLangelis = $('<td>').text(eilute[i]);
@@ -53,7 +53,7 @@ $(document).ready(function() {
     // Pridedame komentarų mygtą:
     $(lentelesEilute).append("<td><button type='button' class='btn btn-primary commentaras' data-container='body' data-toggle='popover' data-placement='left' data-content='" + $('#inputKomentarai').val() + "'>Komentaras</button></td>");
     // Pridedame trynimo mygtą:
-    $(lentelesEilute).append('<td><button type="button" class="btn btn-danger trinti" data-lentelesId="' + targetId +'"><i class="far fa-trash-alt"></i></button></td>');
+    $(lentelesEilute).append('<td><button type="button" class="btn btn-danger trinti" data-lentelesId="lenta1" href=""><i class="far fa-trash-alt"></i></button></td>');
     // Pridedame redagavimo mygtą eilutės paskutiniame langelyje:
     $(lentelesEilute).append('<td><button type="button" class="btn btn-secondary redaguoti"><i class="far fa-edit"></i></button></td>');
     $(lenta).append(lentelesEilute); // prie lentelės pridedame eilutę
@@ -73,14 +73,28 @@ $(document).ready(function() {
                 "<td><button type='button' class='btn btn-secondary commentaras' data-container='body' data-toggle='popover' data-placement='left' data-content='" + $('#inputKomentarai').val() + "'>Komentaras</button></td></tr>"
               );
     */
-
-    $('.commentaras').popover({trigger: 'focus'}); // Rodome popover
+    $('.commentaras').popover({trigger: 'hover'}); // Rodome popover
     // nuimame nuo modalinio/mėlyno REGISTRUOTIS mygtuko atitinkamą atributą:
-    $("button[name='mygtukas']").removeAttr("data-lentelesId");
+    // $("button[name='mygtukas']").removeAttr("data-lentelesId");
     $('#regLangas').modal("hide"); // uždarom modalą
   });
 
 // TRINTI mygtuko funkcija:
+
+    $("body").on('click', 'button.trinti', function (e) {
+        e.preventDefault();
+        var id = $(this).closest('tr').data('id');
+        console.log(id);
+        $('#eilutesTrynimoModalas').data("id", id).modal();
+    });
+
+    $('body').on('click', "#taipTrinti", function() {
+      // var trintukas = $('eilutesTrynimoModalas');
+        var id = $('eilutesTrynimoModalas').attr('data-id');
+        console.log(id);
+        $('[data-id=' + id + ']').remove();
+        $('eilutesTrynimoModalas').modal('hide');
+    });
 
 /* // Trynimas be modalinio lango:
 $("table").on('click', 'button.trinti', function(){

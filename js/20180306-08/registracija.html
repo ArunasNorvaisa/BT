@@ -81,15 +81,15 @@
             <td class="pirmas">Lietuva</td>
             <td class="pirmas">Adutiškis</td>
             <td class="pirmas">
-              <button class="button btn-success" name="mygtas1" data-lentelesId="lenta1">Registruotis</button>
+              <button class="button btn-success" name="mygtas">Registruotis</button>
             </td>
           </tr>
         </tbody>
       </table>
 
-      <table class="table table-bordered" id="lenta1">
+<!--      <table class="table table-bordered" id="lenta1">
         <tbody></tbody>
-      </table>
+      </table>-->
 
       <table class="table">
         <thead>
@@ -112,15 +112,15 @@
             <td class="pirmas">JK</td>
             <td class="pirmas">Nottingham</td>
             <td class="pirmas">
-              <button class="button btn-success" name="mygtas2" data-lentelesId="lenta2">Registruotis</button>
+              <button class="button btn-success" name="mygtas">Registruotis</button>
             </td>
           </tr>
         </tbody>
       </table>
 
-      <table class="table table-bordered" id="lenta2">
+<!--      <table class="table table-bordered" id="lenta2">
         <tbody></tbody>
-      </table>
+      </table>-->
 
       <table class="table">
         <thead>
@@ -143,15 +143,15 @@
             <td class="pirmas">Kinija</td>
             <td class="pirmas">Shanghai</td>
             <td class="pirmas">
-              <button class="button btn-success" name="mygtas3" data-lentelesId="lenta3">Registruotis</button>
+              <button class="button btn-success" name="mygtas">Registruotis</button>
             </td>
           </tr>
         </tbody>
       </table>
 
-      <table class="table table-bordered" id="lenta3">
+<!--      <table class="table table-bordered" id="lenta3">
         <tbody></tbody>
-      </table>
+      </table>-->
 
       <table class="table">
         <thead>
@@ -174,13 +174,13 @@
             <td class="pirmas">Naujoji Gvinėja</td>
             <td class="pirmas">Palė</td>
             <td class="pirmas">
-              <button class="button btn-success" name="mygtas4" data-lentelesId="lenta4">Registruotis</button>
+              <button class="button btn-success" name="mygtas">Registruotis</button>
             </td>
           </tr>
         </tbody>
       </table>
 
-      <table class="table table-bordered" id="lenta4">
+      <table class="table table-bordered" id="lenta1">
         <tbody></tbody>
       </table>
 
@@ -281,21 +281,6 @@
  </div>
 
   <script src="./scripts/registracija.js" type="text/javascript"></script>
-  <script>
-  $("button.trinti").on('click', function (e) {
-      e.preventDefault();
-      var id = $(this).closest('tr').data('id');
-  console.log(this);
-  console.log(id);
-      $('#eilutesTrynimoModalas').data('id', id).modal('show');
-  });
 
-  $("#taipTrinti").click(function() {
-      var id = $('#eilutesTrynimoModalas').data('id');
-      $('[data-id=' + id + ']').remove();
-      $('#eilutesTrynimoModalas').modal('hide');
-  });
-  </script>
 </body>
-
 </html>
