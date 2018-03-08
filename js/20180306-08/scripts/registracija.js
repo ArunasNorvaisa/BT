@@ -83,15 +83,20 @@ $(document).ready(function() {
         e.preventDefault();
         var id = $(this).closest('tr').data('id');
         console.log(id);
-        $('#eilutesTrynimoModalas').data("id", id).modal();
+        // var targetId = $(this).attr('data-lentelesId'); // sekame kuris iš 4 mygtukų paspaustas
+        // suteikiame modaliniam/mėlynam REGISTRUOTIS mygtukui atitinkamą atributą:
+        $("#eilutesTrynimoModalas").data("id", id);
+        $('#eilutesTrynimoModalas').modal();
+        // $('#eilutesTrynimoModalas').data("id", id).modal();
     });
 
-    $('body').on('click', "#taipTrinti", function() {
+    $('body').on('click', "#taipTrinti", function(e) {
+      e.preventDefault();
       // var trintukas = $('eilutesTrynimoModalas');
-        var id = $('eilutesTrynimoModalas').attr('data-id');
+        var id = $('#eilutesTrynimoModalas').data('id');
         console.log(id);
         $('[data-id=' + id + ']').remove();
-        $('eilutesTrynimoModalas').modal('hide');
+        $('#eilutesTrynimoModalas').modal('hide');
     });
 
 /* // Trynimas be modalinio lango:
