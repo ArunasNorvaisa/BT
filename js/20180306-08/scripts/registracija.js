@@ -74,8 +74,6 @@ $(document).ready(function() {
               );
     */
     $('.commentaras').popover({trigger: 'hover'}); // Rodome popover
-    // nuimame nuo modalinio/mėlyno REGISTRUOTIS mygtuko atitinkamą atributą:
-    // $("button[name='mygtukas']").removeAttr("data-lentelesId");
     $('#regLangas').modal("hide"); // uždarom modalą
   });
 
