@@ -100,14 +100,10 @@ $(document).ready(function() {
     e.preventDefault();
     var id = $('#eilutesTrynimoModalas').data('id');
     $('[data-id=' + id + ']').remove();
-
-    // bandom ištrinti lentelės galvą, kai nebėra eilučių, bet nieko nesigauna:
+    // Trinam pildomos lentelės galvą, kai nebėra eilučių:
     var thead = $("#lenta1").find('thead');
     var tbody = $("#lenta1").find('td');
-    // console.log(tbody);
-    // console.log(tbody.length);
-    // console.log(thead);
-    if (tbody.length = 0) {
+    if (tbody.length == 0) {
       thead.remove();
     }
 
