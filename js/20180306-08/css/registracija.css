@@ -37,7 +37,7 @@ tr th {
   font-weight: 500;
 }
 
-#inputSalis, #inputRenginys {
+#inputSalis, #inputRenginys, #redaguotiSalis, #redaguotiRenginys {
   height: 32px;
 }
 
