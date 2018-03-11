@@ -8,7 +8,7 @@ body, html {
 
 code {
   display: none;
-  color: #258;
+  color: #007;
 }
 
 tr th {
@@ -17,21 +17,29 @@ tr th {
   font-weight: 900;
 }
 
-.pirmas tr th:first-of-type {
+.ivykis tr th:first-of-type, #lenta1 tr th:first-of-type {
   border-radius: 15px 0 0 0;
 }
 
-.pirmas tr th:last-of-type {
+.ivykis tr th:last-of-type, #lenta1 tr th:last-of-type {
   border-radius: 0 15px 0 0;
 }
 
-#lenta1 th, #lenta2 th, #lenta3 th, #lenta4 th {
+.ivykis tr:last-of-type td:last-of-type, #lenta1 tr:last-of-type td:last-of-type {
+  border-radius: 0 0 15px 0;
+}
+
+.ivykis tr:last-of-type td:first-of-type, #lenta1 tr:last-of-type td:first-of-type {
+  border-radius: 0 0 0 15px;
+}
+
+#lenta1 th {
   background-color: orangered;
   color: #d9f4ef;
   font-weight: 900;
 }
 
-#lenta1 tbody td, #lenta2 tbody td, #lenta3 tbody td, #lenta4 tbody td {
+#lenta1 tbody td {
   background-color: #fff;
   color: #000;
   font-weight: 500;
@@ -41,7 +49,7 @@ tr th {
   height: 32px;
 }
 
-.pilkas, .virsus {
+.virsus {
   display: inline-block;
   color: #444;
 }
