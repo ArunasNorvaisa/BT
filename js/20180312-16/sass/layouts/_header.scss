@@ -1,12 +1,11 @@
 header {
   width: 100vw;
-  background-color: #ddd;
+  background-color: #ededed;
   top: 0;
 
   .container {
     width: 80vw;
     margin: 0 auto;
-    // padding: 5px;
     &::after {
       content: "";
       clear: both;
@@ -20,15 +19,24 @@ header {
     #header1 {
       text-align: left;
       float: left;
+
+      img {
+        height: 4wh;
+      }
     }
 
-    #header2 ul li {
-      margin: 0 2px;
+    #header2 .kalbos li {
+      margin: 0 0.2vw;
       font-weight: 400;
+      padding: 0.35rem;
+      &:last-of-type {
+        border-right: 1pt solid #404040;
+        margin-right: 1px;
+      }
     }
 
     #header3 ul li {
-      margin: 0 15px;
+      margin: 0 0.5vw;
     }
 
     #header2,
@@ -38,13 +46,22 @@ header {
       font-size: 1.2rem;
       padding: 0;
       margin: 0;
-      font-weight: bold;
-      color: #999;
-      direction: rtl;
+      font-weight: 300;
+      color: #404040;
 
       ul {
         list-style-type: none;
         padding: 0;
+        direction: rtl;
+
+        li .active {
+          color: #FF4500;
+        }
+
+        .fa-facebook-f {
+          &:hover {
+            color: #3b5998;
+          }}
 
         input {
           height: 32px;
@@ -63,11 +80,6 @@ header {
             color: #FF4500;
             cursor: pointer;
           }
-
-          i .fa-facebook-f {
-            &:hover {
-              color: #3b5998;
-            }
           }
       }
       }
@@ -87,7 +99,7 @@ header {
       line-height: 1.2em;
       margin: 0;
       padding: 3px 0;
-      width: 180px;
+      width: 12vw;
       direction: ltr;
     }
 
@@ -99,8 +111,8 @@ header {
       width: 3.5em;
       line-height: 2.2em;
       margin: 0;
+      font-size: 0.86rem;
       // padding: 3px 0;
       // text-indent: -10000px;
     }
   }
-}
