@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
+@import url("https://fonts.googleapis.com/css?family=Aref+Ruqaa");
+/* line 6, E:/bt/js/20180312-16/sass/style.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* line 12, E:/bt/js/20180312-16/sass/style.scss */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* line 1, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header {
+  width: 100vw;
+  background-color: #ddd;
+  top: 0;
+}
+
+/* line 6, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+/* line 10, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* line 16, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container {
+  float: right;
+}
+
+/* line 20, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header1 {
+  text-align: left;
+  float: left;
+}
+
+/* line 25, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2 ul li {
+  margin: 0 2px;
+  font-weight: 400;
+}
+
+/* line 30, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header3 ul li {
+  margin: 0 15px;
+}
+
+/* line 34, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2,
+header .container #header3 {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  color: #999;
+  direction: rtl;
+}
+
+/* line 45, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2 ul,
+header .container #header3 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* line 49, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2 ul input,
+header .container #header3 ul input {
+  height: 32px;
+  padding: 15px;
+}
+
+/* line 54, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2 ul li,
+header .container #header3 ul li {
+  text-decoration: none;
+  display: inline;
+  float: right;
+  padding: 5px;
+  direction: rtl;
+  letter-spacing: -1px;
+}
+
+/* line 62, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2 ul li:hover,
+header .container #header3 ul li:hover {
+  color: #FF4500;
+  cursor: pointer;
+}
+
+/* line 68, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2 ul li i .fa-facebook-f:hover,
+header .container #header3 ul li i .fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+/* line 77, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header #header3 {
+  clear: both;
+}
+
+/* line 82, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header #search input[type="text"] {
+  background-color: #fff;
+  border: 0 none;
+  float: left;
+  height: 1.2em;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 3px 0;
+  width: 180px;
+  direction: ltr;
+}
+
+/* line 94, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header #search button {
+  background-color: #999;
+  color: #fff;
+  border: 0 none;
+  height: 2.4em;
+  width: 3.5em;
+  line-height: 2.2em;
+  margin: 0;
+}
+
+/*# sourceMappingURL=../css/style.map */
