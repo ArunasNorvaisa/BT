@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext");
-/* line 4, E:/bt/js/20180312-16/sass/style.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* line 10, E:/bt/js/20180312-16/sass/style.scss */
 body {
   font-family: 'Oswald', sans-serif;
 }
 
-/* line 1, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header {
   width: 100vw;
   max-width: 1920px;
@@ -20,141 +17,134 @@ header {
   top: 0;
 }
 
-/* line 7, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container {
   width: 80vw;
   margin: 0 auto;
 }
 
-/* line 10, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container::after {
   content: "";
   clear: both;
   display: table;
 }
 
-/* line 16, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container {
   float: right;
 }
 
-/* line 20, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header1 {
   text-align: left;
   float: left;
 }
 
-/* line 24, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header1 img {
   height: 5rem;
+  margin: 10px 0;
 }
 
-/* line 29, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header2,
 header .container #header3 {
   text-align: right;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 0;
   margin: 0;
   font-weight: 300;
   color: #a0a0a0;
 }
 
-/* line 39, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header2 ul,
 header .container #header3 ul {
   list-style-type: none;
   padding: 0;
-  direction: rtl;
 }
 
-/* line 44, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header2 ul input,
 header .container #header3 ul input {
   height: 32px;
   padding: 15px;
 }
 
-/* line 49, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header2 ul li,
 header .container #header3 ul li {
   text-decoration: none;
   display: inline;
   float: right;
   padding: 5px;
-  direction: rtl;
   letter-spacing: -1px;
 }
 
-/* line 57, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header2 ul li:hover,
 header .container #header3 ul li:hover {
   color: #a4252f;
   cursor: pointer;
 }
 
-/* line 65, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header3 {
   clear: both;
 }
 
-/* line 70, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header3 ul {
+  direction: ltr;
+}
+
 header .container #header3 ul li {
   box-sizing: border-box;
   padding: 0 12px;
+  border: 2px solid #fff;
+  margin-bottom: 1rem;
 }
 
-/* line 74, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header3 ul li:hover {
   border: 2px solid #a0a0a0;
-  transform: translate(2px, -2px);
 }
 
-/* line 88, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header2 ul {
+  direction: rtl;
+}
+
+header .container #header2 ul .kalbos li {
+  margin-right: 1vw;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+
+header .container #header2 ul .kalbos li:last-of-type {
+  border-right: 1pt solid #a0a0a0;
+  margin-right: 0;
+}
+
+header .container #header2 ul .kalbos li .active {
+  color: #a4252f;
+}
+
+header .container #header2 ul li .active {
+  color: #a4252f;
+}
+
+header .container #header2 ul li #search {
+  margin-top: 12px;
+}
+
 header .container #header2 ul li #search input[type="text"] {
   background-color: #fff;
   border: 1px solid #a0a0a0;
   float: left;
-  height: 28px;
-  margin-top: 5px;
-  padding: 0;
-  width: 122px;
+  height: 30px;
+  width: 20rem;
   direction: ltr;
 }
 
-/* line 100, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header2 ul li #search button {
   background-color: #a0a0a0;
   color: #fff;
-  border: 0 none;
-  height: 28px;
-  width: 32px;
-  margin: 0;
-}
-
-/* line 113, E:/bt/js/20180312-16/sass/layouts/_header.scss */
-header .container #header2 ul li .kalbos {
-  margin: 0 0.2vw;
-  font-weight: 300;
-  padding: 0.35rem;
-}
-
-/* line 118, E:/bt/js/20180312-16/sass/layouts/_header.scss */
-header .container #header2 ul li .kalbos:last-of-type {
-  border-right: 1pt solid #a0a0a0;
-}
-
-/* line 121, E:/bt/js/20180312-16/sass/layouts/_header.scss */
-header .container #header2 ul li .kalbos .active {
-  color: #a4252f;
+  border: 1px solid #fff;
+  height: 30px;
+  width: 42px;
 }
 
 @media only screen and (max-width: 700px) {
-  /* line 133, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header1 img {
     display: none;
   }
 }
-
-/*# sourceMappingURL=../css/style.map */

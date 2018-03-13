@@ -23,6 +23,7 @@ header {
 
       img {
         height: 5rem;
+        margin: 10px 0;
       }
     }
 
@@ -30,7 +31,7 @@ header {
     #header3 {
       text-align: right;
       text-transform: uppercase;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       padding: 0;
       margin: 0;
       font-weight: 300;
@@ -39,7 +40,6 @@ header {
       ul {
         list-style-type: none;
         padding: 0;
-        direction: rtl;
 
         input {
           height: 32px;
@@ -51,7 +51,6 @@ header {
           display: inline;
           float: right;
           padding: 5px;
-          direction: rtl;
           letter-spacing: -1px;
 
           &:hover {
@@ -66,66 +65,67 @@ header {
       clear: both;
 
       ul {
+        direction: ltr;
 
         li {
-          // margin: 0 0.5vw;
           box-sizing: border-box;
           padding: 0 12px;
+          border: 2px solid $white;
+          margin-bottom: 1rem;
           &:hover {
             border: 2px solid $grey;
-            // margin: 2px;
-            transform: translate(2px, -2px);
           }
         }
       }
+    }
 
-}
+    #header2 {
+      ul {
+        direction: rtl;
 
-  #header2 {
-    ul {
-      li {
-        #search {
-          input[type="text"] {
-            background-color: $white;
-            border: 1px solid $grey;
-            float: left;
-            height: 28px;
-            // line-height: 1.2rem;
-            margin-top: 5px;
-            padding: 0;
-            width: 122px;
-            direction: ltr;
-          }
-
-          button {
-            background-color: $grey;
-            color: $white;
-            border: 0 none;
-            height: 28px;
-            width: 32px;
-            // line-height: 2.2rem;
-            margin: 0;
-            // font-size: 0.85rem;
-            // padding: 3px 0;
-            // text-indent: -10000px;
-          }
-        }
-        .kalbos {
-          margin: 0 0.2vw;
-          font-weight: 300;
-          padding: 0.35rem;
+        .kalbos li {
+          margin-right: 1vw;
+          font-weight: 400;
+          padding: 0.5rem;
 
           &:last-of-type {
             border-right: 1pt solid $grey;
+            margin-right: 0;
           }
           .active {
             color: $darkorange;
           }
         }
+        li {
+          .active {
+            color: $darkorange;
+          }
 
+          #search {
+            margin-top: 12px;
+            input[type="text"] {
+              background-color: $white;
+              border: 1px solid $grey;
+              float: left;
+              height: 30px;
+              // margin-top: 5px;
+              width: 20rem;
+              direction: ltr;
+              // padding: 10px;
+            }
+
+            button {
+              background-color: $grey;
+              color: $white;
+              border: 1px solid $white;
+              height: 30px;
+              width: 42px;
+              // margin-top: 5px;
+            }
+          }
+         }
       }
     }
-  }
   }
 }
 
