@@ -1,0 +1,30 @@
+.content {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+}
+
+.slider {
+  background-image: url("https://artefacted.com/Layer15@1X.png");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  // background-position: top;
+  background-size: cover;
+  height: 40vh;
+  max-height: 663px;
+  width: 100vw;
+}
+
+@media screen and (max-width: 660px) {
+  .content {
+  .slider {
+    background-image: url("https://artefacted.com/Layer15@1X.png");
+    position: absolute;
+    transform: translate(0px, -20px);
+  }
+}
+}
