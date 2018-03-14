@@ -1,150 +1,337 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext");
+/* line 4, E:/bt/js/20180312-16/sass/style.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* line 10, E:/bt/js/20180312-16/sass/style.scss */
 body {
   font-family: 'Oswald', sans-serif;
 }
 
+/* line 1, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header {
-  width: 100vw;
+  width: 100%;
   max-width: 1920px;
   background-color: #fff;
   top: 0;
 }
 
+/* line 7, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container {
-  width: 80vw;
+  width: 75%;
   margin: 0 auto;
 }
 
+/* line 11, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container::after {
   content: "";
   clear: both;
   display: table;
 }
 
-header .container #header_container {
-  float: right;
-}
-
+/* line 17, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header1 {
   text-align: left;
   float: left;
 }
 
+/* line 21, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header1 img {
-  height: 5rem;
-  margin: 10px 0;
+  height: 77px;
+  width: 144px;
+  margin: 21px;
 }
 
-header .container #header2,
-header .container #header3 {
+/* line 28, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container {
+  float: right;
+  direction: rtl;
+}
+
+/* line 33, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul {
   text-align: right;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 16px;
   padding: 0;
   margin: 0;
   font-weight: 300;
   color: #a0a0a0;
 }
 
-header .container #header2 ul,
-header .container #header3 ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-header .container #header2 ul input,
-header .container #header3 ul input {
-  height: 32px;
+/* line 42, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul li {
+  display: inline;
+  float: right;
   padding: 15px;
 }
 
-header .container #header2 ul li,
-header .container #header3 ul li {
-  text-decoration: none;
-  display: inline;
-  float: right;
-  padding: 5px;
-  letter-spacing: -1px;
-}
-
-header .container #header2 ul li:hover,
-header .container #header3 ul li:hover {
+/* line 47, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul li:hover {
   color: #a4252f;
   cursor: pointer;
 }
 
-header .container #header3 {
-  clear: both;
+/* line 52, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul li a {
+  text-decoration: none;
 }
 
-header .container #header3 ul {
-  direction: ltr;
+/* line 55, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul li a:hover {
+  color: #a4252f;
+  cursor: pointer;
 }
 
-header .container #header3 ul li {
-  box-sizing: border-box;
-  padding: 0 12px;
-  border: 2px solid #fff;
-  margin-bottom: 1rem;
-}
-
-header .container #header3 ul li:hover {
-  border: 2px solid #a0a0a0;
-}
-
-header .container #header2 ul {
-  direction: rtl;
-}
-
-header .container #header2 ul .kalbos li {
+/* line 61, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul li .kalbos {
   margin-right: 1vw;
-  font-weight: 400;
+  font-weight: 300;
   padding: 0.5rem;
+  height: 1.2em;
+  color: #7a7979;
 }
 
-header .container #header2 ul .kalbos li:last-of-type {
+/* line 68, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul li .kalbos:last-of-type {
   border-right: 1pt solid #a0a0a0;
   margin-right: 0;
 }
 
-header .container #header2 ul .kalbos li .active {
+/* line 74, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul li .active {
   color: #a4252f;
 }
 
-header .container #header2 ul li .active {
-  color: #a4252f;
-}
-
-header .container #header2 ul li #search {
-  margin-top: 12px;
-}
-
-header .container #header2 ul li #search input[type="text"] {
+/* line 80, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul #search input[type="text"] {
+  box-sizing: border-box;
   background-color: #fff;
   border: 1px solid #a0a0a0;
-  float: left;
-  height: 30px;
-  width: 20rem;
+  font-size: 10px;
+  height: 24px;
+  width: 114px;
   direction: ltr;
+  padding: 0 10px;
+  font-family: 'Oswald', sans-serif;
 }
 
-header .container #header2 ul li #search button {
+/* line 92, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header2 ul #search button {
   background-color: #a0a0a0;
+  box-sizing: border-box;
   color: #fff;
-  border: 1px solid #fff;
-  height: 30px;
-  width: 42px;
+  border: 0 solid #fff;
+  height: 24px;
+  width: 38px;
+  font-size: 0.69em;
 }
 
-@media only screen and (max-width: 700px) {
-  header #header1 img {
-    display: none;
+/* line 105, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 {
+  clear: both;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  color: #525252;
+}
+
+/* line 115, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 ul {
+  direction: ltr;
+  position: relative;
+}
+
+/* line 119, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 ul li {
+  box-sizing: border-box;
+  position: relative;
+  border: 2px solid #fff;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  display: inline;
+  float: right;
+  padding: 7px 1.1vw;
+}
+
+/* line 129, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 ul li:hover {
+  border: 2px solid #a0a0a0;
+  cursor: pointer;
+}
+
+/* line 137, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 .dropbtn,
+header .container #header_container #header3 li a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+/* line 144, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 .dropbtn:hover,
+header .container #header_container #header3 li a:hover {
+  color: #a4252f;
+}
+
+/* line 149, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 li.dropdown {
+  display: inline-block;
+}
+
+/* line 153, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 .dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.7;
+  min-width: 298px;
+  z-index: 1;
+  padding: 10px;
+  text-transform: none;
+  border: 2px solid #a0a0a0;
+  transform: translate(-2px, 8px);
+}
+
+/* line 167, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 .dropdown-content a {
+  color: #525252;
+  margin-left: 20px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* line 175, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 .dropdown-content a:hover {
+  color: #a4252f;
+}
+
+/* line 179, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 .dropdown-content a:last-of-type {
+  margin-bottom: 9px;
+}
+
+/* line 184, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .container #header_container #header3 .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* line 191, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2 {
+  width: 100%;
+  font-size: 20px;
+}
+
+/* line 195, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* line 201, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2 a {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 213, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2 .green,
+header .header_container2 .orange,
+header .header_container2 .red,
+header .header_container2 .yellow {
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  min-height: 130px;
+  min-width: 25%;
+  max-width: 1920px;
+  position: relative;
+  display: block;
+}
+
+/* line 227, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2 .red {
+  background-color: #f73f4e;
+}
+
+/* line 231, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2 .orange {
+  background-color: #fe772d;
+}
+
+/* line 235, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2 .yellow {
+  background-color: #f6d01d;
+}
+
+/* line 239, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+header .header_container2 .green {
+  background-color: #2de850;
+}
+
+@media only screen and (max-width: 980px) {
+  /* line 245, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  header .container {
+    width: 95%;
+    margin: 0;
+  }
+  /* line 249, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  header .container #header_container {
+    width: 100%;
+    margin: 0;
+  }
+  /* line 254, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  header .container #header3 ul li,
+  header .container #header3 ul li a {
+    padding: 0;
+    margin: 0;
   }
 }
+
+@media only screen and (max-width: 979px) {
+  /* line 263, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  header #header1,
+  header #header1 img {
+    display: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+  }
+  /* line 272, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  header header #header_container,
+  header header .container {
+    width: 98vw;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  /* line 282, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  header .header_container2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=../css/style.map */
