@@ -43,12 +43,6 @@ header {
             display: inline;
             float: right;
             padding: 15px;
-
-            /*&:hover {
-              color: $darkorange;
-              cursor: pointer;
-            }*/
-
             a {
               text-decoration: none;
               color: $grey;
@@ -66,7 +60,6 @@ header {
             padding: 0.5rem;
             height: 1.2em;
             color: #7a7979;
-
             /*&:last-of-type {
               border-right: 10pt solid $grey;
               margin-right: 0;
@@ -220,7 +213,7 @@ header {
       vertical-align: middle;
       min-height: 130px;
       min-width: 25%;
-      max-width: 1920px;
+      max-width: 1200px;
       position: relative;
       display: block;
     }
@@ -242,7 +235,6 @@ header {
     }
   }
 }
-
 @media only screen and (max-width: 980px) {
   header .container {
     width: 95%;
@@ -260,7 +252,6 @@ header {
     }
   }
 }
-
 @media only screen and (max-width: 979px) {
   header {
     #header1,
@@ -279,25 +270,27 @@ header {
     }
   }
 }
-
 @media only screen and (max-width: 620px) {
   header {
     #header_container {
-    #header3 .ul {
-      display: flex;
-      box-sizing: border-box;
-      flex-direction: column-reverse;
-      width: 100%;
-
-      .li {
+      #header3 .ul {
+        display: flex;
         box-sizing: border-box;
-        .dropdown-content {
-          min-width: 100%;
-          left: 0;
-          opacity: 1;
+        flex-direction: column-reverse;
+        width: 100%;
+
+        .li {
+          box-sizing: border-box;
+
+          .dropdown-content {
+            min-width: 100%;
+            left: 0;
+            opacity: 1;
+          }
         }
       }
-    }}
+    }
+
     .header_container2 {
       display: flex;
       flex-direction: column;

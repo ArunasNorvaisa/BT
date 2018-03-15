@@ -1,17 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&subset=latin-ext");
+/* line 5, E:/bt/js/20180312-16/sass/style.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* line 11, E:/bt/js/20180312-16/sass/style.scss */
 body {
   font-family: 'Oswald', sans-serif;
   height: 100%;
   width: 100%;
 }
 
+/* line 1, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header {
   width: 100%;
   max-width: 1920px;
@@ -19,33 +23,39 @@ header {
   top: 0;
 }
 
+/* line 7, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container {
   width: 75%;
   margin: 0 auto;
 }
 
+/* line 11, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container::after {
   content: "";
   clear: both;
   display: table;
 }
 
+/* line 17, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header1 {
   text-align: left;
   float: left;
 }
 
+/* line 21, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header1 img {
   height: 77px;
   width: 144px;
   margin: 21px;
 }
 
+/* line 28, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container {
   float: right;
   direction: rtl;
 }
 
+/* line 33, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul {
   text-align: right;
   text-transform: uppercase;
@@ -56,26 +66,26 @@ header .container #header_container #header2 .ul {
   color: #7a7979;
 }
 
+/* line 42, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul .li {
   display: inline;
   float: right;
   padding: 15px;
-  /*&:hover {
-              color: $darkorange;
-              cursor: pointer;
-            }*/
 }
 
+/* line 46, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul .li a {
   text-decoration: none;
   color: #a0a0a0;
 }
 
+/* line 50, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul .li a:hover {
   color: #a4252f;
   cursor: pointer;
 }
 
+/* line 57, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul .kalbos a {
   margin-right: 1vw;
   font-weight: 300;
@@ -88,10 +98,12 @@ header .container #header_container #header2 .ul .kalbos a {
             }*/
 }
 
+/* line 69, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul .active {
   color: #a4252f;
 }
 
+/* line 74, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul #search input[type="text"] {
   box-sizing: border-box;
   background-color: #fff;
@@ -104,6 +116,7 @@ header .container #header_container #header2 .ul #search input[type="text"] {
   font-family: 'Oswald', sans-serif;
 }
 
+/* line 86, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header2 .ul #search button {
   background-color: #a0a0a0;
   box-sizing: border-box;
@@ -114,6 +127,7 @@ header .container #header_container #header2 .ul #search button {
   font-size: 0.69em;
 }
 
+/* line 99, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 {
   clear: both;
   text-align: right;
@@ -125,11 +139,13 @@ header .container #header_container #header3 {
   color: #525252;
 }
 
+/* line 109, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .ul {
   direction: ltr;
   position: relative;
 }
 
+/* line 113, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .ul .li {
   box-sizing: border-box;
   position: relative;
@@ -141,11 +157,13 @@ header .container #header_container #header3 .ul .li {
   padding: 7px 1.1vw;
 }
 
+/* line 123, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .ul .li:hover {
   border: 2px solid #a0a0a0;
   cursor: pointer;
 }
 
+/* line 131, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropbtn,
 header .container #header_container #header3 .li a {
   display: inline-block;
@@ -154,15 +172,18 @@ header .container #header_container #header3 .li a {
   color: #a0a0a0;
 }
 
+/* line 138, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropbtn:hover,
 header .container #header_container #header3 .li a:hover {
   color: #a4252f;
 }
 
+/* line 143, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .li.dropdown {
   display: inline-block;
 }
 
+/* line 147, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content {
   display: none;
   position: absolute;
@@ -177,6 +198,7 @@ header .container #header_container #header3 .dropdown-content {
   transform: translate(-2px, 8px);
 }
 
+/* line 161, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content a {
   color: #525252;
   margin-left: 20px;
@@ -186,29 +208,35 @@ header .container #header_container #header3 .dropdown-content a {
   text-align: left;
 }
 
+/* line 169, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content a:hover {
   color: #a4252f;
 }
 
+/* line 173, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content a:last-of-type {
   margin-bottom: 9px;
 }
 
+/* line 178, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* line 185, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 {
   width: 100%;
   font-size: 20px;
 }
 
+/* line 189, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2::after {
   content: "";
   clear: both;
   display: table;
 }
 
+/* line 195, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 a {
   font-weight: 400;
   text-transform: uppercase;
@@ -221,6 +249,7 @@ header .header_container2 a {
   transform: translate(-50%, -50%);
 }
 
+/* line 207, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .green,
 header .header_container2 .orange,
 header .header_container2 .red,
@@ -230,36 +259,43 @@ header .header_container2 .yellow {
   vertical-align: middle;
   min-height: 130px;
   min-width: 25%;
-  max-width: 1920px;
+  max-width: 1200px;
   position: relative;
   display: block;
 }
 
+/* line 221, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .red {
   background-color: #f73f4e;
 }
 
+/* line 225, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .orange {
   background-color: #fe772d;
 }
 
+/* line 229, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .yellow {
   background-color: #f6d01d;
 }
 
+/* line 233, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .green {
   background-color: #2de850;
 }
 
 @media only screen and (max-width: 980px) {
+  /* line 239, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .container {
     width: 95%;
     margin: 0;
   }
+  /* line 243, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .container #header_container {
     width: 100%;
     margin: 0;
   }
+  /* line 248, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .container #header3 .ul .li,
   header .container #header3 .ul .li a {
     padding: 0;
@@ -268,6 +304,7 @@ header .header_container2 .green {
 }
 
 @media only screen and (max-width: 979px) {
+  /* line 257, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header1,
   header #header1 img {
     display: none;
@@ -276,6 +313,7 @@ header .header_container2 .green {
     width: 0;
     height: 0;
   }
+  /* line 266, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header header #header_container,
   header header .container {
     width: 98vw;
@@ -284,20 +322,24 @@ header .header_container2 .green {
 }
 
 @media only screen and (max-width: 620px) {
+  /* line 276, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header_container #header3 .ul {
     display: flex;
     box-sizing: border-box;
     flex-direction: column-reverse;
     width: 100%;
   }
+  /* line 282, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header_container #header3 .ul .li {
     box-sizing: border-box;
   }
+  /* line 285, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header_container #header3 .ul .li .dropdown-content {
     min-width: 100%;
     left: 0;
     opacity: 1;
   }
+  /* line 294, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .header_container2 {
     display: flex;
     flex-direction: column;
@@ -305,6 +347,7 @@ header .header_container2 .green {
   }
 }
 
+/* line 1, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content {
   font-size: 36px;
   font-weight: 700;
@@ -315,20 +358,45 @@ header .header_container2 .green {
   position: relative;
 }
 
+/* line 11, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .slider {
-  background-image: url("https://artefacted.com/Layer15@1X.png");
+  background-image: url("http://arunas.org/020/images/Layer15@1X.png");
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 40vh;
+  height: 41.43vh;
   max-height: 663px;
   width: 100vw;
 }
 
+/* line 20, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.slider .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* line 27, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.slider .container h1 {
+  position: absolute;
+  margin-left: 19%;
+  margin-bottom: 50%;
+  vertical-align: middle;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 32px;
+  color: #fff;
+}
+
 @media screen and (max-width: 660px) {
+  /* line 40, E:/bt/js/20180312-16/sass/layouts/_content.scss */
   .content .slider {
-    background-image: url("https://artefacted.com/Layer15@1X.png");
+    background-image: url("http://arunas.org/020/images/Layer15@1X.png");
     position: absolute;
     transform: translate(0px, -20px);
   }
 }
+
+/*# sourceMappingURL=../css/style.map */
