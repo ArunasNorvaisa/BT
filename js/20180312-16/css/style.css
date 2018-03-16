@@ -13,6 +13,7 @@ body {
   font-family: 'Oswald', sans-serif;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 /* line 1, E:/bt/js/20180312-16/sass/layouts/_header.scss */
@@ -125,9 +126,10 @@ header .container #header_container #header2 .ul #search button {
   height: 24px;
   width: 38px;
   font-size: 0.69em;
+  transform: translate(-5px, 0);
 }
 
-/* line 99, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 100, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 {
   clear: both;
   text-align: right;
@@ -139,13 +141,13 @@ header .container #header_container #header3 {
   color: #525252;
 }
 
-/* line 109, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 110, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .ul {
   direction: ltr;
   position: relative;
 }
 
-/* line 113, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 114, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .ul .li {
   box-sizing: border-box;
   position: relative;
@@ -157,13 +159,13 @@ header .container #header_container #header3 .ul .li {
   padding: 7px 1.1vw;
 }
 
-/* line 123, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 124, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .ul .li:hover {
   border: 2px solid #a0a0a0;
   cursor: pointer;
 }
 
-/* line 131, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 132, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropbtn,
 header .container #header_container #header3 .li a {
   display: inline-block;
@@ -172,19 +174,20 @@ header .container #header_container #header3 .li a {
   color: #a0a0a0;
 }
 
-/* line 138, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 139, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropbtn:hover,
 header .container #header_container #header3 .li a:hover {
   color: #a4252f;
 }
 
-/* line 143, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 144, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .li.dropdown {
   display: inline-block;
 }
 
-/* line 147, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 148, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content {
+  box-sizing: border-box;
   display: none;
   position: absolute;
   left: 0;
@@ -198,45 +201,44 @@ header .container #header_container #header3 .dropdown-content {
   transform: translate(-2px, 8px);
 }
 
-/* line 161, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 163, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content a {
   color: #525252;
-  margin-left: 20px;
-  padding: 12px 16px;
+  padding: 12px 19px;
   text-decoration: none;
   display: block;
   text-align: left;
 }
 
-/* line 169, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 171, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content a:hover {
   color: #a4252f;
 }
 
-/* line 173, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 175, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown-content a:last-of-type {
   margin-bottom: 9px;
 }
 
-/* line 178, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 180, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .container #header_container #header3 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* line 185, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 187, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 {
   width: 100%;
   font-size: 20px;
 }
 
-/* line 189, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 191, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2::after {
   content: "";
   clear: both;
   display: table;
 }
 
-/* line 195, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 197, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 a {
   font-weight: 400;
   text-transform: uppercase;
@@ -249,7 +251,7 @@ header .header_container2 a {
   transform: translate(-50%, -50%);
 }
 
-/* line 207, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 209, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .green,
 header .header_container2 .orange,
 header .header_container2 .red,
@@ -264,38 +266,38 @@ header .header_container2 .yellow {
   display: block;
 }
 
-/* line 221, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 223, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .red {
   background-color: #f73f4e;
 }
 
-/* line 225, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 227, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .orange {
   background-color: #fe772d;
 }
 
-/* line 229, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 231, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .yellow {
   background-color: #f6d01d;
 }
 
-/* line 233, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+/* line 235, E:/bt/js/20180312-16/sass/layouts/_header.scss */
 header .header_container2 .green {
   background-color: #2de850;
 }
 
 @media only screen and (max-width: 980px) {
-  /* line 239, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 241, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .container {
     width: 95%;
     margin: 0;
   }
-  /* line 243, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 245, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .container #header_container {
     width: 100%;
     margin: 0;
   }
-  /* line 248, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 250, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .container #header3 .ul .li,
   header .container #header3 .ul .li a {
     padding: 0;
@@ -304,7 +306,7 @@ header .header_container2 .green {
 }
 
 @media only screen and (max-width: 979px) {
-  /* line 257, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 259, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header1,
   header #header1 img {
     display: none;
@@ -313,7 +315,7 @@ header .header_container2 .green {
     width: 0;
     height: 0;
   }
-  /* line 266, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 268, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header header #header_container,
   header header .container {
     width: 98vw;
@@ -322,24 +324,25 @@ header .header_container2 .green {
 }
 
 @media only screen and (max-width: 620px) {
-  /* line 276, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 278, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header_container #header3 .ul {
     display: flex;
     box-sizing: border-box;
     flex-direction: column-reverse;
     width: 100%;
   }
-  /* line 282, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 284, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header_container #header3 .ul .li {
     box-sizing: border-box;
   }
-  /* line 285, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 287, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header #header_container #header3 .ul .li .dropdown-content {
-    min-width: 100%;
-    left: 0;
+    min-width: 100.95%;
+    left: -3px;
     opacity: 1;
+    transform: translate(0, 7px);
   }
-  /* line 294, E:/bt/js/20180312-16/sass/layouts/_header.scss */
+  /* line 297, E:/bt/js/20180312-16/sass/layouts/_header.scss */
   header .header_container2 {
     display: flex;
     flex-direction: column;
@@ -349,28 +352,25 @@ header .header_container2 .green {
 
 /* line 1, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content {
-  font-size: 36px;
-  font-weight: 700;
   text-align: center;
   margin: 0;
-  display: inline-block;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
-/* line 11, E:/bt/js/20180312-16/sass/layouts/_content.scss */
-.slider {
+/* line 8, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.content .slider {
   background-image: url("http://arunas.org/020/images/Layer15@1X.png");
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-size: cover;
   height: 41.43vh;
   max-height: 663px;
-  width: 100vw;
+  width: 100%;
 }
 
-/* line 20, E:/bt/js/20180312-16/sass/layouts/_content.scss */
-.slider .container {
+/* line 17, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.content .slider .container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -378,8 +378,8 @@ header .header_container2 .green {
   justify-content: center;
 }
 
-/* line 27, E:/bt/js/20180312-16/sass/layouts/_content.scss */
-.slider .container h1 {
+/* line 24, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.content .slider .container h1 {
   position: absolute;
   margin-left: 19%;
   margin-bottom: 50%;
@@ -390,13 +390,77 @@ header .header_container2 .green {
   color: #fff;
 }
 
+/* line 37, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.content .content_2 {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 42, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.content .content_2 .content_21 {
+  position: relative;
+  float: left;
+  width: 20%;
+  height: 184px;
+  margin: auto;
+}
+
+/* line 49, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+.content .content_2 .content_21 img {
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@media screen and (max-width: 1220px) {
+  /* line 62, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+  .content .content_2 {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 660px) {
-  /* line 40, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+  /* line 69, E:/bt/js/20180312-16/sass/layouts/_content.scss */
   .content .slider {
     background-image: url("http://arunas.org/020/images/Layer15@1X.png");
     position: absolute;
     transform: translate(0px, -20px);
   }
+}
+
+/* line 1, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer {
+  width: 100%;
+  position: absolute;
+}
+
+/* line 5, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 {
+  background-color: #fff;
+  width: 100%;
+  display: inline;
+}
+
+/* line 10, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .footer_11 {
+  height: 26.37vh;
+  max-height: 422px;
+  width: 25vw;
+  float: left;
+  position: relative;
+}
+
+/* line 17, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .footer_11 .footer_12 {
+  width: 80%;
+}
+
+/* line 20, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .footer_11 .footer_12 img {
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=../css/style.map */

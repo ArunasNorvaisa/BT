@@ -91,6 +91,7 @@ header {
               height: 24px;
               width: 38px;
               font-size: 0.69em;
+              transform: translate(-5px, 0);
             }
           }
         }
@@ -145,6 +146,7 @@ header {
         }
 
         .dropdown-content {
+          box-sizing: border-box;
           display: none;
           position: absolute;
           left: 0;
@@ -160,8 +162,8 @@ header {
 
         .dropdown-content a {
           color: $darkgrey;
-          margin-left: 20px;
-          padding: 12px 16px;
+          // margin-left: 20px;
+          padding: 12px 19px;
           text-decoration: none;
           display: block;
           text-align: left;
@@ -283,9 +285,10 @@ header {
           box-sizing: border-box;
 
           .dropdown-content {
-            min-width: 100%;
-            left: 0;
+            min-width: 100.95%;
+            left: -3px;
             opacity: 1;
+            transform: translate(0, 7px);
           }
         }
       }

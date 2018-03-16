@@ -1,39 +1,68 @@
 .content {
-  font-size: 36px;
-  font-weight: 700;
   text-align: center;
   margin: 0;
-  display: inline-block;
   width: 100%;
-  position: relative;
+  // position: relative;
+  position: absolute;
+
+  .slider {
+    background-image: url("http://arunas.org/020/images/Layer15@1X.png");
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 41.43vh;
+    max-height: 663px;
+    width: 100%;
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        position: absolute;
+        margin-left: 19%;
+        margin-bottom: 50%;
+        vertical-align: middle;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 32px;
+        color: $white;
+      }
+    }
+  }
+
+  .content_2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    .content_21 {
+      position: relative;
+      float: left;
+      width: 20%;
+      height: 184px;
+      margin: auto;
+
+      img {
+        height: 64px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // transform: translate(-50%, -50%);
+      }
+    }
+  }
 }
 
-.slider {
-  background-image: url("http://arunas.org/020/images/Layer15@1X.png");
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 41.43vh;
-  max-height: 663px;
-  width: 100vw;
-
-  .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    h1 {
-    position: absolute;
-    margin-left: 19%;
-    margin-bottom: 50%;
-    vertical-align: middle;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 32px;
-    color: $white;
-  }}
+@media screen and (max-width: 1220px) {
+  .content {
+    .content_2 {
+      display: none;
+    }
+  }
 }
 @media screen and (max-width: 660px) {
   .content {
