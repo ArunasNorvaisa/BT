@@ -5,7 +5,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 /* line 11, E:/bt/js/20180312-16/sass/style.scss */
@@ -355,10 +354,12 @@ header .header_container2 .green {
   text-align: center;
   margin: 0;
   width: 100%;
-  position: absolute;
+  height: 53%;
+  max-height: 847px;
+  position: relative;
 }
 
-/* line 8, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+/* line 9, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content .slider {
   background-image: url("http://arunas.org/020/images/Layer15@1X.png");
   background-attachment: scroll;
@@ -369,7 +370,7 @@ header .header_container2 .green {
   width: 100%;
 }
 
-/* line 17, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+/* line 18, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content .slider .container {
   width: 100%;
   height: 100%;
@@ -378,7 +379,7 @@ header .header_container2 .green {
   justify-content: center;
 }
 
-/* line 24, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+/* line 25, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content .slider .container h1 {
   position: absolute;
   margin-left: 19%;
@@ -390,77 +391,188 @@ header .header_container2 .green {
   color: #fff;
 }
 
-/* line 37, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+/* line 38, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content .content_2 {
   width: 100%;
+  display: flex;
   margin: 0;
   padding: 0;
 }
 
-/* line 42, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+/* line 45, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content .content_2 .content_21 {
   position: relative;
-  float: left;
   width: 20%;
-  height: 184px;
   margin: auto;
+  height: 184px;
 }
 
-/* line 49, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+/* line 51, E:/bt/js/20180312-16/sass/layouts/_content.scss */
 .content .content_2 .content_21 img {
   height: 64px;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 1220px) {
-  /* line 62, E:/bt/js/20180312-16/sass/layouts/_content.scss */
+  /* line 64, E:/bt/js/20180312-16/sass/layouts/_content.scss */
   .content .content_2 {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 480px;
   }
-}
-
-@media screen and (max-width: 660px) {
   /* line 69, E:/bt/js/20180312-16/sass/layouts/_content.scss */
-  .content .slider {
-    background-image: url("http://arunas.org/020/images/Layer15@1X.png");
-    position: absolute;
-    transform: translate(0px, -20px);
+  .content .content_2 .content_21 {
+    width: 100%;
+    height: 96px;
+    padding: 0;
+    margin: 0;
   }
 }
 
+/*@media screen and (max-width: 660px) {
+  .content {
+    .slider {
+      background-image: url("http://arunas.org/020/images/Layer15@1X.png");
+      position: absolute;
+      transform: translate(0px, -20px);
+    }
+  }
+}*/
 /* line 1, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
 footer {
   width: 100%;
-  position: absolute;
+  max-height: 503px;
+  position: relative;
 }
 
-/* line 5, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+/* line 6, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
 footer .footer_1 {
   background-color: #fff;
   width: 100%;
-  display: inline;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  top: 0;
+  left: 0;
 }
 
-/* line 10, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+/* line 14, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
 footer .footer_1 .footer_11 {
-  height: 26.37vh;
-  max-height: 422px;
-  width: 25vw;
-  float: left;
-  position: relative;
+  height: 422px;
 }
 
 /* line 17, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
 footer .footer_1 .footer_11 .footer_12 {
-  width: 80%;
+  padding: 50px 0 0 20%;
+  color: #424242;
+  font-size: 18px;
 }
 
-/* line 20, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
-footer .footer_1 .footer_11 .footer_12 img {
-  width: 100%;
+/* line 22, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .footer_11 .footer_12 .footer_13 {
+  box-sizing: border-box;
+  height: 422px;
+  list-style: none;
+  width: 70%;
+  height: 70%;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+/* line 31, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .footer_11 .footer_12 .footer_13:first-of-type {
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 2.5px solid #a0a0a0;
+}
+
+/* line 37, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .footer_11 .footer_12 .footer_13 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 41, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .footer_11 .footer_12 .footer_13 a:hover {
+  color: #a4252f;
+}
+
+/* line 49, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .zemelapis > .footer_12 {
+  position: relative;
+  height: 26.37vh;
+  height: 422px;
+  padding: 0;
+}
+
+/* line 55, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .zemelapis > .footer_12 h2 {
+  color: #424242;
+  background-color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 13px 21px;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 69, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .zemelapis > .footer_12 a img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* line 77, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .apie_mus,
+footer .footer_1 .kontaktai {
+  background-color: #e7e7e7;
+}
+
+/* line 82, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .teisine_informacija {
+  background-color: #f7f7f7;
+}
+
+/* line 87, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_1 .kontaktai .footer_12 > li:first-of-type {
+  font-weight: 500;
+}
+
+/* line 93, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_2 {
+  width: 100%;
+  height: 81px;
+  background-color: #4d4d4d;
+  display: flex;
+}
+
+/* line 99, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+footer .footer_2 p {
+  color: #fff;
+  font-size: 16px;
+  align-self: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 1050px) {
+  /* line 109, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+  footer .footer_1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  /* line 116, E:/bt/js/20180312-16/sass/layouts/_footer.scss */
+  footer .footer_1 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=../css/style.map */
