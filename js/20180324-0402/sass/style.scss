@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&subset=latin-ext');
 
 * {
   padding: 0;
@@ -9,10 +7,20 @@
 }
 
 body {
-  font-family: 'Oswald', sans-serif;
-  height: 100%;
+  font-family: 'Raleway', sans-serif;
   width: 100%;
-  position: relative;
+}
+
+.container_1 {
+  background-image: url("../images/Darken@1X.png");
+  height: 100vh;
+  width: 100vw;
+}
+
+@media only screen and (max-width: 979px) {
+  .container_1 {
+    height: auto;
+  }
 }
 
 @import "variables";
