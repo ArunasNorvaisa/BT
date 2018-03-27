@@ -1,7 +1,7 @@
 #page1 {
   background-image: url("../images/Darken@1X.png");
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 
 #header_1 {
 
@@ -41,12 +41,12 @@
 .section_1 {
   padding-left: 15%;
   margin-top: 9%;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 70px;
   color: $white;
 }
 
-.line_1 {
+.line_1, .section_2 {
   padding: 1% 15%;
 }
 
@@ -54,7 +54,6 @@
   color: $white;
   font-size: 50px;
   font-weight: 300;
-  padding: 1% 15%;
 }
 
 .section_3 {
@@ -75,7 +74,7 @@
     a {
       color: $white;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       text-decoration: none;
       text-transform: uppercase;
       text-align: center;
@@ -91,12 +90,19 @@
     #header_1 {
 
       #header_11 {
-        display: grid;
-        grid-template-columns: auto;
-        grid-gap: 10px;
+        display: block;
+
+        div, a {
+          padding: 15px;
+        }
 
         #home {
-          padding-top: 16%;
+          padding-top: 6%;
+          width: 3rem;
+        }
+
+        #home, #contactus {
+          margin: auto;
         }
       }
     }
