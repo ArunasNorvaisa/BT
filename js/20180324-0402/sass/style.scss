@@ -11,19 +11,7 @@ body {
   width: 100%;
 }
 
-.container_1 {
-  background-image: url("../images/Darken@1X.png");
-  height: 100vh;
-  width: 100vw;
-}
-
-@media only screen and (max-width: 979px) {
-  .container_1 {
-    height: auto;
-  }
-}
-
 @import "variables";
-@import "./layouts/header";
-@import "./layouts/content";
-@import "./layouts/footer";
+@import "./layouts/page1";
+@import "./layouts/page2";
+@import "./layouts/page3";
