@@ -1,19 +1,69 @@
-footer {
+#page3 {
   width: 100%;
-  max-height: 503px;
-  position: relative;
+  height: 100vh;
+  color: $white;
+  background-color: $white;
+  font-family: 'Open Sans', sans-serif;
+
+  #section3 {
+    background-image: url("../images/Overlay@1X.png");
+    text-align: center;
+
+    #paralax {
+      font-size: 45px;
+      font-weight: 600;
+      font-family: 'Raleway', sans-serif;
+      color: $white;
+      padding: 2vh 0;
+    }
+
+    hr {
+      display: block;
+      width: 12%;
+      height: 0.4px;
+      background-color: $white;
+      margin: auto;
+    }
+
+    #unexplored {
+      font-size: 17px;
+      font-weight: 400;
+      padding: 2vh 0;
+    }
+
+  blockquote {
+    font-size: 30px;
+    font-weight: 300;
+    quotes: "\201C""\201D""\2018""\2019";
+    padding: 7vh 9vw;
+    font-style: italic;
+    position: relative;
+
+    &:before {
+    content: open-quote;
+    display: inline;
+    height: 0;
+    line-height: 0;
+    position: absolute;
+    left: 3vw;
+    top: 11vh;
+    font-size: calc(28px + 10vw);
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 0.5;
+    }
+    
+    p {
+    margin: 0;
+    text-align: left;
+  }
+  
+  footer {
+    text-align: left;
+    font-style: normal;
+    padding-top: 5vh;
+  }
+  }
+}
 }
 @media screen and (max-width: 1050px) {
-  footer {
-    .footer_1 {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-}
-@media screen and (max-width: 660px) {
-  footer {
-    .footer_1 {
-      grid-template-columns: 1fr;
-    }
-  }
 }
