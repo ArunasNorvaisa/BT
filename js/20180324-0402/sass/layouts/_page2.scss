@@ -1,6 +1,5 @@
 #page2 {
   width: 100%;
-  height: 100vh;
   background-image: url("../images/Frame@1X.png");
   color: $black;
   font-family: 'Open Sans', sans-serif;
@@ -22,7 +21,7 @@
       width: 14%;
       height: 1.3px;
       color: $black;
-      background: linear-gradient(to right, $red , $black);
+      background: linear-gradient(to right, $red, $black);
     }
 
     p {
@@ -33,74 +32,76 @@
     }
   }
 
-    #section2 {
-      display: flex;
-      flex-direction: row;
-      padding: 0 9% 15% 9%;
-
-      #section21 {
-        width: 130%;
-
-        #section211 {
-          font-size: 28px;
-        }
-
-        button {
-          background-color: #ff3c1f;
-          width: 93%;
-          height: 50px;
-          cursor: pointer;
-          margin-top: 2.5vh;
-
-          a {
-            color: $white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: calc(0.2rem+8px);
-          }
-        }
-      }
-
-      #section22, #section23, #section24 {
-        background-image: url("../images/Outline@1X.png");
-        background-repeat: no-repeat;
-        padding: 2%;
-
-        p {
-          font-size: 14px;
-          color: rgba(78, 88, 96, 255);
-          padding: 0 28px 5px;
-        }
-
-        #section221, #section231, #section241 {
-          color: rgba(48, 48, 48, 255);
-          text-transform: uppercase;
-          font-size: 20px;
-          font-weight: 800;
-
-          img {
-            padding: 13px;
-          }
-        }
-      }
-    }
-}
-@media screen and (max-width: 1200px) {
-  #page2 {
   #section2 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 0 9% 15% 9%;
 
     #section21 {
-      width: 100%;
+      width: 130%;
+
+      #section211 {
+        font-size: 28px;
+      }
+
+      button {
+        background-color: #ff3c1f;
+        width: 93%;
+        height: 50px;
+        cursor: pointer;
+        margin-top: 2.5vh;
+
+        a {
+          color: $white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: calc(0.2rem + 8px);
+        }
+      }
     }
 
     #section22, #section23, #section24 {
-      background-size: 100% auto;
+      background-image: url("../images/Outline@1X.png");
+      background-repeat: no-repeat;
+      padding: 2%;
 
       p {
-        padding: 5.2% 1.2%;
+        font-size: 14px;
+        color: rgba(78, 88, 96, 255);
+        padding: 0 28px 5px;
+      }
+
+      #section221, #section231, #section241 {
+        color: rgba(48, 48, 48, 255);
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 800;
+
+        img {
+          padding: 13px;
+        }
       }
     }
   }
-}}
+}
+
+@media screen and (max-width: 1200px) {
+  #page2 {
+    #section2 {
+      display: flex;
+      flex-direction: column;
+
+      #section21 {
+        width: 100%;
+      }
+
+      #section22, #section23, #section24 {
+        background-size: 100% auto;
+
+        p {
+          padding: 5.2% 1.2%;
+        }
+      }
+    }
+  }
+}
