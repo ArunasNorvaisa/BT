@@ -1,0 +1,129 @@
+#page5 {
+  width: 100%;
+  background-color: $white;
+  font-family: 'Open Sans', sans-serif;
+  color: $black;
+
+  #header5 {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 8vh 0;
+
+    h2 {
+      font-size: 45px;
+      font-weight: 600;
+    }
+
+    hr {
+      display: block;
+      margin: 2vh auto 0;
+      width: 10%;
+      height: 0.01vh;
+      background-color: $red;
+    }
+  }
+
+  #section5 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-sizing: border-box;
+
+    .section51 {
+      width: calc(100% - 2px);
+      height: 30vh;
+      background-color: $grey;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .h25 {
+        text-align: center;
+        color: yellow;
+        padding: 23% 1.2vw 0;
+      }
+
+      .section511 {
+        width: 100%;
+        height: 70%;
+        background-color: $darkgrey;
+        text-align: center;
+        padding-top: 19%;
+
+        .h251 {
+          color: $white;
+          font-size: 20px;
+        }
+
+        .p51 {
+          color: $white;
+          font-size: 15px;
+          margin-top: 1.2vh;
+        }
+      }
+
+      .section512 {
+        background-color: $lightgrey;
+        width: 100%;
+        height: 30%;
+        display: flex;
+        //flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        img {
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  #footer5 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+
+    #button5 {
+      width: 150px;
+      height: 50px;
+      background-color: $white;
+      border: 2px solid $red;
+
+      &:hover {
+        background-color: $red;
+        cursor: pointer;
+      }
+
+      a {
+        text-decoration: none;
+        color: $red;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #page5 {
+    #section5 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 590px) {
+  #page5 {
+    #section5 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
