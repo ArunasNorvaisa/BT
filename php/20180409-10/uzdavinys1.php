@@ -38,7 +38,7 @@ while ($i < count($a)) {
 }
 
 //išvedam sumą ant ekrano
-echo "<h2>Masyvo elementų lyginiu indeksu suma: $suma</h2>";
+echo "<h3>Masyvo elementų lyginiu indeksu suma: $suma</h3>";
 
 ?>
 </p>
