@@ -1,6 +1,6 @@
 <?php
 
-// rasti max skaičių iš trijų vidinių masyvų
+// rasti max skaičių kiekviename iš trijų vidinių masyvų
 
 $array = [
     [
