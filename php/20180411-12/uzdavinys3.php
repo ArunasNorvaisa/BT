@@ -15,7 +15,9 @@
 
 $a = [-10, 0, 2, 9, -5];
 
-for ($j = 0; $j < count($a); $j++) {
+$masyvoIlgis = count($a);
+
+for ($j = 0; $j < $masyvoIlgis; $j++) {
 
     $max = $a[0];
     $maxIndex = 0;
@@ -29,7 +31,6 @@ for ($j = 0; $j < count($a); $j++) {
     echo $max . '<br>';
     array_splice($a, $maxIndex, 1);
 }
-var_dump($a);
 
 ?>	
 </body>
