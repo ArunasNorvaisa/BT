@@ -7,16 +7,17 @@
 <body>
 <h1>Sąlyga:</h1>
 <code>
-	<h2>Duotas masyvas array(-10, 0, 2, 9, -5). Atspausdinkite masyvo elementus mažėjimo tvarka.
+	<h2>Duotas masyvas array(-10, 0, 2, -13, -7777, 9, -5, -12, -999, -236764). Atspausdinkite masyvo elementus mažėjimo tvarka.
 </h2>
 </code>
 <p>
 <?php
 
-$a = [-10, 0, 2, 9, -5];
+$a = [-10, 0, 2, -13, -7777, 9, -5, -12, -999, -236764];
 
-for ($j = 0; $j < count($a); $j++) {
+$start = count($a);
 
+for ($j = 0; $j < $start; $j++) {
     $max = $a[0];
     $maxIndex = 0;
 
@@ -29,7 +30,6 @@ for ($j = 0; $j < count($a); $j++) {
     echo $max . '<br>';
     array_splice($a, $maxIndex, 1);
 }
-var_dump($a);
 
 ?>	
 </body>
