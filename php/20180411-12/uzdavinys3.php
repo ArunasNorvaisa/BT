@@ -15,21 +15,21 @@
 
 $a = [-10, 0, 2, 9, -5];
 
-for ($i = 0; $i < count($a); $i++) {
-$max = $a[0];
-$maxIndex = 0;
-var_dump($a);
-
 for ($j = 0; $j < count($a); $j++) {
-	if ($max < $a[$j]) {
-		$max = $a[$j];
-		$maxIndex = $j;
-	}
+
+    $max = $a[0];
+    $maxIndex = 0;
+
+    for ($i = 1; $i < count($a); $i++) {
+        if ($a[$i] > $max) {
+            $max = $a[$i];
+            $maxIndex = $i;
+        }
+    }
+    echo $max . '<br>';
+    array_splice($a, $maxIndex, 1);
 }
-	echo $max . '<br>'
-	//array_splice($a, $maxIndex, 1);
-	unset($a[$maxIndex]);
-}
+var_dump($a);
 
 ?>	
 </body>
