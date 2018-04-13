@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,12 +12,10 @@
 <p>
 <?php
 $suma = 0;
-
 for ($i = 1; $i <= 100; $i++) {
     $suma += $i;
 }
 echo $suma;
-
 ?>
 </body>
 </html>
