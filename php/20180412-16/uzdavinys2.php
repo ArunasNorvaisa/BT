@@ -14,8 +14,8 @@
 <p>
 <?php
 
-/*
 //n00biškas kodas:
+/*
 function dalikliuSuma(int $skaicius):int {
 	$suma = 0;
 	for ($i = 1; $i <= ceil($skaicius / 2); $i++) {
@@ -35,11 +35,13 @@ function dalikliuSuma(int $skaicius):int {
     $suma = 1;
     for ($i = 2; $i <= floor(sqrt($skaicius)); $i++) {
         if ($skaicius % $i) {
-            $suma = $suma + 0; //bereikšmė eilutė, nesant galimybės parašyti sąlygos !%
+            $suma += 0; //bereikšmė eilutė, nesant galimybės parašyti sąlygos !%
         }
         else {
         $suma += $i;
+        if ($i != sqrt($skaicius)) {       
         $suma += $skaicius / $i;
+    }
     }
 }
     return $suma;
