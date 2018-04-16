@@ -20,7 +20,7 @@ function dalikliuSuma(int $skaicius):int {
 	$suma = 0;
 	for ($i = 1; $i <= ceil($skaicius / 2); $i++) {
         if ($skaicius % $i) {
-            $suma = $suma + 0; //bereikšmė eilutė, nesant galimybės parašyti sąlygos !%
+            $suma += 0; //bereikšmė eilutė, nesant galimybės parašyti sąlygos !%
         }
         else {
 		$suma += $i;
