@@ -1,20 +1,20 @@
 <?php
 
 $a = [
-	'39001010123' => [
+	'49001010123' => [
 		'vardas' => 'Jonas',
 		'pavarde' => 'Jonaitis',
 		'gdata' => '1990-01-01'
 	],
-	'37502055584' => [
+	'7502055584' => [
 		'vardas' => 'Petras',
 		'pavarde' => 'Petraitis',
 		'gdata' => '1975-02-05'
-	],
+	]
 ];
 
 $b = [
-	'46708030084' => [
+	'36708030084' => [
 		'vardas' => 'Rasa',
 		'pavarde' => 'Jonaitiene',
 		'gdata' => '1967-08-03'
@@ -23,13 +23,28 @@ $b = [
 		'vardas' => 'Ona',
 		'pavarde' => 'Onute',
 		'gdata' => '1984-09-26'
-	],
+	]
 ];
 
-for ($i = 0; $i < count($b); $i++) {
-	array_push($a, $b[$i]);
+//Šitas kodas visai neveikia:
+
+/*for ($i = 0; $i < count($b); $i++) {
+	//array_push($a, $b[$i]);
+	$a[] = $b[$i];
+}*/
+
+//šitas ciklas grąžina masyvą su pakeistais $b indeksais:
+
+foreach ($b as $key => $value) {
+	$a[] = $b[$key];
 }
 
 var_dump($a);
-echo '<br>';
-var_dump($b);
+
+//Šita eilutė vietoj to kad ištrintų paskutinius 2 elementus,
+//ištrina pirmus. O kaip ištrinti kurių indeksas prasideda "4"
+//visai neturiu idėjų :(
+
+$a = array_splice($a, -count($b));
+
+var_dump($a);
