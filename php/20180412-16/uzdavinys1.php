@@ -21,8 +21,7 @@ function rastiVidurki(array $array):float {
 	for ($i = 0; $i < count($array); $i++) {
 		$suma += $array[$i];
 	}
-	$vidurkis = $suma / count($array);
-	return $vidurkis;
+	return $suma / count($array);
 }
 
 $vidurkiuSkirtumas = rastiVidurki($a) - rastiVidurki($b);

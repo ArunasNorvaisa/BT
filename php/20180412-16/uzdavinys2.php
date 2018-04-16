@@ -34,10 +34,7 @@ function dalikliuSuma(int $skaicius):int {
 function dalikliuSuma(int $skaicius):int {
     $suma = 1;
     for ($i = 2; $i <= floor(sqrt($skaicius)); $i++) {
-        if ($skaicius % $i) {
-            $suma += 0; //bereikšmė eilutė, nesant galimybės parašyti sąlygos !%
-        }
-        else {
+        if ($skaicius % $i == 0) {
         $suma += $i;
         if ($i != sqrt($skaicius)) {       
         $suma += $skaicius / $i;
