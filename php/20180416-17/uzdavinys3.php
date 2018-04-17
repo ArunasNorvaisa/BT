@@ -35,15 +35,16 @@ for ($i = 1; $i < count($a); $i++) {
 	}
 }
 
+//piešiame lentelę, kad žinotumėm su kuo dirbam
+
 echo '<table border=1>';
 
 for ($i = 0; $i < count($a); $i++) {
 	$suma = 0;
 	echo '<tr>';
-	//var_dump($a[$i]);
 	for ($j = 0; $j <= $maxIndex; $j++) {
-		if (empty($a[$i][$j])) {
-			$a[$i][$j] = 0;
+		if (empty($a[$i][$j])) { //jei elementas tuščias
+			$a[$i][$j] = 0;      //prilyginam jį nuliui
 		}
 		$suma += $a[$i][$j];	
 		echo "<td style='padding:10px;'>" . $a[$i][$j] . '</td>';
