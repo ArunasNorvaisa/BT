@@ -15,10 +15,10 @@ poros 'Jonas' - 'Petras' ir 'Petras' - 'Jonas' yra skirtingos.</h2>
 <?php
 $a = ['Jonas', 'Petras', 'Antanas', 'Povilas'];
 
-for ($i = 0; $i < count($a); $i++) {
-    for ($j = 0; $j < count($a); $j++) {
-    	if ($i != $j) {
-        echo '<h1>' . $a[$i] . ' - ' . $a[$j] . '</h1>';
+foreach ($a as $key1 => $value1) {
+    foreach ($a as $key2 => $value2) {
+    	if ($key1 != $key2) {
+        echo '<h1>' . $value1 . ' - ' . $value2 . '</h1>';
     }
     }
 }

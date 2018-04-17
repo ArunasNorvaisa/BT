@@ -15,9 +15,9 @@ poros 'Jonas' - 'Petras' ir 'Petras' - 'Jonas' yra tokios pat.</h2>
 <?php
 $a = ['Jonas', 'Petras', 'Antanas', 'Povilas'];
 
-for ($i = 0; $i < count($a); $i++) {
-    for ($j = $i + 1; $j < count($a); $j++) {
-        echo '<h1>' . $a[$i] . ' - ' . $a[$j] . '</h1>';
+foreach ($a as $key => $value) {
+    for ($j = $key + 1; $j < count($a); $j++) {
+        echo '<h1>' . $value . ' - ' . $a[$j] . '</h1>';
     }
 }
 
