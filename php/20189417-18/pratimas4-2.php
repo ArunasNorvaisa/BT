@@ -6,8 +6,9 @@
 //žmogaus gimimo; (3) - skirtas iškviesti funkcijas ir išvesti inf-jai
 //į ekraną lentelėje
 
-function datuSkirtumas (array $a): int {
-	foreach ($a as $vardas => $gData) {
-		echo (date('Y-m-d') - $a['gData']) . '<br>';
+function datuSkirtumas (array $array) {
+	foreach ($array as $person) {
+		$skirtumas = floor((strtotime(date(DATE_W3C)) - strtotime($person['gData'])) / 31536000);
+		echo $person['vardas'] . ' yra ' . $skirtumas . ' metų<br>';
 	}
 }

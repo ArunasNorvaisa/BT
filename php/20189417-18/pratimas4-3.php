@@ -9,4 +9,4 @@
 require 'pratimas4-1.php';
 require 'pratimas4-2.php';
 
-echo date('Y-m-d');
+datuSkirtumas ($a);

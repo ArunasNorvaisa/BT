@@ -9,18 +9,18 @@
 $a = [
 	[
 		'vardas' => 'Jonas',
-		'gData' => '1992-03-08'
+		'gData' => '1992-01-08'
 	],
 	[
 		'vardas' => 'Petras',
-		'gData' => '1962-08-31'
+		'gData' => '1962-07-15'
 	],
 		[
 		'vardas' => 'Marius',
-		'gData' => '1972-12-24'
+		'gData' => '1972-12-25'
 	],
 		[
 		'vardas' => 'Rasa',
-		'gData' => '1996-11-11'
+		'gData' => '1996-11-18'
 	]
 ];
