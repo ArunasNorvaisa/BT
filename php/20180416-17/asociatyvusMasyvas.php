@@ -6,7 +6,7 @@ $a = [
 		'pavarde' => 'Jonaitis',
 		'gdata' => '1990-01-01'
 	],
-	'7502055584' => [
+	'37502055584' => [
 		'vardas' => 'Petras',
 		'pavarde' => 'Petraitis',
 		'gdata' => '1975-02-05'
@@ -26,24 +26,11 @@ $b = [
 	]
 ];
 
-//Šitas kodas visai neveikia:
-
-/*for ($i = 0; $i < count($b); $i++) {
-	//array_push($a, $b[$i]);
-	$a[] = $b[$i];
-}*/
-
-//šitas ciklas grąžina masyvą su pakeistais $b indeksais:
-
 foreach ($b as $key => $value) {
-	$a[] = $b[$key];
+	$a[] = $value;
 }
 
 var_dump($a);
-
-//Šita eilutė vietoj to kad ištrintų paskutinius 2 elementus,
-//ištrina pirmus. O kaip ištrinti kurių indeksas prasideda "4"
-//visai neturiu idėjų :(
 
 $a = array_splice($a, -count($b));
 
