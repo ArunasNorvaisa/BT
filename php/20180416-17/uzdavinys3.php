@@ -40,13 +40,11 @@ for ($i = 1; $i < count($a); $i++) {
 echo '<table border=1>';
 
 for ($i = 0; $i < count($a); $i++) {
-	$suma = 0;
 	echo '<tr>';
 	for ($j = 0; $j <= $maxIndex; $j++) {
 		if (empty($a[$i][$j])) { //jei elementas tuščias
 			$a[$i][$j] = 0;      //prilyginam jį nuliui
-		}
-		$suma += $a[$i][$j];	
+		}	
 		echo "<td style='padding:10px;'>" . $a[$i][$j] . '</td>';
 	}
 	echo '</tr>';
