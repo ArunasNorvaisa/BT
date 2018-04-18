@@ -8,14 +8,14 @@
 <h1>Sąlyga:</h1>
 <code>
     <h2>Turime žmonių masyvą, kurio kiekvienas elementas yra
-masyvas su žmogaus vardu ir lytimi. Pvz:<p>
+masyvas su žmogaus vardu ir lytimi. Pvz:<p></p>
     $zmones = [<br>
     ['vardas' => 'Jonas', 'lytis' => 'V'],<br>
     ['vardas' => 'Ona', 'lytis' => 'M'],<br>
     ['vardas' => 'Petras', 'lytis' => 'V'],<br>
     ['vardas' => 'Marytė', 'lytis' => 'M'],<br>
     ['vardas' => 'Eglė', 'lytis' => 'M']<br>
-];</p><p>
+];<p>
 Atspausdinkite visas galimas skirtingas poras vyras - moteris.</p></h2><hr>
 </code>
 <p>
