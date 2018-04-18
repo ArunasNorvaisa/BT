@@ -10,23 +10,31 @@
 <code>
     <h2>Turime mokinių sąrašą su dalykais ir gautais pažymiais už tuos dalykus, pvz.:<p></p>
 
-$mokiniai = [<br />
-['vardas' => 'Jonas', 'pazymiai' => [<br />
-'lietuviu' => [4, 8, 6, 7], 'anglu' => [6, 7, 8],<br />
-'matematika' => [3, 5, 4]]],<br />
-['vardas' => 'Ona', 'pazymiai' => [<br />
-'lietuviu' => [10, 9, 10], 'anglu' => [9, 8, 10],<br />
-'matematika' => [10, 10, 9, 9]]],<br />
-['vardas' => 'Rasa', 'pazymiai' => [<br />
-'lietuviu' => [10, 10, 10, 10], 'anglu' => [10, 10, 10],<br />
-'matematika' => [10, 10, 10]]],<br />
-['vardas' => 'Perestukinas', 'pazymiai' => [<br />
-'lietuviu' => [6, 8, 4, 5], 'anglu' => [5, 6, 9],<br />
-'matematika' => [4, 3, 5]]]];<p></p>
+<pre>$mokiniai = [<br />
+['vardas' => 'Jonas',<br />
+        'pazymiai' => [<br />
+                'lietuviu' => [4, 8, 6, 7],<br />
+                'anglu' => [6, 7, 8],<br />
+                'matematika' => [3, 5, 4]]],<br />
+['vardas' => 'Ona',
+        'pazymiai' => [<br />
+                'lietuviu' => [10, 9, 10],<br />
+                'anglu' => [9, 8, 10],<br />
+                'matematika' => [10, 10, 9, 9]]],<br />
+['vardas' => 'Rasa',<br />
+        'pazymiai' => [<br />
+                'lietuviu' => [10, 10, 10, 10],<br />
+                'anglu' => [10, 10, 10],<br />
+                'matematika' => [10, 10, 10]]],<br />
+['vardas' => 'Perestukinas',<br />
+        'pazymiai' => [<br />
+                'lietuviu' => [6, 8, 4, 5],<br />
+                'anglu' => [5, 6, 9],<br />
+                'matematika' => [4, 3, 5]]]];<p></p>
 
 Suskaičiuokite kuris geriausiai mokosi pagal visų dalykų pažymių
 vidurkius. Dalyko pažymio nustatymui reikės panaudoti funkciją round()</h2><hr>
-</code>
+</pre></code>
 <p>
     <?php
 $mokiniai = [
