@@ -81,14 +81,14 @@ echo '<h2>Pirminiai duomenys:</h2>';
 lentele($mokiniai);
 
 //rūšiuojam masyvą vidurkio mažėjimo tvarka
-uasort($mokiniai, 'rusiuok');
+arsort($mokiniai);
 
-function rusiuok($vidurkis1, $vidurkis2) {
+/*function rusiuok($vidurkis1, $vidurkis2) {
     if ($vidurkis1 == $vidurkis2) {
         return 0;
     }
     return ($vidurkis1 > $vidurkis2) ? -1 : 1;
-}
+}*/
 
 //pildom rezultatų lentelę
 echo '<h2>Surikiuota lentelė vidurkio mažėjimo tvarka:</h2>';
