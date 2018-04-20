@@ -21,11 +21,11 @@ function lentele(array $array):string {
  * @param  [object]  $vidurkis2
  * @return [int]
  */
-function rusiuok(object $vidurkis1, object $vidurkis2):int {
-    if ($vidurkis1 == $vidurkis2) {
+function rusiuok(object $mokinys1, object $mokinys2):int {
+    if ($mokinys1 == $mokinys2) {
         return 0;
     }
-    return ($vidurkis1 > $vidurkis2) ? -1 : 1;
+    return ($mokinys1->skaiciuokVidurki() > $mokinys2->skaiciuokVidurki()) ? -1 : 1;
 }
 
 ?>
