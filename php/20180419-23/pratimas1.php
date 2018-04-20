@@ -1,10 +1,18 @@
 <?php
 
+/*Sukurkite klasę Gyvunas su atributais: svoris, ugis.
+Sukurkite klasę Suo su atributais: spalva, lytis ir
+metodu išvesti visą informaciją.
+Sukurkite konstruktorius.
+
+Sukurkite klasės Suo objektą ir iškvieskite metodą
+informacijai spausdinti.*/
+
 class Gyvunas {
 	public $svoris;
 	public $ugis;
 
-	public function __contruct(float $svoris, float $ugis) {
+	public function __construct(float $svoris, float $ugis) {
 		$this->svoris = $svoris;
 		$this->ugis = $ugis;
 	}
@@ -14,8 +22,8 @@ class Suo extends Gyvunas {
 	public $spalva;
 	public $lytis;
 
-	public function __contruct(float $svoris, float $ugis, string $spalva, string $lytis) {
-		parent:: __contruct($svoris, $ugis);
+	public function __construct(float $svoris, float $ugis, string $spalva, string $lytis) {
+		parent:: __construct($svoris, $ugis);
 	$this->spalva = $spalva;
 	$this->lytis = $lytis;
 	}
@@ -27,6 +35,8 @@ $laika = new Suo (1.2, 12, 'balta', 'M');
 
 $sunys = [$barbosas, $sargis, $laika];
 
+var_dump($sunys);
+
 foreach ($sunys as $key) {
-	echo $sunys->svoris . ', ' . $sunys->ugis . ', ' . $sunys->spalva . ', ' . $sunys->lytis . '.<br>';
+	echo $key->svoris . ', ' . $key->ugis . ', ' . $key->spalva . ', ' . $key->lytis . '.<br>';
 }

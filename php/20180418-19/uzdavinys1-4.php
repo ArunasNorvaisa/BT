@@ -21,7 +21,7 @@ function lentele(array $array):string {
  * @param  [object]  $vidurkis2
  * @return [int]
  */
-function rusiuok(object $mokinys1, object $mokinys2):int {
+function rusiuok(Mokinys $mokinys1, Mokinys $mokinys2):int {
     if ($mokinys1->skaiciuokVidurki() == $mokinys2->skaiciuokVidurki()) {
         return 0;
     }

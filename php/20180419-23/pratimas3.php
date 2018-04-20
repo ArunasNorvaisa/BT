@@ -1,5 +1,12 @@
 <?php
 
+/*Sukurkite klasę Ivykis, kurios atributai yra: pavadinimas, data.
+(panaudoti DateTime).
+Sukurkite klasę Istorija, kurios atributai yra: laikotarpio
+pavadinimas, įvykiai (masyvas).
+Sukurkite metodą klasėje Istorija, kuris atspausdina istoriją
+lentelėje ir apskaičiuoja kiek laiko praėjo nuo kiekvieno įvykio.*/
+
 class Ivykis {
 	public $pavadinimas;
 	public $data;
