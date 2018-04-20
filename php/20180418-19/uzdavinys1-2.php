@@ -4,8 +4,8 @@
         public $vardas;
         public $pavarde;
 
-        public function __construct ($vardas, $pavarde, $trimestras, $vidurkis) {
-            parent:: __construct ($trimestras, $vidurkis);
+        public function __construct (string $vardas, string $pavarde, array $trimestras) {
+            parent:: __construct ($trimestras);
             $this->vardas = $vardas;
             $this->pavarde = $pavarde;
         }

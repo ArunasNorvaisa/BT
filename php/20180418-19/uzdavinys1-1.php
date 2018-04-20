@@ -1,19 +1,17 @@
     <?php
     class Trimestras {
                 public $trimestras;
-                public $vidurkis;
 
-        function __construct($trimestras, $vidurkis) {
+        function __construct(array $trimestras) {
             $this->trimestras = $trimestras;
-            $this->vidurkis = $this->skaiciuokVidurki();;
         }
 
+/**
+ * skaičiuojam vidurkiį
+ * @return [float] [mokinio vidurkis]
+ */
         public function skaiciuokVidurki():float {
-            $vidurkis = 0;
-            foreach ($this->trimestras as $value) {
-                $vidurkis += $value;
-            }
-            return $vidurkis / 3;
+            return array_sum($this->trimestras) / count($this->trimestras);
         }
     }
     ?>

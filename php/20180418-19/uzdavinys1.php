@@ -32,14 +32,14 @@ pavadinimas.</h2><hr>
 
 //pildom pirminių duomenų lentelę
 echo '<h2>Pirminiai duomenys:</h2>';
-lentele($mokiniai);
+echo lentele($mokiniai);
 
 //rūšiuojam masyvą vidurkio mažėjimo tvarka
-arsort($mokiniai);
+usort($mokiniai, 'rusiuok');
 
 //pildom rezultatų lentelę
-echo '<h2>Surikiuota lentelė vidurkio mažėjimo tvarka:</h2>';
-lentele($mokiniai);
+echo '<h2>Surikiuota lentelė vidurkio mažėjimo tvarka:</h2><p></p>';
+echo lentele($mokiniai);
 
 ?>
 </p>
