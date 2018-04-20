@@ -22,7 +22,7 @@ function lentele(array $array):string {
  * @return [int]
  */
 function rusiuok(object $mokinys1, object $mokinys2):int {
-    if ($mokinys1 == $mokinys2) {
+    if ($mokinys1->skaiciuokVidurki() == $mokinys2->skaiciuokVidurki()) {
         return 0;
     }
     return ($mokinys1->skaiciuokVidurki() > $mokinys2->skaiciuokVidurki()) ? -1 : 1;
