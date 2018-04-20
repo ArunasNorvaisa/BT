@@ -18,7 +18,7 @@
 <code>
     <h2>
     	Tarkime turime masyvą objektų Mokinys. Papildykite Mokinys klasę
-    	tekstiniu atributu gimimoData, t.y. jo reikšmė bus pvz ‘2001-10-31’.<br>
+    	tekstiniu atributu gimimoData, t.y. jo reikšmė bus pvz. ‘2001-10-31’.<br>
 		Sukurkite Mokinys klasei metodą, kuris grąžintų sveiką skaičių kiek
 		mokiniui yra metų, pvz. 17 (16,5 → 16).<br>
 		Sukurkite kelių (3-4) mokinių masyvą ir atspausdinkite html
@@ -61,9 +61,6 @@ $leopoldas = new Mokinys ('Katinas', 'Leopoldas', '1990-07-15');
 
 $mokiniai = [$eustarchijus, $kulverstukas, $paslemekas, $bonifacijus, $perestukinas, $leopoldas];
 
-//var_dump ($leopoldas->kiekMetu());
-
-
 /**
  * piešiam pradinių duomenų lentelę
  * @param  array  $array [paprastai $mokiniai]
@@ -105,16 +102,12 @@ function lentele2(array $array):string {
 }
 
 //pildom pirminių duomenų lentelę
-//echo '<h2>Pirminiai duomenys:</h2>';
-//echo '<table border=3><thead><tr><th>Vardas</th><th>';
-//echo 'Gimimo data</th><th>Amžius</th></tr></thead><tbody>';
+echo '<h2>Pirminiai duomenys:</h2>';
 echo lentele1($mokiniai);
-//echo '</tbody></table>';
 
 //pildom rezultatų lentelę
 echo '<h2>Mokiniai, kuriems daugiau nei 18 metų:</h2><p></p>';
 echo lentele2($mokiniai);
-//echo '</tbody></table>';
 
 ?>
 </p>
