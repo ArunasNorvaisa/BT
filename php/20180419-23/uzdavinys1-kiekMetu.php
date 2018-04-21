@@ -54,12 +54,12 @@
 
 $eustarchijus = new Mokinys ('Eustarchijus', 'Vamzdys', '2004-09-01');
 $kulverstukas = new Mokinys ('Kūlverstukas', 'Didžiaausis', '2001-01-11');
-$paslemekas = new Mokinys ('Pašlemėkas', 'Šliūpšta', '999-12-25');
-$bonifacijus = new Mokinys ('Liūtas', 'Bonifacijus', '1974-04-20');
+$dunkan = new Mokinys ('Duncan', 'MacLeod', '1592-07-15');
+$bonifacijus = new Mokinys ('Liūtas', 'Bonifacijus', '1974-04-23');
 $perestukinas = new Mokinys ('Perestukinas', 'Nemokusis', '2008-12-18');
-$leopoldas = new Mokinys ('Katinas', 'Leopoldas', '1990-07-15');
+$leopoldas = new Mokinys ('Katinas', 'Leopoldas', '1998-08-03');
 
-$mokiniai = [$eustarchijus, $kulverstukas, $paslemekas, $bonifacijus, $perestukinas, $leopoldas];
+$mokiniai = [$eustarchijus, $kulverstukas, $dunkan, $bonifacijus, $perestukinas, $leopoldas];
 
 /**
  * piešiam pradinių duomenų lentelę
@@ -106,7 +106,7 @@ echo '<h2>Pirminiai duomenys:</h2>';
 echo lentele1($mokiniai);
 
 //pildom rezultatų lentelę
-echo '<h2>Mokiniai, kuriems daugiau nei 18 metų:</h2><p></p>';
+echo '<h2>Mokiniai, kuriems 18 metų ir daugiau:</h2><p></p>';
 echo lentele2($mokiniai);
 
 ?>
