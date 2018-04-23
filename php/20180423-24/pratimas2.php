@@ -1,4 +1,12 @@
-<?php 
+<?php
+
+/* Susikurkite klasę Radar, kurioje būtų tokie atributai:
+ 1. $date - Data ir laikas
+ 2. $number - Automobilio numeris
+ 3. $distance - Nuvažiuotas atstumas metrais
+ 4. $time - Sugaištas laikas sekundėmis
+ Sukurkite masyvą iš 3-4 elementų ir išveskite juos pagal datos
+ lauką nuo vėliausio iki anksčiausio, t.y. mažėjimo tvarka.*/
 
 class Radar {
 
@@ -20,7 +28,7 @@ $ivykis1 = new Radar ('2012-04-23', 'ACE922', 12457, 362);
 $ivykis2 = new Radar ('2014-04-22', 'JGF476', 24452, 728);
 $ivykis3 = new Radar ('2018-03-21', 'CBC025', 2450, 505);
 $ivykis4 = new Radar ('2017-12-23', 'FUV723', 120457, 8062);
-$ivykis5 = new Radar ('2016-09-01', 'BOND007', 20419, 1287);
+$ivykis5 = new Radar ('2016-09-01', 'JB0ND007', 70419, 1287);
 
 $ivykiai = [$ivykis1, $ivykis2, $ivykis3, $ivykis4, $ivykis5];
 
@@ -28,21 +36,14 @@ $ivykiai = [$ivykis1, $ivykis2, $ivykis3, $ivykis4, $ivykis5];
 echo '<h2>Pradiniai duomenys:</h2><p></p>';
 echo lentele($ivykiai);
 
-/*var_dump(usort($ivykiai, function($a, $b) {
-	    if ($a == $b) {
-        return 0;
-    }
-    return ($a < $b) ? -1 : 1;
-}));*/
+usort($ivykiai, 'rikiuok');
 
-$ivykiai = usort($ivykiai, 'rikiuok');
-
-//spausdinam rezultatus
+//spausdinam surikuotus rezultatus
 echo '<h2>Lentelė datų didėjimo tvarka:</h2><p></p>';
 echo lentele($ivykiai);
 
 /**
- * piešiam pradinių duomenų lentelę
+ * piešiam lentelę
  * @param  array  $array [paprastai $ivykiai]
  * @return [string]        [lentelė]
  */
@@ -64,17 +65,15 @@ function lentele(array $array): string {
 
 /**
  * rikiuojam masyvą didėjančia tvarka
- * @param  [int] $a [date1]
- * @param  [int] $b [date2]
- * @return [bool]
+ * @param  [object] $ivykis1
+ * @param  [object] $ivykis2
+ * @return [int]
  */
-function rikiuok(Radar $a->date->format('Y-m-d'), Radar $b->date->format('Y-m-d')) {
-	    if ($a->date->format('Y-m-d') == $b->date->format('Y-m-d')) {
+function rikiuok(Radar $ivykis1, Radar $ivykis2) {
+	    if ($ivykis1->date->format('Y-m-d') == $ivykis2->date->format('Y-m-d')) {
         return 0;
     }
-    return ($a->date->format('Y-m-d') < $b->date->format('Y-m-d')) ? -1 : 1;
+    return ($ivykis1->date->format('Y-m-d') < $ivykis2->date->format('Y-m-d')) ? -1 : 1;
 };
-
-echo lentele($ivykiai);
 
  ?>
