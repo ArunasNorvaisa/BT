@@ -101,7 +101,7 @@ function lentele(array $array): string {
 }
 
 /**
- * rikiuojam masyvą didėjančia tvarka
+ * rikiuojam masyvą greičio mažėjimo tvarka
  * @param  [object] $ivykis1
  * @param  [object] $ivykis2
  * @return [int]
