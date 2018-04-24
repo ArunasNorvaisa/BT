@@ -106,7 +106,7 @@ function lentele(array $array): string {
  * @param  [object] $ivykis2
  * @return [int]
  */
-function rikiuok(object $ivykis1, object $ivykis2):int {
+function rikiuok(Radar $ivykis1, Radar $ivykis2):int {
         if ($ivykis1->skaiciuokGreiti() == $ivykis2->skaiciuokGreiti()) {
         return 0;
     }
