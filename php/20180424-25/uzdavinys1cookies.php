@@ -1,6 +1,5 @@
-<!DOCTYPE html>
 <?php
-if (!empty($date) && !empty($number) && !empty($distance) && !empty($time)) {
+//if (!empty($date) && !empty($number) && !empty($distance) && !empty($time)) {
         class Radar {
 
         public $date;
@@ -31,7 +30,7 @@ if (!empty($date) && !empty($number) && !empty($distance) && !empty($time)) {
     $ivykiai = [];
     $ivykis = new Radar ($_POST['data'], $_POST['numeris'], $_POST['atstumas'], $_POST['laikas']);
     $ivykiai[] = $ivykis;
-    var_dump($ivykiai);
+    //var_dump($ivykiai);
 
     //spausdinam pradinius duomenis
     echo '<h2>Pradiniai duomenys:</h2><p></p>';
@@ -43,7 +42,7 @@ if (!empty($date) && !empty($number) && !empty($distance) && !empty($time)) {
     echo '<h2>Lentelė vid. greičio mažėjimo tvarka:</h2><p></p>';
     echo lentele($ivykiai);
 
-    var_dump($_COOKIE);
+    //var_dump($_COOKIE);
 
     /**
      * piešiam lentelę
@@ -85,9 +84,10 @@ if (!empty($date) && !empty($number) && !empty($distance) && !empty($time)) {
         }
         return ($ivykis1->skaiciuokGreiti() > $ivykis2->skaiciuokGreiti()) ? -1 : 1;
     }
-}
+//}
 
- ?>
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
