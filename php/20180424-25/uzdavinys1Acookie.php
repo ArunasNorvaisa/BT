@@ -43,6 +43,7 @@
     <hr>
 </p>
 <?php
+include_once 'uzdavinys1Acookie.php';
 
     //spausdinam pradinius duomenis
     echo '<h2>Pradiniai duomenys:</h2><p></p>';
@@ -57,8 +58,6 @@
      * @param  array $array [paprastai $ivykiai]
      * @return [string]        [lentelė]
      */
-    function lentele(array $array): string
-    {
         $lentele = '<table border=3><thead><tr>';
         $lentele .= '<th>Data</th>';
         $lentele .= '<th>Valst. Nr.</th>';
@@ -66,6 +65,7 @@
         $lentele .= '<th>Laikas, s</th>';
         $lentele .= '<th>Vid. greitis, km/h</th>';
         $lentele .= '</tr></thead><tbody>';
+    function lentele(array $array): string {
         foreach ($array as $x) {
             $lentele .= '<tr>';
             $lentele .= '<td>' . $x->date->format('Y-m-d H:m:s') . '</td>';

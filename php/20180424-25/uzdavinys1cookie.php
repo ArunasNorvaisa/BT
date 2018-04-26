@@ -27,6 +27,8 @@ if (isset($_COOKIE['ivykiai'])) {
         $ivykiai = [];
     }
 
+var_dump($ivykiai);
+
 if ($_POST) {
 $ivykiai[] = new Radar($_POST['data'], $_POST['numeris'], $_POST['atstumas'], $_POST['laikas']);
 setcookie('ivykiai', serialize($ivykiai));
@@ -50,10 +52,10 @@ header('Location: uzdavinys1Acookie.php');
 
 //====================================================
 
-    setcookie('data', $date, time() + 300);
-    setcookie('numeris', $number, time() + 300);
-    setcookie('atstumas', $distance, time() + 300);
-    setcookie('laikas', $time, time() + 300);
+//    setcookie('data', $date, time() + 300);
+//    setcookie('numeris', $number, time() + 300);
+//    setcookie('atstumas', $distance, time() + 300);
+//    setcookie('laikas', $time, time() + 300);
     //$ivykiai = [];
     //$ivykis = new Radar ($_POST['data'], $_POST['numeris'], $_POST['atstumas'], $_POST['laikas']);
     //$ivykiai[] = $ivykis;
