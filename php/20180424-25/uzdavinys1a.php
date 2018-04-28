@@ -20,19 +20,15 @@ class Radar {
     }
 }
 
-if (isset($_COOKIE['ivykiai'])) {
-    $ivykiai[] = unserialize($_COOKIE['ivykiai']);
+if (isset($_COOKIE['matavimai'])) {
+    $ivykiai = unserialize($_COOKIE['matavimai']);
     } else {
         $ivykiai = [];
     }
 
 if ($_POST) {
     $ivykiai[] = new Radar($_POST['data'], $_POST['numeris'], $_POST['atstumas'], $_POST['laikas']);
-    setcookie('ivykiai', serialize($ivykiai));
-    //header('Location: uzdavinys1.php');
+    setcookie('matavimai', serialize($ivykiai));
 }
-
-var_dump($ivykiai);
-var_dump($_COOKIE);
 
 ?>
