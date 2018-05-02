@@ -68,7 +68,7 @@ if(isset($_POST['atstumas1']) && isset($_POST['laikas1']) && isset($_POST['numer
     $atstumas1 = $_POST['atstumas1'];
     $laikas1 = $_POST['laikas1'];
     $stmp = $connection->prepare("INSERT INTO rezultatai(data, numeris, atstumas, laikas) VALUES(?, ?, ?, ?)");
-    $stmp->bind_param("ssbb", $data1, $numeris1, $atstumas1, $laikas1);
+    $stmp->bind_param("ssdd", $data1, $numeris1, $atstumas1, $laikas1);
     $stmp->execute();
     }
 
@@ -105,13 +105,11 @@ if(isset($_POST['redaguoti'])) {
         $numeris = $_POST['numeris'];
         $atstumas = $_POST['atstumas'];
         $laikas = $_POST['laikas'];
-        $stmt->bind_param("ssbbi", $data, $numeris, $atstumas, $laikas, $id);
+        $stmt->bind_param("ssddi", $data, $numeris, $atstumas, $laikas, $id);
         $stmt->execute();
         $stmt->close();
 }
 
-
-//$sql = 'SELECT * FROM rezultatai';
 $sql = 'SELECT * FROM rezultatai LIMIT 10 OFFSET ' . $_SESSION['puslapiavimas'];
 
 $result = $connection->query($sql);
@@ -140,7 +138,8 @@ $connection->close();
 
 ?>
     </tbody>
-</table><p>
+</table>
+<p>
 <form method="POST">
     <center>
         <button name="atgal">10 psl. atgal <<<<<<</button>
