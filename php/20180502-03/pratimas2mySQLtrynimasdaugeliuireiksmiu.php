@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pratimas 1</title>
+    <title>Pratimas 2</title>
     <style>
         table, h1, h2 {
             text-align: center;
@@ -21,11 +21,12 @@
 <code>
     <h2>
         Sukurkite programą, kad galima būtų trinti turimą automobilių
-        informaciją. Taip pat kad galima būtų peržiūrėti jau turimus įrašus.
+        informaciją po keletą įrašų vienu metu. Taip pat kad galima
+        būtų peržiūrėti jau turimus įrašus.
     </h2>
     </code>
 <hr>
-<h1>Rezultatų atvaizdavimo/redagavimo/trynimo lentelė:</h1>
+<h1>Rezultatų atvaizdavimo/trynimo lentelė:</h1>
     <table border=1>
     <thead>
         <tr>
@@ -76,15 +77,6 @@ if(isset($_SESSION['puslapiavimas']) && isset($_POST['pirmyn'])) {
          $_SESSION['puslapiavimas'] = 0;
 }
 
-if(isset($_POST['trinti'])) {
-
-        $stmt = $connection->prepare("DELETE FROM automobiliai WHERE id = ?");
-        $id = $_POST['id'];
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $stmt->close();
-}
-
 $sql = 'SELECT * FROM automobiliai LIMIT 10 OFFSET ' . $_SESSION['puslapiavimas'];
 
 $result = $connection->query($sql);
@@ -93,17 +85,27 @@ if (!$result) {
     die ('Error: ' . $connection->error);
 }
 
-//Piešiam lentelę. Kiekviena eilutė turi savo formos ID, kad redaguojant
-//į serverį nebūtų siunčiama visa duombazė.
+//Piešiam lentelę
 if ($result->num_rows > 0) {
 while ($row = $result->fetch_assoc()) {
     echo '<tr>
-    <td><form method="POST" id="forma' . $row['id'] . '"></form>
-    <input form="forma' . $row['id'] . '" type="hidden" name="id" value="' . $row['id'] . '">' . $row['id'] . '</td>
-    <td form="forma' . $row['id'] . '" type="text" name="modelis">' . $row['modelis'] . '</td>
-    <td form="forma' . $row['id'] . '" type="text" name="marke">' . $row['marke'] . '</td>
-    <td><input type="checkbox" form="forma' . $row['id'] . '" name="trintiEilutes[]" id="' . $row['id'] . '">trinti</button></td>
+    <td>' . $row['id'] . '</td>
+    <td>' . $row['modelis'] . '</td>
+    <td>' . $row['marke'] . '</td>
+    <td><input type="checkbox" name=trintiEilutes[] id="' . $row['id'] . '"></td>
     </tr>';
+    }
+}
+
+var_dump($trintiEilutes);
+
+if(isset($_POST['trinti'])) {
+    foreach ($trintiEilutes as $key => $value) {
+        $stmt = $connection->prepare("DELETE FROM automobiliai WHERE id = ?");
+        $id = $value;
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $stmt->close();
     }
 }
 
