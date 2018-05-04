@@ -20,8 +20,7 @@
 <h1>Sąlyga:</h1>
 <code>
     <h2>
-        Sukurkite programą kad galima būtų įvesti naujus įrašus apie automobilių greitį,
-        taisyti jau suvestą informaciją, trinti įrašus ir SELECT pagalba įrašyti numerių
+        Sukurkite programą kad galima būtų SELECT pagalba įrašyti numerių
         raides ir skaitmenis skirtinguose stulpeliuose.
     </h2>
     <hr>
@@ -32,8 +31,8 @@
         <tr>
             <th>ID</th>
             <th>Data</th>
-            <th>Numeris raidės</th>
-            <th>Numeris skaičiai</th>
+            <th>Numerio raidės</th>
+            <th>Numerio skaičiai</th>
             <th>Atstumas, m</th>
             <th>Laikas, s</th>
         </tr>
@@ -54,8 +53,7 @@ if ($connection->connect_error) {
     die ('Nepavyko prisijungti: ' . $connection->connect_error);
 }
 
-$sql = 'SELECT id, data, SUBSTRING(numeris, 1, 3) AS raides, SUBSTRING(numeris, 4, 3) AS skaiciai, atstumas, laikas FROM rezultatai';
-//redaguojam duombazę
+$sql = 'SELECT id, data, SUBSTRING(numeris, 1, 3) AS raides, SUBSTRING(numeris, -3) AS skaiciai, atstumas, laikas FROM rezultatai';
 
 $result = $connection->query($sql);
 
@@ -64,8 +62,7 @@ if (!$result) {
 }
 
 
-//Piešiam lentelę. Kiekviena eilutė turi savo formos ID, kad redaguojant
-//į serverį nebūtų siunčiama visa duombazė.
+//Piešiam lentelę.
 if ($result->num_rows > 0) {
 while ($row = $result->fetch_assoc()) {
     echo '<tr>

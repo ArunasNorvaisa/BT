@@ -66,18 +66,15 @@ if(isset($_SESSION['puslapiavimas']) && isset($_POST['pirmyn'])) {
     if (($_SESSION['puslapiavimas'] <= $eiluciuSkaicius) && ($eiluciuSkaicius > $_SESSION['puslapiavimas'] + 10)) {
      $_SESSION['puslapiavimas'] += 10;
         }
-    }
-    elseif(isset($_SESSION['puslapiavimas']) && isset($_POST['atgal'])) {
+    } elseif(isset($_SESSION['puslapiavimas']) && isset($_POST['atgal'])) {
          if ($_SESSION['puslapiavimas'] >= 10) {
             $_SESSION['puslapiavimas'] -= 10;
         }
-    }
-    else {
+    } else {
          $_SESSION['puslapiavimas'] = 0;
 }
 
 if(isset($_POST['trinti'])) {
-
         $stmt = $connection->prepare("DELETE FROM automobiliai WHERE id = ?");
         $id = $_POST['id'];
         $stmt->bind_param("i", $id);

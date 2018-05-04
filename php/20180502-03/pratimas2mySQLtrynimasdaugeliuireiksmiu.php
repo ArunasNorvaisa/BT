@@ -67,13 +67,11 @@ if(isset($_SESSION['puslapiavimas']) && isset($_POST['pirmyn'])) {
     if (($_SESSION['puslapiavimas'] <= $eiluciuSkaicius) && ($eiluciuSkaicius > $_SESSION['puslapiavimas'] + 10)) {
      $_SESSION['puslapiavimas'] += 10;
         }
-    }
-    elseif(isset($_SESSION['puslapiavimas']) && isset($_POST['atgal'])) {
+    } elseif(isset($_SESSION['puslapiavimas']) && isset($_POST['atgal'])) {
          if ($_SESSION['puslapiavimas'] >= 10) {
             $_SESSION['puslapiavimas'] -= 10;
         }
-    }
-    else {
+    } else {
          $_SESSION['puslapiavimas'] = 0;
 }
 
@@ -96,8 +94,6 @@ while ($row = $result->fetch_assoc()) {
     </tr>';
     }
 }
-
-var_dump($trintiEilutes);
 
 if(isset($_POST['trinti'])) {
     foreach ($trintiEilutes as $key => $value) {

@@ -60,11 +60,13 @@ if ($connection->connect_error) {
 }
 
 if(isset($_POST['metai'])) {
-    $metai = $_POST['metai'];
-}
+//http://php.net/manual/en/mysqli.examples-basic.php sako kad taip saugu...
+    $metai = (int)$_POST['metai'];
+    $sql = "SELECT * FROM rezultatai WHERE YEAR(data) = $metai";
+} else {
+    $sql = "SELECT * FROM rezultatai";
+    }
 
-$sql = "SELECT * FROM rezultatai WHERE YEAR(data) = $metai";
-//redaguojam duombazę
 
 $result = $connection->query($sql);
 
@@ -73,8 +75,7 @@ if (!$result) {
 }
 
 
-//Piešiam lentelę. Kiekviena eilutė turi savo formos ID, kad redaguojant
-//į serverį nebūtų siunčiama visa duombazė.
+//Piešiam lentelę.
 if ($result->num_rows > 0) {
 while ($row = $result->fetch_assoc()) {
     echo '<tr>
