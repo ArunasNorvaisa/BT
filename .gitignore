@@ -5,3 +5,5 @@ phpmyadmin/
 node_modules/
 package.json
 package-lock.json
+*.json
+php/.vscode/tasks.json

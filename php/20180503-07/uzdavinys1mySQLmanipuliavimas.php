@@ -31,6 +31,7 @@
          <hr>
       </code>
       <form name="automobiliai" method="POST">
+      <input type="hidden" name="automobiliai">
           <button name="automobiliai">Automobiliai</button>
       </form>
       <table>
@@ -119,22 +120,7 @@ if(isset($_POST['metai'])) {
     $vidGreitis = $result->fetch_row();
     $sql = "SELECT *, ROUND(((atstumas/laikas)*3.6), 1) AS greitis FROM rezultatai WHERE MONTH(data) = $menuo";
     echo lentele1($sql, $connection, $irasuKiekis, $maxGreitis, $minGreitis, $vidGreitis);
-} else {
-    $sql = "SELECT COUNT(*) AS irasukiekis FROM rezultatai";
-    $result = $connection->query($sql);
-    $irasuKiekis = $result->fetch_row();
-    $sql = "SELECT MAX(ROUND(((atstumas/laikas)*3.6), 1)) AS maxgreitis FROM rezultatai";
-    $result = $connection->query($sql);
-    $maxGreitis = $result->fetch_row();
-    $sql = "SELECT MIN(ROUND(((atstumas/laikas)*3.6), 1)) AS mingreitis FROM rezultatai";
-    $result = $connection->query($sql);
-    $minGreitis = $result->fetch_row();
-    $sql = "SELECT AVG(ROUND(((atstumas/laikas)*3.6), 1)) AS vidgreitis FROM rezultatai";
-    $result = $connection->query($sql);
-    $vidGreitis = $result->fetch_row();
-    $sql = "SELECT *, ROUND(((atstumas/laikas)*3.6), 1) AS greitis FROM rezultatai";
-    echo lentele1($sql, $connection, $irasuKiekis, $maxGreitis, $minGreitis, $vidGreitis);
-    }
+}
 
 function lentele1(string $sql, mysqli $connection, array $irasuKiekis, array $maxGreitis, array $minGreitis, array $vidGreitis): string {
 
@@ -144,7 +130,7 @@ function lentele1(string $sql, mysqli $connection, array $irasuKiekis, array $ma
         die ('Error: ' . $connection->error);
     }
     if ($result->num_rows > 0) {
-    $lentele = '<h1>Rezultatų (pirminių duomenų) atvaizdavimo lentelė:</h1>';
+    $lentele = '<h1>Rezultatų atvaizdavimo lentelė:</h1>';
     $lentele .= '<table border=1>';
     $lentele .= '<thead>';
     $lentele .= '<tr>';
