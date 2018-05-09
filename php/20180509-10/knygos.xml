@@ -1,0 +1,15 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<knygos>
+	<knyga>
+		<autorius>Julies Verne</autorius>
+		<pavadinimas kalba="lt">Aplink pasaulį per 80 dienų</pavadinimas>
+		<metai>1873</metai>
+	</knyga>
+		<knyga>
+		<autorius>Julies Verne</autorius>
+		<pavadinimas kalba="lt">20000 mylių po vandeniu</pavadinimas>
+		<metai>1869</metai>
+	</knyga>
+</knygos>
+EOD;
