@@ -16,11 +16,7 @@
                             <td>Kada sukurtas</td>
                         </tr>
                         <tr>
-                            <td>
-                                <a href="{{  route('radar.show', ['id' => $radar->id])  }}">
-                                 {{ $radar->id }}
-                             </a>
-                            </td>
+                            <td>{{ $radar->id }}</td>
                             <td>{{ $radar->date }}</td>
                             <td>{{ $radar->number }}</td>
                             <td>{{ $radar->distance }}</td>

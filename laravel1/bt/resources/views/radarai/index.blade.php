@@ -19,7 +19,11 @@
 
                         @foreach ($radars as $radar)
                         <tr>
-                            <td>{{ $radar->id }}</td>
+                            <td>
+                                <a href="{{  route('radar.show', ['id' => $radar->id])  }}">
+                                 {{ $radar->id }}
+                             </a>
+                            </td>
                             <td>{{ $radar->date }}</td>
                             <td>{{ $radar->number }}</td>
                             <td>{{ $radar->distance }}</td>
@@ -29,6 +33,10 @@
                         </tr>
                         @endforeach
                     </table>
+                    <div class='row'>
+                        <a href="{{  route('radars.create')  }}">
+                        <button>Įrašyti</button></a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -28,6 +28,6 @@ class Drivers extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('drivers');
     }
 }

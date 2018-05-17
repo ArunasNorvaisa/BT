@@ -26,22 +26,37 @@ Route::get('/', function () {
     ];
     return view('radarai.index', ['radar' => $radaras]);
 });
-*/
 
 Route::get('radarai', function () {
     $radarai = \App\Radar::all();
     return view('radarai.index', ['radars' => $radarai]);
+});*/
+
+Route::prefix('radarai')->group(function () {
+Route::get('/', 'RadarsController@index')->name('radars.index');
+Route::get('create', 'RadarsController@create')->name('radars.create');
+Route::post('create', 'RadarsController@store')->name('radars.store');
+Route::get('show/{id}', 'RadarsController@show')->name('radar.show');
+Route::put('update/{id}', 'RadarsController@update')->name('radars.update');
 });
 
-Route::get('radarai/{id}', function ($id) {
-    $radarai = \App\Radar::find($id);
-    return view('radarai.show', ['radar' => $radarai]);
-})->name('radar.show');
+Route::prefix('drivers')->group(function () {
+Route::get('/', 'DriversController@index')->name('drivers.index');
+Route::get('show/{driverId}', 'DriversController@show')->name('drivers.show');
+Route::get('create', 'DriversController@create')->name('drivers.create');
+Route::post('create', 'DriversController@store')->name('drivers.store');
+Route::put('update/{driverId}', 'DriversController@update')->name('drivers.update');
+});
 
-Route::get('drivers', function () {
+/*Route::get('drivers', function () {
     $drivers = \App\Drivers::all();
     return view('drivers.index', ['drivers' => $drivers]);
 });
+
+Route::get('drivers/{driverId}', function ($driverId) {
+    $driver = \App\Drivers::find($driverId);
+    return view('drivers.show', ['driver' => $driver]);
+})->name('driver.show');*/
 
 Auth::routes();
 

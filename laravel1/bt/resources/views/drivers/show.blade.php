@@ -12,23 +12,12 @@
                             <td>Vardas</td>
                             <td>Miestas</td>
                         </tr>
-
-                        @foreach ($drivers as $driver)
                         <tr>
-                            <td>
-                                <a href="{{  route('drivers.show', ['driverId' => $driver->driverId])  }}">
-                                 {{ $driver->driverId }}
-                             </a>
-                            </td>
+                            <td>{{ $driver->driverId }}</td>
                             <td>{{ $driver->name }}</td>
                             <td>{{ $driver->city }}</td>
                         </tr>
-                        @endforeach
                     </table>
-                        <div class='row'>
-                        <a href="{{  route('drivers.create')  }}">
-                        <button>Įrašyti</button></a>
-                    </div>
                 </div>
             </div>
         </div>
