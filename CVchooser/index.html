@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Kurale&amp;subset=latin-ext" rel="stylesheet">
+    <title>Arūno Norvaišos CV / Arūnas Norvaiša CV</title>
+    <script type="text/javascript">
+        function handleClick(event) {
+            event.preventDefault();
+            var cv = document.querySelector('input[name="CV"]:checked').value;
+            if (cv === "EN") {
+                window.location = "https://arunas.org/cv/ArunasNorvaisaCV_EN.pdf";
+            } else {
+                window.location = "https://arunas.org/cv/ArunoNorvaisosCV_LT.pdf";
+            }
+        }
+    </script>
+    <style>
+        .container {
+            font-family: 'Kurale', serif;
+            background-color: #fff;
+        }
+        h1, h3 {
+            text-align: center;
+        }
+        h3 {
+        padding-bottom: 50px;
+        }
+        .checkmark {
+            position: absolute;
+            top: 3px;
+            left: calc(20vw - 30px);
+            height: 19px;
+            width: 19px;
+            background-color: #999;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .etikete {
+            display: block;
+            position: relative;
+            padding-left: 20vw;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .etikete input {
+            position: absolute;
+            opacity: 0;
+        }
+        .etikete input:checked ~ .checkmark, .etikete:hover input ~ .checkmark {
+            background-color: #E92D0C;
+        }
+        .etikete input:checked ~ .checkmark:after {
+            display: block;
+        }
+        #mygtukas {
+            margin-left: calc(20vw - 30px);
+            padding: 8px 42px;
+            background-color: #bbb;
+            font-family: 'Kurale', serif;
+            font-size: 1em;
+            border: none;
+            border-radius: 15px;
+        }
+        #mygtukas:hover {
+            background-color: #2196F3;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pasirinkite CV kalbą</h1>
+        <h3>Choose CV language</h3>
+        <form>
+            <label class="etikete">Lietuviškas CV
+                <input type="radio" name="CV" value="LT" />
+                <span class="checkmark"></span><br />
+            </label>
+            <label class="etikete">CV in English
+                <input type="radio" name="CV" value="EN" />
+                <span class="checkmark"></span>
+            </label>
+            <input type="submit" id="mygtukas" onclick="handleClick(event)" value="Parsisiųsti CV / Get CV" />
+        </form>
+    </div>
+</body>
+</html>
