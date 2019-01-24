@@ -14,6 +14,13 @@
     sudo systemctl (start|restart|status) nginx.service
     sudo systemctl (start|restart|status) mysqld.service
     sudo systemctl (start|restart|status) php-fpm
+    =========
+    Laravel:
+    sudo chgrp -R http storage bootstrap/cache
+    find storage -type d -exec chmod 775 {} \;
+    find bootstrap/cache -type d -exec chmod 775 {} \;
+    find storage -type f -exec chmod 664 {} \;
+    find bootstrap/cache -type f -exec chmod 664 {} \;
 
 </pre>
 </body>
