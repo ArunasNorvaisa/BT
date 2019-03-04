@@ -1,4 +1,4 @@
-const closestMonday = () => {
+function secondsTillMonday() {
     const currentDate = new Date(); // current date
     const mSecondsInADay = 8.64e+7; // milliseconds per day
     let days_to_monday = 8 - currentDate.getUTCDay(); // days left to closest Monday
@@ -9,18 +9,18 @@ const closestMonday = () => {
     return Math.floor((next_monday - currentDate)/1000);
 }
 
-const counter = () => {
-    let seconds = closestMonday();
-    document.getElementById('diff').innerHTML = seconds + '<br>';
+function counter() {
+    let seconds = secondsTillMonday();
+    document.getElementById('diff').innerHTML = seconds + 's till the nearest UTC Monday. This computes to:';
     const days = Math.floor(seconds / (24 * 3600));
-    const hours = Math.floor((seconds - days * 24 * 3600) / 3600);
+    const hours = Math.floor((seconds % (24 * 3600)) / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     seconds = seconds % 60;
 
-    document.getElementById('days').innerHTML = days + ' day(s)<br>';
-    document.getElementById('hours').innerHTML= hours + ' hour(s)<br>';
-    document.getElementById('minutes').innerHTML = minutes + ' minute(s)<br>';
-    document.getElementById('seconds').innerHTML = seconds + ' second(s)<br>';
+    document.getElementById('days').innerHTML = days + ' day(s)';
+    document.getElementById('hours').innerHTML= hours + ' hour(s)';
+    document.getElementById('minutes').innerHTML = minutes + ' minute(s)';
+    document.getElementById('seconds').innerHTML = seconds + ' second(s)';
 }
 
 setInterval(counter, 1000);
