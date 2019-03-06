@@ -16,7 +16,7 @@ function makeDragon() {
  *             JS ITERATOR VERSION            *
  **********************************************/
 
-const dragonArmy = {
+/* const dragonArmy = {
     [Symbol.iterator]: function() {
         return {
             next: function() {
@@ -31,27 +31,20 @@ const dragonArmy = {
             }
         }
     }
-}
-
-for (const dragon of dragonArmy) {
-    const node = document.createElement("li");
-    const textnode = document.createTextNode(dragon);
-    node.appendChild(textnode);
-    document.getElementById("dragons").appendChild(node);
-}
+} */
 
 /**********************************************
  *              VANILLA JS VERSION            *
  **********************************************/
 
-/* function dragonArmyCreate() {
+function dragonArmyCreate() {
     let enoughDragonsSpawned = Math.random() > 0.95;
     let dragons = [];
     while(!enoughDragonsSpawned) {
         dragons.push(makeDragon());
         enoughDragonsSpawned = Math.random() > 0.95;
     }
-    return dragons; 
+    return dragons;
 }
 
 function renderDragonArmy(array) {
@@ -64,4 +57,4 @@ function renderDragonArmy(array) {
 }
 
 const dragonArmy = dragonArmyCreate();
-renderDragonArmy(dragonArmy); */
+renderDragonArmy(dragonArmy);
